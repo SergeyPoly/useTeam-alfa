@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Button.scss';
-import { buttonTypes } from './buttoTypes';
+import { buttonTypes } from './buttonTypes';
 
 const Button = props => {
   const { text, type, className, handleClick } = props;
