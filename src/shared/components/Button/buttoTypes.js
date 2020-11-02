@@ -1,4 +1,4 @@
 export const buttonTypes = {
   primary: '',
-  yellow: 'btn-yellow',
+  yellow: 'button-yellow',
 };

@@ -1,12 +1,13 @@
 @import "../../styles/scss/variables";
 
-.btn {
-  padding: 17px 15px;
+.button {
+  padding: 13px 17px;
   min-width: 125px;
   color: $text-color--main;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
+  line-height: 15px;
   border-radius: 15px;
   background: $button-background--primary;
   border: none;
@@ -24,8 +25,8 @@
   }
 }
 
-.btn-yellow {
-    background: $button-background--yellow;
+.button-yellow {
+  background: $button-background--yellow;
 }
 
 

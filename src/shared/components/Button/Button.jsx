@@ -7,7 +7,7 @@ import { buttonTypes } from './buttoTypes';
 const Button = props => {
   const { text, type, className, handleClick } = props;
 
-  const buttonCLassName = `btn ${buttonTypes[type]} ${className}`;
+  const buttonCLassName = `button ${buttonTypes[type]} ${className}`;
 
   return (
     <button className={buttonCLassName} onClick={handleClick} type="button">
@@ -22,10 +22,11 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   type: PropTypes.string,
   className: PropTypes.string,
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   type: 'primary',
   className: '',
+  handleClick: () => {},
 };
