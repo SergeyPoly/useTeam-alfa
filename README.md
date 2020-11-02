@@ -15,6 +15,6 @@
 `};`  
 * Описать в файле shared/components/Button/Button.scss свои стили  
 `.button-yellow {`  
-  `  background: $button-background--yellow;`
+  `  background: $button-background--yellow;`  
 `}`  
 
