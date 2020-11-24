@@ -1,0 +1,40 @@
+$background-color--main-layout: #252A48;
+$background-color--content-blocks--main: #2D3357;
+$background-color--content-blocks--secondary: #364886;
+
+$button-color--main: #745FF8;
+$button-color--main-inactive: #3F456C;
+$button-color--slider: #D99A51;
+$button-color--accept-invite: #99E47F;
+
+$text-color--main: #FFFFFF;
+$text-color--secondary: #747BAA;
+$text-color--content-block--general-info: #8B79FF;
+$text-color--content-block--secondary: #8988B6;
+$text-color--load-more-button: #567EF7;
+$text-color--active-navbar: #8B79FF;
+$text-color--accept: #99E47F;
+$text-color--decline: #E45D68;
+
+$border-radius--buttons: 5px;
+$border-radius--content-blocks: 15px;
+$border-radius--profile-picture--small: 10px;
+$border-radius--profile-picture--big: 20px;
+
+$text-size--headings--main: 28px;
+$text-size--headings--secondary: 18px;
+$text-size--logo: 24px;
+$text-size--buttons: 15px;
+
+$breakpoint--desktops: 1024px;
+$breakpoint--tablets: 768px;
+$breakpoint--phones: 320px;
+
+$breakpoints: (
+    "phone": 320px,
+    "tablet": 768px,
+    "desktop": 1024px,
+);
+
+
+
