@@ -3,7 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@ant-design/icons": "^4.2.2",
         "@reduxjs/toolkit": "^1.4.0",
+        "antd": "^4.8.0",
         "bootstrap": "^5.0.0-alpha1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
