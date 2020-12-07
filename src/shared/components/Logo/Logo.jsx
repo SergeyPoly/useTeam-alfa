@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Logo.css';
+import './Logo.scss';
 
 const Logo = props => {
-    const { classNames, href, children } = props;
+    const { classNames, logotype } = props;
+    const currentLogo = logotype || 'useTeam';
     const additionalClasses = classNames.join(' ');
 
     return (
         <div className={`base-logo ${additionalClasses}`}>
-            <a href={href}>
-                {children}
+            <a href='/'>
+                {currentLogo}
             </a>
         </div>
     );
@@ -23,7 +24,5 @@ Logo.defaultProps = {
 };
 
 Logo.propTypes = {
-    href: PropTypes.string.isRequired,
     classNames: PropTypes.arrayOf(PropTypes.string),
-    children: PropTypes.node.isRequired,
 };
