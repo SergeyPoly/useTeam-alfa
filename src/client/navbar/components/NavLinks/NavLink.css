@@ -1,0 +1,28 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-item {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.invitePoint {
+  position: relative;
+}
+
+.invitePoint::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 9px;
+  height: 9px;
+  content: "";
+  border-radius: 50%;
+  background: #99E47F;
+}
+
+/*# sourceMappingURL=NavLink.css.map */
