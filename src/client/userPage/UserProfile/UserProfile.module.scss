@@ -1,0 +1,91 @@
+@import '../user.variables';
+
+p {
+    margin: 0;
+}
+
+.userProfile {
+  font-family: $FONT;
+  width: 715px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: $COLOR-PRIMARY;
+    background: $BACKGROUND-PRIMARY;
+    box-sizing: border-box;
+    padding: 20px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: left;
+    margin-bottom: 13px;
+}
+
+.overview {
+    font-size: 18px;
+    color: $COLOR-SECONDARY;
+    margin-bottom: 6px;
+}
+
+.playerContainer {
+    box-sizing: border-box;
+    padding: 27px 19px;
+    background: $BACKGROUND-THIRD;
+    border-radius: 15px;
+    display: flex;
+}
+
+.playerTextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 18px;
+    padding-bottom: 10px;
+}
+
+.playerTextWrapper div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+}
+
+.playerName {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.playerTextItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: unset!important;
+    height: 40px;
+}
+
+.playerTextItem span:first-of-type {
+    font-size: 12px;
+    color: $COLOR-SECONDARY;
+}
+
+.playerTextItem span:last-of-type {
+    font-size: 18px;
+}
+
+.editProfileButton {
+    color: $COLOR-BUTTON;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    background: none;
+    height: 20px;
+    margin-left: 10px;
+
+}
+
