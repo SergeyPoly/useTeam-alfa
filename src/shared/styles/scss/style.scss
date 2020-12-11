@@ -1,5 +1,12 @@
-@import "variables";
-@import "mixins";
-@import "functions";
+@import 'shared';
+
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 
 
