@@ -1,8 +1,7 @@
-
 /*BACKGROUND COLOR*/
-$background-color--main: #26254F;
-$background-color--secondary: #2C2B5F;
-$background-color--third: #35346C;
+$background-color--main: #26254f;
+$background-color--secondary: #2c2b5f;
+$background-color--third: #35346c;
 
 /*BORDER-COLORS*/
 //
@@ -11,15 +10,15 @@ $background-color--third: #35346C;
 
 /*BORDER-RADIUS*/
 
-$border-radius:15px;
+$border-radius: 15px;
 
 /*TEXT COLOR*/
 $text-color--main: #fff;
-$text-color--secondary: #CAC9EF;
-$text-color--third: #8988B6;
-$text-color--win: #99E47F;
-$text-color--def: #F65164;
-$text-color--error: #F65164;
+$text-color--secondary: #cac9ef;
+$text-color--third: #8988b6;
+$text-color--win: #99e47f;
+$text-color--def: #f65164;
+$text-color--error: #f65164;
 
 /*Z-INDEX*/
 $z-index--negative: -1;
@@ -28,11 +27,9 @@ $z-index--middle: 2;
 $z-index--top: 3;
 
 /*TRANSITION*/
-$transition--main: all .4s ease;
-$transition--slow: all .6s ease;
-$transition--fast: all .2s ease;
+$transition--main: all 0.4s ease;
+$transition--slow: all 0.6s ease;
+$transition--fast: all 0.2s ease;
 
 /*FONTS*/
 $font-main: 'Mukta Vaani', sans-serif;
-
-
