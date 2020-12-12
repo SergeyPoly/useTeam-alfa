@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Button.css'
+import './Button.scss'
 
 const Button = props => {
-    const { text, type, classNames, handleClick } = props;
-    const additionalClasses = classNames.join(' ');
+    const { text, type, classType, additionalClass, handleClick } = props;
 
     return (
-        <button type={type} className={`base-button ${additionalClasses}`} onClick={handleClick}>
+        <button type={type} className={`base-button ${classType} ${additionalClass}`} onClick={handleClick}>
             {text}
         </button>
     );
@@ -17,13 +16,20 @@ const Button = props => {
 export default Button;
 
 Button.defaultProps = {
-    classNames: [],
+    additionalClass: '',
     type: 'button'
 };
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
     type: PropTypes.string,
-    classNames: PropTypes.arrayOf(PropTypes.string),
+    classType: PropTypes.oneOf([
+        'blue-btn',
+        'orange-btn',
+        'green-btn',
+        'inactive-btn',
+        'load-btn'
+    ]).isRequired,
+    additionalClass: PropTypes.string,
     handleClick: PropTypes.func.isRequired,
 };

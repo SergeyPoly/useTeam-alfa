@@ -1,8 +1,9 @@
 .base-heading {
   font-family: Roboto, sans-serif;
   font-size: 28px;
-  color: black;
+  color: #FFFFFF;
   font-weight: 700;
+  text-align: center;
 }
 
 /*# sourceMappingURL=Heading.css.map */

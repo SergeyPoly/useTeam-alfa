@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Heading.css'
+import './Heading.scss'
 
 const Heading = props => {
     const { text, classNames } = props;

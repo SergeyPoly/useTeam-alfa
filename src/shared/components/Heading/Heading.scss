@@ -1,10 +1,8 @@
-//waiting for mixins
+@import "./../../../shared/styles/scss/_shared.scss";
 
 .base-heading {
-    font-family: Roboto, sans-serif;
-    font-size: 28px;
-    color: black;
-    font-weight: 700;
+    @include font-source-sans(28px, #FFFFFF, 700);
+    text-align: center;
 }
 
 
