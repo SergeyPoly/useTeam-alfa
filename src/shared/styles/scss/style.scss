@@ -1,6 +1,12 @@
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+@import 'shared';
+
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
+
+
