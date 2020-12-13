@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './Logo.scss';
 
 const Logo = props => {
-    const { classNames, logotype } = props;
-    const currentLogo = logotype || 'useTeam';
-    const additionalClasses = classNames.join(' ');
+    const { className, text, img } = props;
 
     return (
-        <div className={`base-logo ${additionalClasses}`}>
-            <a href='/'>
-                {currentLogo}
-            </a>
-        </div>
+        <Link to='/' className={`logo ${className}`}>
+            {img ? <img className="logo-img" src={img} alt={text}/> : null}
+            {text ? <span className="logo-text">{text}</span> : null}
+        </Link>
     );
 };
 

@@ -1,28 +1,32 @@
-.base-button {
+.button {
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
 }
-
-.blue-btn {
+.button-basic {
   border: none;
   background-color: #745FF8;
   font-family: Roboto, sans-serif;
   color: #FFFFFF;
   font-weight: 700;
 }
-
-.orange-btn {
-  border: none;
-  background-color: #D99A51;
+.button-outline {
+  background-color: transparent;
+  border: 1px solid #567EF7;
   font-family: Roboto, sans-serif;
-  font-size: 24px;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 15px 52px;
+  font-size: 12px;
+  color: #567EF7;
+  font-weight: 400;
+  padding: 7px 30px;
 }
-
-.green-btn {
+.button-inactive {
+  border: none;
+  background-color: #3F456C;
+  font-family: Roboto, sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 700;
+}
+.button-success {
   border: none;
   background-color: #99E47F;
   font-family: Roboto, sans-serif;
@@ -31,23 +35,14 @@
   font-weight: 700;
   padding: 10px 30px;
 }
-
-.inactive-btn {
+.button-success {
   border: none;
-  background-color: #3F456C;
+  background-color: #D99A51;
   font-family: Roboto, sans-serif;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 24px;
+  color: #FFFFFF;
   font-weight: 700;
-}
-
-.load-btn {
-  background-color: transparent;
-  border: 1px solid #567EF7;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  color: #567EF7;
-  font-weight: 400;
-  padding: 7px 30px;
+  padding: 15px 52px;
 }
 
 /*# sourceMappingURL=Button.css.map */
