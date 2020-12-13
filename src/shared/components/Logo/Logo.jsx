@@ -9,7 +9,7 @@ const Logo = props => {
 
     return (
         <Link to='/' className={`logo ${className}`}>
-            {img ? <img className="logo-img" src={img} alt={text}/> : null}
+            {img ? <img className="img-fluid" src={img} alt={text}/> : null}
             {text ? <span className="logo-text">{text}</span> : null}
         </Link>
     );
@@ -18,9 +18,13 @@ const Logo = props => {
 export default Logo;
 
 Logo.defaultProps = {
-    classNames: [],
+    className: '',
+    text: '',
+    img: ''
 };
 
 Logo.propTypes = {
-    classNames: PropTypes.arrayOf(PropTypes.string),
+    className: PropTypes.string,
+    text: PropTypes.string,
+    img: PropTypes.string
 };

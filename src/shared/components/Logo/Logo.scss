@@ -6,6 +6,6 @@
     cursor: pointer;
 
     &-text {
-        @include font-source-sans(24px, black, 900)
+        @include font-source-sans(24px, white, 900)
     }
 }

@@ -1,48 +1,17 @@
-.button {
-  border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-.button-basic {
-  border: none;
-  background-color: #745FF8;
-  font-family: Roboto, sans-serif;
-  color: #FFFFFF;
-  font-weight: 700;
-}
-.button-outline {
-  background-color: transparent;
-  border: 1px solid #567EF7;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  color: #567EF7;
-  font-weight: 400;
-  padding: 7px 30px;
-}
-.button-inactive {
-  border: none;
-  background-color: #3F456C;
-  font-family: Roboto, sans-serif;
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 700;
-}
-.button-success {
-  border: none;
-  background-color: #99E47F;
-  font-family: Roboto, sans-serif;
-  font-size: 15px;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 10px 30px;
-}
-.button-success {
-  border: none;
-  background-color: #D99A51;
-  font-family: Roboto, sans-serif;
-  font-size: 24px;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 15px 52px;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import "src/shared/styles/scss/shared";
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   button.scss 1:9  root stylesheet */
 
-/*# sourceMappingURL=Button.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"src/shared/styles/scss/shared\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   button.scss 1:9  root stylesheet";
+}

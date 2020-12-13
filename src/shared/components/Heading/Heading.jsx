@@ -2,26 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Heading.scss'
+import { types } from './types';
 
 const Heading = props => {
-    const { text, classNames } = props;
-    const additionalClasses = classNames.join(' ');
+    const { text, type, additionalClass } = props;
+    const { className, Component } = types[type];
+    const fullClassName = `heading ${className} ${additionalClass}`;
 
     return (
-        <h2 className={`base-heading ${additionalClasses}`} >
-            {text}
-        </h2>
+        <Component fullClassName={fullClassName}>{text}</Component>
     );
 };
 
 export default Heading;
 
 Heading.defaultProps = {
-    classNames: [],
+    additionalClass: '',
 };
 
 Heading.propTypes = {
     text: PropTypes.string.isRequired,
-    classNames: PropTypes.PropTypes.arrayOf(PropTypes.string),
+    type: PropTypes.oneOf([
+        'page',
+        'section',
+        'block',
+    ]).isRequired,
+    additionalClass: PropTypes.string,
 };
 
