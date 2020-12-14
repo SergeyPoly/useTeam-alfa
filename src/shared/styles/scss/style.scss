@@ -1,6 +1,12 @@
-@import './variables';
-@import '~antd/dist/antd.css';
+@import 'shared';
 
-#root {
-  font-family: $font-main;
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
+
+

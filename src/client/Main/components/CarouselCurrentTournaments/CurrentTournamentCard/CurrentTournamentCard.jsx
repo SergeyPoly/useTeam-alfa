@@ -1,5 +1,5 @@
 import React from 'react';
-import { TournamentsData } from '../../../../../../../app/store/TournamentsData';
+// import { TournamentsData } from '../../../../app/store/TournamentsData';
 import { ThunderboltOutlined } from '@ant-design/icons';
 import {
   CurrentTournamentCardStyle,
@@ -13,6 +13,7 @@ import {
   CurrentTournamentCardSlots,
   CurrentTournamentCardSum,
 } from './CurrentTournamentCardStyle';
+import { TournamentsData } from '../../../pages/MainPage/pageProps;';
 
 const CurrentTournamentCard = TournamentsData.filter(
   el => el.status === 'current',

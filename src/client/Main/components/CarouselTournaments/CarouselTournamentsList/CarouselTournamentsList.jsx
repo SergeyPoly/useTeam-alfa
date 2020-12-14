@@ -1,10 +1,10 @@
 import React from 'react';
+import { TournamentsData } from '../../../pages/MainPage/pageProps;';
 import {
   carouselStyle,
   styleCarouselDescription,
   styleCarouselHeader,
 } from './style';
-import { TournamentsData } from '../../../../../../../app/store/TournamentsData';
 
 const CarouselTournamentsList = TournamentsData.filter(
   el => el.status === 'announce',
