@@ -1,14 +1,14 @@
-import banner1Bg from "../../../../assets/images/banners/bg_banner1.png";
-import banner2Bg from "../../../../assets/images/banners/bg_banner1.png";
+import bannerEnticingBg from "../../../../assets/images/banners/bg_banner1.png";
+import bannerAdvantageBg from "../../../../assets/images/banners/bg_banner2.png";
 
 export const pageProps = {
-    sectionBanner1: {
-        bg: banner1Bg,
+    sectionBannerEnticing: {
+        bg: bannerEnticingBg,
         title:"Why team better then solo play?",
         text:"Create your own team or join to your friends team"
     },
-    sectionBanner2: {
-        bg: banner2Bg,
+    sectionBannerAdvantage: {
+        bg: bannerAdvantageBg,
         title:"Join useTeam Right now",
         text:"More than 1000 tournaments every month. Check your skills!"
     },
@@ -322,4 +322,18 @@ export const TournamentsData = [
       winners: [],
     },
   ];
-  
+    
+export const InfoListData = [
+  {
+    name: 'PAY LESS FOR INVITE',
+    description: 'Team save 20% on each tournament invite',
+  },
+  {
+    name: 'GET MORE PRIZE',
+    description: 'Team owner get 30% instead 20% when play solo',
+  },
+  {
+    name: 'FIND NEW FRIENDS',
+    description: 'Every victory is a team work',
+  },
+];

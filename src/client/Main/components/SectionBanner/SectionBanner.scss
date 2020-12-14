@@ -1,0 +1,29 @@
+@import 'src/shared/styles/scss/shared';
+
+.title-style {
+  color: $text-color--main;
+  font-weight: bold;
+  margin: 40px 0;
+  font-family: $font-main;
+}
+
+.section-banner{
+  &--container {
+    background: $background-color--secondary;
+    border-radius: $border-radius;
+  }
+
+  &--description {
+    height: 120px;
+    @include flex(space-between,center);
+    margin: 0 40px;
+  }
+
+  &--text {
+    color: $text-color--main;
+    font-weight: bold;
+    font-family: $font-main;
+    font-size: 24px;
+    margin: 0;
+  }
+}

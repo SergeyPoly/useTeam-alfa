@@ -14,13 +14,14 @@ const variables = {
   textColorDef: '#F65164',
   textColorError: '#F65164',
 
-  widthRightColumn: '70px',
+  widthRightColumn: '75px',
 };
 
 export const flexRowStyle = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
+  alignItems:'center'
 };
 
 export const CurrentTournamentCardStyle = {
@@ -46,9 +47,11 @@ export const CurrentTournamentCardName = {
   color: variables.textColorMain,
   fontSize: '21px',
   width: '50%',
-  height: '70px',
+  height: '73px',
   wordWrap: 'break-word',
   overflow: 'hidden',
+  margin:0,
+  textAlign:'start'
 };
 
 export const CurrentTournamentCardNamePrize = {
@@ -62,12 +65,14 @@ export const CurrentTournamentCardSum = {
   fontWeight: 'bold',
   display: 'flex',
   justifyContent: 'center',
+  margin:0
 };
 
 export const CurrentTournamentCardGo = {
   color: '#99E47F',
   fontSize: '19px',
   align: 'center',
+  margin:0
 };
 
 export const CurrentTournamentCardSlots = {

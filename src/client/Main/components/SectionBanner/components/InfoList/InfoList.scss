@@ -1,0 +1,26 @@
+@import 'src/shared/styles/scss/shared';
+
+.info-list{
+    @include flex(space-evenly, center);
+    width: 100%;
+    
+    &--container{
+    @include flex(space-evenly, center);
+    width: 270px;
+    height: 170px;
+    background: rgba(54, 72, 134, 0.6);
+    border-radius: $border-radius;
+    padding: 0 4%;
+    }
+    &--description{
+        margin: 0;
+        color:#8988B6
+    }
+    &--text {
+        color: $text-color--main;
+        font-weight: bold;
+        font-family: $font-main;
+        font-size: 24px;
+        margin: 0;
+    }
+}

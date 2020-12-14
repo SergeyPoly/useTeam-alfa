@@ -1,36 +1,34 @@
 import React from 'react';
-// import Banner from '../../components/Banner/Banner';
+import Banner from '../../components/SectionBanner/components/Banner/Banner';
 import CarouselCurrentTournaments from '../../components/CarouselCurrentTournaments';
 import CarouselTournaments from '../../components/CarouselTournaments/CarouselTournaments';
-import EnticingBanner from '../../components/EnticingBanner/EnticingBanner';
-// import { pageProps } from './pageProps;';
-import { mainPageStyle, mainPageStyleContainer } from './style';
+import { pageProps } from './pageProps;';
+import SectionBanner from '../../components/SectionBanner/SectionBanner';
+import InfoList from '../../components/SectionBanner/components/InfoList';
+import './MainPage.scss'
 
 
 const MainPage = () => {
-  // const {sectionBanner1, sectionBanner2} = pageProps;
+  const { sectionBannerEnticing, sectionBannerAdvantage } = pageProps;
   return (
-    <div style={mainPageStyle}>
-      <div style={mainPageStyleContainer}>
-        <CarouselTournaments/>
+    <div className="main-page">
+      <div className="main-page--container">
+        <CarouselTournaments />
         <CarouselCurrentTournaments />
-        {/* <SectionBanner title={sectionBanner1.title} text={sectionBanner1.text}>
-         <Banner bgImage={sectionBanner1.bg}>
-           <InfoList />
+
+        <SectionBanner
+          title={sectionBannerEnticing.title}
+          text={sectionBannerEnticing.text}>
+          <Banner bgImage={sectionBannerEnticing.bg}>
+            <InfoList />
           </Banner>
         </SectionBanner>
-        <SectionBanner title={sectionBanner2.title} text={sectionBanner2.text}>
-         <Banner bgImage={sectionBanner2.bg} />
-        </SectionBanner> */}
-        <EnticingBanner
-          title="Why team better then solo play?"
-          text="Create your own team or join to your friends team"
-          isUnitAvailable="true"
-        />
-        <EnticingBanner
-          title="Join useTeam Right now"
-          text="More than 1000 tournaments every month. Check your skills!"
-        />
+
+        <SectionBanner
+          title={sectionBannerAdvantage.title}
+          text={sectionBannerAdvantage.text}>
+          <Banner bgImage={sectionBannerAdvantage.bg} />
+        </SectionBanner>
       </div>
     </div>
   );
