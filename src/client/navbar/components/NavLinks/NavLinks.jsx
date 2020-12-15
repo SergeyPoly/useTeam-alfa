@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './NavLink.scss';
+import styles from './NavLink.module.scss';
 import { NavLink } from 'react-router-dom';
 
 const links = [
@@ -30,14 +30,14 @@ const linksAuth = [
     },
 ];
 
-export const NavLinks = ({isAuth, invited}) => {
+const NavLinks = ({isAuth, invited}) => {
 
     const linkItems = links.map(({ to, label }) => (
-        <li className="nav-item" key={label}>
+        <li className={styles.nav_item} key={label}>
             <NavLink
                 exact
-                className="nav-link"
-                activeClassName="nav-link-active"
+                className={styles.nav_link}
+                activeClassName={styles.nav_link_active}
                 aria-current="page"
                 to={to}>
                 {label}
@@ -46,11 +46,11 @@ export const NavLinks = ({isAuth, invited}) => {
     ));
 
     const linkItemsAuth = linksAuth.map(({ to, label }) => (
-        <li className="nav-item" key={label}>
+        <li className={styles.nav_item} key={label}>
             <NavLink
                 exact
-                className="nav-link"
-                activeClassName="nav-link-active"
+                className={`${styles.nav_link} ${label === 'Profile' && invited ? styles.invitePoint : ''}`}
+                activeClassName={styles.nav_link_active}
                 aria-current="page"
                 to={to}>
                 {label}
@@ -59,13 +59,15 @@ export const NavLinks = ({isAuth, invited}) => {
     ));
 
     return (
-        <nav className={invited ? 'invitePoint' : ''}>
+        <nav>
             <ul>
                 {isAuth ? linkItemsAuth : linkItems}
             </ul>
         </nav>
     );
 };
+
+export default NavLinks;
 
 NavLinks.propTypes = {
     isAuth: PropTypes.bool.isRequired,

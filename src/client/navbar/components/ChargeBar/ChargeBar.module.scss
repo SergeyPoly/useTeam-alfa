@@ -1,0 +1,18 @@
+@import "src/shared/styles/scss/shared";
+
+.charge_bar{
+    display: inline-block;
+    float: right;
+    height: 39px;
+
+    &__wrapper{
+        height: 100%;
+        @include flex(flex-start, center)
+    }
+
+    &__account_balance {
+        @include font-source-sans(18px, #FFFFFF, 400);
+        margin-right: 18px;
+        margin-left: 3px;
+    }
+}
