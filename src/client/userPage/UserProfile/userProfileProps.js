@@ -1,6 +1,4 @@
 const userProfileProps = {
-  title: 'Profile',
-  overview: 'Overview',
   player: {
     playerName: 'Player 1',
     playerItems: [
@@ -22,6 +20,10 @@ const userProfileProps = {
       },
     ],
     editProfileButton: 'EDIT PROFILE',
+  },
+  balance: {
+    charge: 725,
+    money: 1000,
   },
 };
 

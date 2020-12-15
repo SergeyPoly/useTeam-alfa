@@ -36,9 +36,17 @@ p {
 .playerContainer {
     box-sizing: border-box;
     padding: 27px 19px;
-    background: $BACKGROUND-THIRD;
+    background: $BACKGROUND-SECONDARY;
     border-radius: 15px;
     display: flex;
+    margin-bottom: 10px;
+}
+
+.playerContainer img {
+    width: 86px;
+    height: 86px;
+    border-radius: 20px;
+
 }
 
 .playerTextWrapper {
@@ -86,6 +94,93 @@ p {
     background: none;
     height: 20px;
     margin-left: 10px;
-
 }
 
+.steamContainer {
+    width: 270px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $BACKGROUND-SECONDARY;
+    border-radius: 15px;
+    color: $COLOR-SECONDARY;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.steamContainer img {
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.steamContainer.connected {
+    color: $COLOR-THIRD;
+}
+
+.steamContainer.connected img {
+    display: none;
+}
+
+.balanceContainer {
+    box-sizing: border-box;
+    padding: 17px 19px;
+    background: $BACKGROUND-SECONDARY;
+    border-radius: 15px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.balanceItem {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.balanceItem:first-of-type {
+    margin-right: 87px;
+    color: $COLOR-THIRD;
+}
+
+.balanceItem span {
+    margin-right: 20px;
+}
+
+.balanceItem svg {
+    margin-right: 4px;
+}
+
+.balanceItem button {
+    width: 125px;
+    height: 40px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: $BACKGROUND-BUTTON;
+    border: none;
+    outline: none;
+
+    &:hover {
+        background: $BACKGROUND-BUTTON--HOVER;
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.wrapper {
+    position: relative;
+}
+
+.testButton {
+    position: absolute;
+    right: -250px;
+    top: 45%;
+}
