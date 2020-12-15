@@ -1,21 +1,19 @@
-@import "src/shared/styles/scss/shared";
+@import 'src/shared/styles/scss/shared';
 
 .heading {
-    &-page {
-        @include font-source-sans(28px, #FFFFFF, 700);
-        margin-bottom: 20px;
-    }
+  &-page {
+    @include font-source-sans(28px, #ffffff, 700);
+    margin-bottom: 20px;
+  }
 
-    &-section {
-        @include font-source-sans(28px, #FFFFFF, 700);
-        margin-bottom: 40px;
-        text-align: center;
-    }
+  &-section {
+    @include font-source-sans(28px, #ffffff, 700);
+    margin-bottom: 40px;
+    text-align: center;
+  }
 
-    &-block {
-        @include font-source-sans(18px, #747BAA, 400);
-        margin-bottom: 10px;
-    }
+  &-block {
+    @include font-source-sans(18px, #747baa, 400);
+    margin-bottom: 10px;
+  }
 }
-
-

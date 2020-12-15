@@ -1,0 +1,9 @@
+@import 'src/shared/styles/scss/style.scss';
+.teamPage {
+  @include font-source-sans(18px, #747baa);
+  background: $third-color;
+
+  .title {
+    @include font-source-sans(28px, #ffffff, 700);
+  }
+}

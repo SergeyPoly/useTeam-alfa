@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ExamplePage } from '../../client/example/pages/ExamplePage';
+import TeamPage from '../../client/Team/pages/TeamPage';
 
 export const AppRoutes = () => {
   return (
@@ -10,6 +11,9 @@ export const AppRoutes = () => {
       </Route>
       <Route exact path="/foo">
         <p>BAR</p>
+      </Route>
+      <Route exact path="/team">
+        <TeamPage />
       </Route>
     </Switch>
   );

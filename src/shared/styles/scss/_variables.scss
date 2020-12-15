@@ -1,14 +1,11 @@
-$primary-color: #2D3357; //content blocks
-$secondary-color: #745FF8; //buttons
-$third-color: #252A48; //background
+$primary-color: #2d3357; //content blocks
+$secondary-color: #745ff8; //buttons
+$third-color: #252a48; //background
 
 $block-border-radius: 15px;
 
 $breakpoints: (
-    "phone": 320px,
-    "tablet": 768px,
-    "desktop": 1024px,
+  'phone': 320px,
+  'tablet': 768px,
+  'desktop': 1024px,
 );
-
-
-

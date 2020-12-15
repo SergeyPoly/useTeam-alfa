@@ -1,0 +1,14 @@
+@import 'src/shared/styles/scss/style.scss';
+.fileInput {
+  display: none;
+}
+.fileInputLabel {
+  @include font-source-sans(50px, #747baa, 100, 0.5);
+  text-align: center;
+  display: inline-block;
+  border-radius: $block-border-radius;
+  background: $third-color;
+  padding: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
