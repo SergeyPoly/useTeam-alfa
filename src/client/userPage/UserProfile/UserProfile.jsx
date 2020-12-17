@@ -18,7 +18,7 @@ const teamProps = {
 };
 
 const UserProfile = props => {
-  const { player, balance } = props;
+  const { player, balance, tournaments } = props;
   const { playerName, playerItems, editProfileButton } = player;
 
   const [steamConnection, setSteamConnection] = useState(false);
@@ -111,7 +111,7 @@ const UserProfile = props => {
       </div>
 
       <p className={styles.overview}>Tournament History</p>
-      <TournamentHistory />
+      <TournamentHistory tournaments={tournaments} />
     </section>
   );
 };
@@ -127,9 +127,11 @@ UserProfile.propTypes = {
   ),
 
   balance: PropTypes.objectOf(PropTypes.string),
+  tournaments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
 };
 
 UserProfile.defaultProps = {
   player: {},
   balance: {},
+  tournaments: [],
 };

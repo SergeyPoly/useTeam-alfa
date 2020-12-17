@@ -6,20 +6,30 @@ import styles from './TournamentHistory.module.scss';
 const TournamentHistory = props => {
   const { tournaments } = props;
 
-  if (!tournaments) {
-    // eslint-disable-next-line no-console
-    console.log('no tournaments');
-  }
+  const tournamentElements = tournaments.map(
+    ({ name, date, mode, role, result }) => (
+      <tr className={styles.tournamentItem}>
+        <td>{name}</td>
+        <td>{date}</td>
+        <td>{mode}</td>
+        <td>{role}</td>
+        <td>{result}</td>
+      </tr>
+    ),
+  );
   return (
     <div className={styles.container}>
       <div className={styles.tournaments}>
-        <div className={styles.title}>
-          <span>TOURNAMENT</span>
-          <span>DATE</span>
-          <span>MODE</span>
-          <span>ROLE</span>
-          <span>RESULT</span>
-        </div>
+        <table className={styles.container}>
+          <tr className={styles.title}>
+            <th>TOURNAMENT</th>
+            <th>DATE</th>
+            <th>MODE</th>
+            <th>ROLE</th>
+            <th>RESULT</th>
+          </tr>
+          {tournamentElements}
+        </table>
       </div>
     </div>
   );
