@@ -1,7 +1,7 @@
 @import '../user.variables';
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 .userProfile {
@@ -12,11 +12,11 @@ p {
   justify-content: flex-start;
   align-items: flex-start;
   color: $COLOR-PRIMARY;
-    background: $BACKGROUND-PRIMARY;
-    box-sizing: border-box;
-    padding: 20px;
-    font-weight: normal;
-    text-align: left;
+  background: $BACKGROUND-PRIMARY;
+  box-sizing: border-box;
+  padding: 20px;
+  font-weight: normal;
+  text-align: left;
 }
 
 .title {
@@ -24,163 +24,12 @@ p {
   font-size: 28px;
   line-height: 36px;
   text-align: left;
-    margin-bottom: 13px;
+  margin-bottom: 13px;
 }
 
-.overview {
-    font-size: 18px;
-    color: $COLOR-SECONDARY;
-    margin-bottom: 6px;
+.subTitle {
+  font-size: 18px;
+  color: $COLOR-SECONDARY;
+  margin-bottom: 6px;
 }
 
-.playerContainer {
-    box-sizing: border-box;
-    padding: 27px 19px;
-    background: $BACKGROUND-SECONDARY;
-    border-radius: 15px;
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.playerContainer img {
-    width: 86px;
-    height: 86px;
-    border-radius: 20px;
-
-}
-
-.playerTextWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 18px;
-    padding-bottom: 10px;
-}
-
-.playerTextWrapper div:last-of-type {
-    display: flex;
-    justify-content: space-between;
-    width: 290px;
-}
-
-.playerName {
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.playerTextItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: unset!important;
-    height: 40px;
-}
-
-.playerTextItem span:first-of-type {
-    font-size: 12px;
-    color: $COLOR-SECONDARY;
-}
-
-.playerTextItem span:last-of-type {
-    font-size: 18px;
-}
-
-.editProfileButton {
-    color: $COLOR-BUTTON;
-    border: none;
-    outline: none;
-    font-size: 12px;
-    background: none;
-    height: 20px;
-    margin-left: 10px;
-}
-
-.steamContainer {
-    width: 270px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $BACKGROUND-SECONDARY;
-    border-radius: 15px;
-    color: $COLOR-SECONDARY;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.steamContainer img {
-    border-radius: 5px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.steamContainer.connected {
-    color: $COLOR-THIRD;
-}
-
-.steamContainer.connected img {
-    display: none;
-}
-
-.balanceContainer {
-    box-sizing: border-box;
-    padding: 17px 19px;
-    background: $BACKGROUND-SECONDARY;
-    border-radius: 15px;
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.balanceItem {
-    font-size: 25px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.balanceItem:first-of-type {
-    margin-right: 87px;
-    color: $COLOR-THIRD;
-}
-
-.balanceItem span {
-    margin-right: 20px;
-}
-
-.balanceItem svg {
-    margin-right: 4px;
-}
-
-.balanceItem button {
-    width: 125px;
-    height: 40px;
-    color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    background: $BACKGROUND-BUTTON;
-    border: none;
-    outline: none;
-
-    &:hover {
-        background: $BACKGROUND-BUTTON--HOVER;
-    }
-
-    &:focus {
-        border: none;
-        outline: none;
-    }
-}
-
-.wrapper {
-    position: relative;
-}
-
-.testButton {
-    position: absolute;
-    right: -250px;
-    top: 45%;
-}

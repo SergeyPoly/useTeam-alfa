@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './TournamentHistory.module.scss';
+import Button from '../../../shared/components/Button';
 
 const TournamentHistory = props => {
   const { tournaments } = props;
@@ -18,20 +19,23 @@ const TournamentHistory = props => {
     ),
   );
   return (
-    <div className={styles.container}>
-      <div className={styles.tournaments}>
-        <table className={styles.container}>
-          <tr className={styles.title}>
-            <th>TOURNAMENT</th>
-            <th>DATE</th>
-            <th>MODE</th>
-            <th>ROLE</th>
-            <th>RESULT</th>
-          </tr>
-          {tournamentElements}
-        </table>
+      <div className={styles.container}>
+        <div className={styles.tournaments}>
+          <table className={styles.container}>
+            <tr className={styles.title}>
+              <th>TOURNAMENT</th>
+              <th>DATE</th>
+              <th>MODE</th>
+              <th>ROLE</th>
+              <th>RESULT</th>
+            </tr>
+            {tournamentElements}
+          </table>
+        </div>
+          <div className={styles.buttonContainer}>
+              <Button classType='outline' text="Load More" additionalClass={styles.loadMore}/>
+          </div>
       </div>
-    </div>
   );
 };
 

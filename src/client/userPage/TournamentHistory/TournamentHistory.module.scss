@@ -1,95 +1,98 @@
 @import '../user.variables';
 
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tournaments {
-    width: 675px;
-    box-sizing: border-box;
-    padding: 15px 17px;
-    border-radius: 15px;
-    background: $BACKGROUND-SECONDARY;
+  width: 675px;
+  box-sizing: border-box;
+  padding: 15px 17px;
+  border-radius: 15px;
+  background: $BACKGROUND-SECONDARY;
 }
 
 .title {
-    background: rgba(116, 123, 170, 0.25);
-    width: 100%;
-    border-radius: 5px;
-    display: flex;
-    justify-content: flex-start;
-    padding: 4px 22px;
+  background: rgba(116, 123, 170, 0.25);
+  width: 93%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 7px 22px;
+  margin-bottom: 10px;
 }
 
 .title th {
-    color: #8988B6;
-    font-size: 10px;
-    text-align: center;
+  color: #8988B6;
+  font-size: 10px;
+  text-align: center;
 
-    &:first-of-type {
-        width: 28%;
-        text-align: left;
-    }
+  &:first-of-type {
+    width: 28%;
+    text-align: left;
+  }
 
-    &:nth-of-type(2) {
-        width: 27%
+  &:nth-of-type(2) {
+    width: 27%
 
-    }
+  }
 
-    &:nth-of-type(3) {
-        width: 15%
-    }
+  &:nth-of-type(3) {
+    width: 15%
+  }
 
-    &:nth-of-type(4) {
-        width: 21%
-    }
+  &:nth-of-type(4) {
+    width: 21%
+  }
 
-    &:nth-of-type(5) {
-        width: 9%;
-    }
-}
-
-.itemContainer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    padding: 4px 22px;
-    box-sizing: border-box;
+  &:nth-of-type(5) {
+    width: 9%;
+  }
 }
 
 .tournamentItem {
-    padding: 4px 22px;
-    box-sizing: border-box;
+  padding: 8px 22px;
+  box-sizing: border-box;
 }
 
 .tournamentItem td {
-    color: #8988B6;
-    font-size: 15px;
-    display: inline-block;
-    text-align: center;
+  color: #8988B6;
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
 
-    &:first-of-type {
-        width: 28%;
-        text-align: left;
-        color: #fff;
-    }
+  &:first-of-type {
+    width: 28%;
+    text-align: left;
+    color: #fff;
+  }
 
-    &:nth-of-type(2) {
-        width: 27%
+  &:nth-of-type(2) {
+    width: 27%
 
-    }
+  }
 
-    &:nth-of-type(3) {
-        width: 15%
-    }
+  &:nth-of-type(3) {
+    width: 15%
+  }
 
-    &:nth-of-type(4) {
-        width: 21%
-    }
+  &:nth-of-type(4) {
+    width: 21%
+  }
 
-    &:nth-of-type(5) {
-        width: 9%;
-        color: #fff;
-    }
+  &:nth-of-type(5) {
+    width: 9%;
+    color: #fff;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.loadMore {
+  margin-top: 10px;
 }

@@ -1,0 +1,53 @@
+@import '../user.variables';
+
+.balanceContainer {
+  box-sizing: border-box;
+  padding: 17px 19px;
+  background: $BACKGROUND-SECONDARY;
+  border-radius: 15px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.balanceItem {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.balanceItem:first-of-type {
+  margin-right: 87px;
+  color: $COLOR-THIRD;
+}
+
+.balanceItem span {
+  margin-right: 20px;
+}
+
+.balanceItem svg {
+  margin-right: 4px;
+}
+
+.balanceItem button {
+  width: 125px;
+  height: 40px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  background: $BACKGROUND-BUTTON;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background: $BACKGROUND-BUTTON--HOVER;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
