@@ -1,36 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import styles from './NavLink.module.scss';
 import { NavLink } from 'react-router-dom';
+import { shallowEqual, useSelector } from 'react-redux';
 
-const links = [
-    {
-        to: '/',
-        label: 'Home',
-    },
-    {
-        to: '/tournaments/',
-        label: 'Tournaments',
-    },
-];
+import styles from './NavbarMenu.module.scss';
+import { links } from './links'
+import { linksAuth } from './linksAuth'
 
-const linksAuth = [
-    {
-        to: '/',
-        label: 'Profile',
-    },
-    {
-        to: '/team/',
-        label: 'Team',
-    },
-    {
-        to: '/tournaments/',
-        label: 'Tournaments',
-    },
-];
-
-const NavLinks = ({isAuth, invited}) => {
+const NavbarMenu = ({isAuth}) => {
+    const invited = useSelector(state => state.navbar.invited, shallowEqual); // AJAX data required
 
     const linkItems = links.map(({ to, label }) => (
         <li className={styles.nav_item} key={label}>
@@ -60,16 +38,15 @@ const NavLinks = ({isAuth, invited}) => {
 
     return (
         <nav>
-            <ul>
+            <ul className={styles.nav}>
                 {isAuth ? linkItemsAuth : linkItems}
             </ul>
         </nav>
     );
 };
 
-export default NavLinks;
+export default NavbarMenu;
 
-NavLinks.propTypes = {
+NavbarMenu.propTypes = {
     isAuth: PropTypes.bool.isRequired,
-    invited: PropTypes.bool.isRequired
 };

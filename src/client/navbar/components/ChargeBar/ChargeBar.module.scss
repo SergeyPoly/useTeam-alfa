@@ -1,13 +1,9 @@
 @import "src/shared/styles/scss/shared";
 
 .charge_bar{
-    display: inline-block;
-    float: right;
-    height: 39px;
 
     &__wrapper{
-        height: 100%;
-        @include flex(flex-start, center)
+        @include flex(flex-end, center)
     }
 
     &__account_balance {

@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 
+import { setAuthData } from '../reducer/NavbarActionCreators';
 import styles from './Navbar.module.scss'
-import NavLinks from '../NavLinks';
+import NavbarMenu from '../NavbarMenu';
 import Logo from '../../../../shared/components/Logo';
 import Button from '../../../../shared/components/Button';
 import ChargeBar from '../ChargeBar';
 
 export const Navbar = () => {
-    const [isAuth, setIsAuth] = useState(false); // no data available yet
-    const invited = true; // no data available yet
-    const accountBalance = 725; // no data available yet
+    const dispatch = useDispatch();
+    const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual); // AJAX data required
     const text = isAuth ? 'recharge' : 'sign up';
 
     return (
@@ -18,21 +19,20 @@ export const Navbar = () => {
                 <div className={'column-3'}>
                     <Logo text={'useTeam'}/>
                 </div>
-                <div className={'column-6'}>
-                    <NavLinks
+                <div className={'column-5'}>
+                    <NavbarMenu
                         isAuth={isAuth}
-                        invited={invited}
                     />
                 </div>
-                <div className={'column-3'}>
+                <div className={`column-4 ${styles.navbar__wraper}`}>
+                    {isAuth ? <ChargeBar/> : null}
                     <Button
                         type={'button'}
                         classType={'basic'}
                         additionalClass={styles.navbar__button}
                         text={text}
-                        handleClick={()=>{setIsAuth(!isAuth)}}
+                        handleClick={() => dispatch(setAuthData())}
                     />
-                    {isAuth ? <ChargeBar accountBalance={accountBalance}/> : null}
                 </div>
             </div>
         </div>
