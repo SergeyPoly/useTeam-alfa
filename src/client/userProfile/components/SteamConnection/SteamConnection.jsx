@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './SteamConnection.module.scss';
-import steamIcon from '../../../assets/images/userProfile/steam.jpg';
+import steamIcon from '../../../../assets/images/userProfile/steam.jpg';
 
 const SteamConnection = props => {
   const { connected } = props;
@@ -18,7 +18,7 @@ const SteamConnection = props => {
     </div>
   );
 
-  return <>{steamElem}</>;
+  return useMemo(() => <>{steamElem}</>, [steamElem]);
 };
 
 export default SteamConnection;

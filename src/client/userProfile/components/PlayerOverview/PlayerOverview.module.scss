@@ -1,4 +1,4 @@
-@import '../user.variables';
+@import '../../_user.variables';
 
 .playerContainer {
   box-sizing: border-box;
@@ -61,4 +61,5 @@
   background: none;
   height: 20px;
   margin-left: 10px;
+    cursor: pointer;
 }

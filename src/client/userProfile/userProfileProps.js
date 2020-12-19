@@ -19,7 +19,6 @@ const userProfileProps = {
         value: '3',
       },
     ],
-    editProfileButton: 'EDIT PROFILE',
   },
   balance: {
     charge: '725',
@@ -62,6 +61,12 @@ const userProfileProps = {
       result: '1/4',
     },
   ],
+  team: {
+    name: 'JabbasTeam 2',
+    date: 'Nov 3, 2020 13:47',
+    charge: '5',
+    invites: '6',
+  },
 };
 
 export default userProfileProps;

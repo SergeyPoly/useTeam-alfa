@@ -1,4 +1,4 @@
-@import '../user.variables';
+@import '../../_user.variables';
 
 .container {
   display: flex;
@@ -10,14 +10,13 @@
   width: 675px;
   box-sizing: border-box;
   padding: 15px 17px;
-  border-radius: 15px;
+  border-radius: 5px;
   background: $BACKGROUND-SECONDARY;
 }
 
 .title {
   background: rgba(116, 123, 170, 0.25);
-  width: 93%;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   display: flex;
   justify-content: flex-start;
   padding: 7px 22px;

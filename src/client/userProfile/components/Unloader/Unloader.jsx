@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as DefaultUser } from '../../../assets/images/userProfile/unloader.svg';
+import { ReactComponent as DefaultUser } from '../../../../assets/images/userProfile/unloader.svg';
 
 import styles from './Unloader.module.scss';
 
