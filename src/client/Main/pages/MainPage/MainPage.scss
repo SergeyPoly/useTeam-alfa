@@ -1,10 +1,11 @@
+@import 'src/shared/styles/scss/shared.scss';
+
 .main-page {
     text-align: -webkit-center;
     width: 1440px;
     background-color: #26254F;
 
-    &--container{
+    &--container {
         width: 1260px; 
     }
   };
-  

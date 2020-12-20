@@ -1,4 +1,7 @@
-.slider-section{
-    display: flex;
-    justify-content: start;
+@import 'src/shared/styles/scss/shared';
+
+.slider{
+    &-dots{
+        @include flex(center)
+    }
 }

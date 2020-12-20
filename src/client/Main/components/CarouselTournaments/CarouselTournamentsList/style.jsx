@@ -1,4 +1,4 @@
-// import "../../../../../../shared/styles/scss/variables.scss"
+import "../../../../../shared/styles/scss/variables.scss"
 
 export const carouselStyle = bgImageUrl => {
   return {

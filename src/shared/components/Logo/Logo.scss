@@ -1,0 +1,11 @@
+@import "src/shared/styles/scss/shared";
+
+.logo {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+    &-text {
+        @include font-source-sans(24px, white, 900)
+    }
+}

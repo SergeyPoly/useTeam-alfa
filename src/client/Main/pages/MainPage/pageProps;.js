@@ -1,5 +1,6 @@
 import bannerEnticingBg from "../../../../assets/images/banners/bg_banner1.png";
 import bannerAdvantageBg from "../../../../assets/images/banners/bg_banner2.png";
+import { v4 as uuidv4 } from 'uuid';
 
 export const pageProps = {
     sectionBannerEnticing: {
@@ -18,6 +19,7 @@ export const pageProps = {
 export const TournamentsData = [
     {
       name: 'Name Tour1',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
       url_for_card:
@@ -38,6 +40,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour2',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327396/useTeam/tournament2_rntabh.png',
       url_for_card:
@@ -58,6 +61,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour3',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/banner-dota2_z64fyi.png',
       url_for_card:
@@ -78,6 +82,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour4',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398101/useTeam/kunkkabloodseeker_s1bzdh.jpg',
       url_for_card:
@@ -98,6 +103,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour5',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398275/useTeam/FYz_jIXNVZWCd6fDqDIRnmotJ5WCoZ-opw1FDdnxrEY_po6tao.png',
       url_for_card:
@@ -118,6 +124,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour6',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/dota-2-banner-2_dweulm.jpg',
       url_for_card:
@@ -138,6 +145,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour7',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398101/useTeam/kunkkabloodseeker_s1bzdh.jpg',
       url_for_card:
@@ -158,6 +166,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour8',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398099/useTeam/dota2-banner_oug7re.jpg',
       url_for_card:
@@ -183,6 +192,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour Big Fight 9',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398099/useTeam/dota2-banner_oug7re.jpg',
       url_for_card:
@@ -203,6 +213,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour10',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398101/useTeam/kunkkabloodseeker_s1bzdh.jpg',
       url_for_card:
@@ -223,6 +234,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour11',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398099/useTeam/dota2-banner_oug7re.jpg',
       url_for_card:
@@ -243,6 +255,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour12',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398101/useTeam/kunkkabloodseeker_s1bzdh.jpg',
       url_for_card:
@@ -263,6 +276,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour13',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398099/useTeam/dota2-banner_oug7re.jpg',
       url_for_card:
@@ -283,6 +297,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour14',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398101/useTeam/kunkkabloodseeker_s1bzdh.jpg',
       url_for_card:
@@ -303,6 +318,7 @@ export const TournamentsData = [
     },
     {
       name: 'Name Tour15',
+      id:uuidv4(),
       url_for_banner:
         'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398099/useTeam/dota2-banner_oug7re.jpg',
       url_for_card:

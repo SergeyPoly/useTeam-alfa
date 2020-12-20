@@ -1,25 +1,27 @@
 import React from 'react';
-import { TournamentsData } from '../../../../pages/MainPage/pageProps;';
 import SliderItem from '../SliderItem';
 import './SliderContainer.scss';
 
-const SliderContainer = () => {
-  const sliderItems = TournamentsData.filter(
-    el => el.status === 'announce',
-  ).map(elem => {
-    return <SliderItem elem={elem} />;
-  });
+const SliderContainer = ({ sliderItems, actualSlide }) => {
 
-  let sliderLength = sliderItems.length * 1260;
-  const style = { width: `${sliderLength}px` };
+  let widthBreakPoints = 1260;
+  let sliderLength = sliderItems.length * (widthBreakPoints + 3);
+
+  const style = {
+    width: `${sliderLength}px`,
+    transform: `translate3d(${-actualSlide * widthBreakPoints}px, 0, 0)`,
+  };
+
+  const sliderItemsArr = sliderItems.map((elem, index) => {
+    const displaySlide = actualSlide === index ? 'visible ' : 'hidden ';
+    return <SliderItem elem={elem} displaySlide={displaySlide} />;
+  });
 
   return (
     <div className="slider-container">
-      <button />
       <div className="slider-items" style={style}>
-        {sliderItems}
+        {sliderItemsArr}
       </div>
-      <button />
     </div>
   );
 };
