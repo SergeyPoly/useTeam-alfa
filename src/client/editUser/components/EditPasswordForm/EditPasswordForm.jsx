@@ -18,14 +18,16 @@ const EditPasswordForm = props => {
 
   const { oldPassword, newPassword, newPasswordRepeat } = editPasswordProps;
 
-  const onSubmit = values => {
+  const onSubmit = (values, { resetForm }) => {
+      const { oldPassword, newPassword, newPasswordRepeat } = values;
     if (oldPassword !== password) {
       alert('Incorrect password, please try again');
     } else if (newPassword !== newPasswordRepeat) {
       alert("New passwords don't match");
     } else {
-      setPassword(values.newPassword);
-      alert(`Success, your new password is values.newPassword`);
+      setPassword(newPassword);
+      alert(`Success, your new password is ${newPassword}`);
+        resetForm(initialValues);
     }
   };
 

@@ -2,7 +2,7 @@
 
 const validationRegExp = {
   name: {
-    regExp: /^[a-zA-Z0-9\s]*$/,
+    regExp: /^[a-zA-Z0-9\s]*$/g,
     text: 'Only latin letters, numbers and spaces',
   },
   passwordNumber: {

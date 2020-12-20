@@ -22,8 +22,10 @@
   box-sizing: border-box;
   padding: 10px 12px;
   border-radius: 5px;
+    font-family: $FONT;
 
-  &::placeholder {
+
+    &::placeholder {
     color: $COLOR-SECONDARY;
     opacity: 0.2;
     font-size: 13px;
