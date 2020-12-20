@@ -1,0 +1,8 @@
+@import "src/shared/styles/scss/shared";
+
+.not_ready_page {
+    background-color: $third-color;
+    flex-direction: column;
+    @include font-source-sans(50px, #FFFFFF, 700);
+    @include flex (center, center);
+}
