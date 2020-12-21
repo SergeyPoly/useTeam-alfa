@@ -13,7 +13,8 @@ export const AppRoutes = () => {
                    render={() => !isAuth ?
                        <NotReadyPage/> :
                        <NotReadyPage/>
-                   }/>
+                   }
+            />
 
             <Route path="/player/:id">
                 <NotReadyPage/>
