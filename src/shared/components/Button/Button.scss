@@ -32,11 +32,15 @@
         padding: 10px 30px;
     }
 
-    &-success {
+    &-alert {
         border: none;
         background-color: #D99A51;
         @include font-source-sans(24px, #FFFFFF, 700);
         padding: 15px 52px;
+    }
+
+    &-disabled {
+        cursor: not-allowed;
     }
 }
 
