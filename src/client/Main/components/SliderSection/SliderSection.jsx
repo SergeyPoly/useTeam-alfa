@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react';
 import SliderContainer from './components/SliderContainer';
 import { TournamentsData } from '../../pages/MainPage/pageProps;';
 import './SliderSection.scss';
+import Button from '../../../../shared/components/Button/Button';
 
 const SliderSection = () => {
   const [actualSlide, setActualSlide] = useState(0);
   const sliderItems = TournamentsData.filter(el => el.status === 'announce');
-  const sliderDots = sliderItems.map(elem => {
+  const sliderDots = sliderItems.map((elem, index) => {
     return (
       <li>
-        <button />
+        <Button
+          classType="inactive"
+          additionalClass="slider-dots--unit"
+          handleClick={() => setActualSlide(index)}
+        />
       </li>
     );
   });

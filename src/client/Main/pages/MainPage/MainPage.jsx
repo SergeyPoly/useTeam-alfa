@@ -1,23 +1,21 @@
 import React from 'react';
 import Banner from '../../components/SectionBanner/components/Banner/Banner';
-import CarouselCurrentTournaments from '../../components/CarouselCurrentTournaments';
 import SliderSection from '../../components/SliderSection';
-import CarouselTournaments from '../../components/CarouselTournaments/CarouselTournaments';
 import { pageProps } from './pageProps;';
 import SectionBanner from '../../components/SectionBanner/SectionBanner';
 import InfoList from '../../components/SectionBanner/components/InfoList';
 import './MainPage.scss';
+import SectionTourList from '../../components/SectionTourList/SectionTourList';
 
 const MainPage = () => {
   const { sectionBannerEnticing, sectionBannerAdvantage } = pageProps;
   return (
     <div className="main-page">
       <div className="main-page--container">
-        {/* <CarouselTournaments /> */}
 
         <SliderSection />
 
-        <CarouselCurrentTournaments />
+        <SectionTourList/>
 
         <SectionBanner
           title={sectionBannerEnticing.title}

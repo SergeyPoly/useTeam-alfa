@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../../../shared/components/Button/Button';
 import './SectionBanner.scss';
 
 const SectionBanner = ({ title, text,children }) => {
@@ -9,7 +10,7 @@ const SectionBanner = ({ title, text,children }) => {
         {children}
         <div className="section-banner--description">
           <p className="section-banner--text">{text}</p>
-          <button type="button">Sign up</button>
+          <Button classType="basic" additionalClass='section-banner--button' text='CHECK In'></Button>
         </div>
       </div>
     </div>
