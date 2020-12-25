@@ -1,0 +1,21 @@
+@import "src/shared/styles/scss/shared";
+
+.navbar {
+    background-color: #2D3357;
+    padding: 20px 0;
+
+    &__content {
+        height: 100%;
+        @include flex(flex-start, center);
+        flex-wrap: nowrap;
+    }
+
+    &__wraper{
+        @include flex(flex-end, center);
+    }
+
+    &__button {
+        font-size: 15px;
+        padding: 11px 36px;
+    }
+}
