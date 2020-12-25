@@ -12,7 +12,8 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.3",
         "redux": "^4.0.5",
-        "web-vitals": "^0.2.4"
+        "web-vitals": "^0.2.4",
+        "yup": "^0.32.8"
     },
     "devDependencies": {
         "eslint-config-airbnb": "^18.2.0",
