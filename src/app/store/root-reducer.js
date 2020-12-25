@@ -1,8 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { exampleReducer } from '../../client/example/reducer/example.reeducer';
+import { navbarReducer } from '../../client/navbar/components/reducer/NavbarReducer';
 
 const rootReducer = combineReducers({
-  example: exampleReducer,
+    navbar: navbarReducer,
 });
 
 export default rootReducer;

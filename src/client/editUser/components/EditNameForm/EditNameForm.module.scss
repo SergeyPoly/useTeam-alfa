@@ -1,0 +1,44 @@
+@import "../../_editUser.variables.scss";
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.formControl label {
+  color: $COLOR-SECONDARY;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.formControl input {
+  background: $BACKGROUND-PRIMARY;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 5px;
+    font-family: $FONT;
+
+
+    &::placeholder {
+    color: $COLOR-SECONDARY;
+    opacity: 0.2;
+    font-size: 13px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px $BACKGROUND-THIRD;
+  }
+}
+
+.button {
+  box-sizing: border-box;
+  padding: 11px 37px;
+  margin-top: 5px;
+}
+

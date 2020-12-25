@@ -4,7 +4,7 @@ import React from 'react';
 export const ExamplePage = () => {
   return (
     <>
-      <MainPage />
+      <p>Hello world!</p>
     </>
   );
 };
