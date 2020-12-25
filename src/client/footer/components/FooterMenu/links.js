@@ -1,18 +1,24 @@
+import { v4 } from 'uuid';
+
 export const links = [
     {
-        to: '/Partnership/',
-        label: 'Partnership',
+        id: v4(),
+        to: '/partnership/',
+        text: 'Partnership',
     },
     {
-        to: '/Terms/',
-        label: 'Terms',
+        id: v4(),
+        to: '/terms/',
+        text: 'Terms',
     },
     {
-        to: '/About/',
-        label: 'About',
+        id: v4(),
+        to: '/about/',
+        text: 'About',
     },
     {
-        to: '/Contacts/',
-        label: 'Contacts',
+        id: v4(),
+        to: '/contacts/',
+        text: 'Contacts',
     },
 ];

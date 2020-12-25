@@ -7,7 +7,7 @@ import { Navbar } from '../../../client/navbar/components/Navbar';
 
 export const App = () => {
     return (
-        <>
+
             <div className={'app-wraper'}>
                 <div className={'app-navbar'}>
                     <Navbar/>
@@ -19,6 +19,6 @@ export const App = () => {
                     <Footer />
                 </div>
             </div>
-        </>
+
     );
 };

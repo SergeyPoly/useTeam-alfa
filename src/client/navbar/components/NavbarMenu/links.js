@@ -1,10 +1,14 @@
+import { v4 } from 'uuid';
+
 export const links = [
     {
+        id: v4(),
         to: '/',
-        label: 'Home',
+        text: 'Home',
     },
     {
+        id: v4(),
         to: '/tournaments/',
-        label: 'Tournaments',
+        text: 'Tournaments',
     },
 ];
