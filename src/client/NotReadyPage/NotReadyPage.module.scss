@@ -5,4 +5,5 @@
     flex-direction: column;
     @include font-source-sans(50px, #FFFFFF, 700);
     @include flex (center, center);
+    flex: 0 0 100%;
 }

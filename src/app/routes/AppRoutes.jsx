@@ -5,7 +5,6 @@ import { NoMatchPage } from '../../client/NoMatchPage';
 
 export const AppRoutes = () => {
     const isAuth = true;
-    const inProgress = true;
 
     return (
         <Switch>
@@ -16,7 +15,7 @@ export const AppRoutes = () => {
                    }
             />
 
-            <Route path="/player/:id">
+            <Route path="/players/:id">
                 <NotReadyPage/>
             </Route>
 
@@ -24,29 +23,27 @@ export const AppRoutes = () => {
                 <NotReadyPage/>
             </Route>
 
-            <Route exact path="/tournaments/:id"
-                   render={() => !inProgress ?
-                       <NotReadyPage/> :
-                       <NotReadyPage/>
-                   }/>
+            <Route exact path="/tournaments/:id">
+                <NotReadyPage/>
+            </Route>
 
             <Route exact path="/team/">
                 <NotReadyPage/>
             </Route>
 
-            <Route exact path="/Partnership/">
+            <Route exact path="/partnership/">
                 <NotReadyPage/>
             </Route>
 
-            <Route exact path="/Terms/">
+            <Route exact path="/terms/">
                 <NotReadyPage/>
             </Route>
 
-            <Route exact path="/About/">
+            <Route exact path="/about/">
                 <NotReadyPage/>
             </Route>
 
-            <Route exact path="/Contacts/">
+            <Route exact path="/contacts/">
                 <NotReadyPage/>
             </Route>
 
