@@ -1,50 +1,52 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { shallowEqual, useSelector } from 'react-redux';
+
 import { NotReadyPage } from '../../client/NotReadyPage';
 import { NoMatchPage } from '../../client/NoMatchPage';
 
 export const AppRoutes = () => {
-    const isAuth = true;
+    const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual);
 
     return (
         <Switch>
             <Route exact path="/"
                    render={() => !isAuth ?
-                       <NotReadyPage/> :
-                       <NotReadyPage/>
+                       <NotReadyPage text={'Main'}/> :
+                       <NotReadyPage text={'Profile'}/>
                    }
             />
 
             <Route path="/players/:id">
-                <NotReadyPage/>
+                <NotReadyPage text={'Player'}/>
             </Route>
 
             <Route exact path="/tournaments/">
-                <NotReadyPage/>
+                <NotReadyPage text={'Tournaments'}/>
             </Route>
 
             <Route exact path="/tournaments/:id">
-                <NotReadyPage/>
+                <NotReadyPage text={'Tournament'}/>
             </Route>
 
             <Route exact path="/team/">
-                <NotReadyPage/>
+                <NotReadyPage text={'Team'}/>
             </Route>
 
             <Route exact path="/partnership/">
-                <NotReadyPage/>
+                <NotReadyPage text={'Partnership'}/>
             </Route>
 
             <Route exact path="/terms/">
-                <NotReadyPage/>
+                <NotReadyPage text={'Terms'}/>
             </Route>
 
             <Route exact path="/about/">
-                <NotReadyPage/>
+                <NotReadyPage text={'About'}/>
             </Route>
 
             <Route exact path="/contacts/">
-                <NotReadyPage/>
+                <NotReadyPage text={'Contacts'}/>
             </Route>
 
             <Route path="*">
