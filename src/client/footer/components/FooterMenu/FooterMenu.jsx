@@ -6,15 +6,15 @@ import { links } from './links'
 
 const FooterMenu = () => {
 
-    const linkItems = links.map(({ to, label }) => (
-        <li className={styles.nav_item} key={label}>
+    const linkItems = links.map(({ to, text, id }) => (
+        <li className={styles.nav_item} key={id}>
             <NavLink
                 exact
                 className={styles.nav_link}
                 activeClassName={styles.nav_link_active}
                 aria-current="page"
                 to={to}>
-                {label}
+                {text}
             </NavLink>
         </li>
     ));

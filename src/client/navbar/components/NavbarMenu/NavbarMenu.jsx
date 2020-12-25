@@ -10,28 +10,28 @@ import { linksAuth } from './linksAuth'
 const NavbarMenu = ({isAuth}) => {
     const invited = useSelector(state => state.navbar.invited, shallowEqual); // AJAX data required
 
-    const linkItems = links.map(({ to, label }) => (
-        <li className={styles.nav_item} key={label}>
+    const linkItems = links.map(({ to, text, id }) => (
+        <li className={styles.nav_item} key={id}>
             <NavLink
                 exact
                 className={styles.nav_link}
                 activeClassName={styles.nav_link_active}
                 aria-current="page"
                 to={to}>
-                {label}
+                {text}
             </NavLink>
         </li>
     ));
 
-    const linkItemsAuth = linksAuth.map(({ to, label }) => (
-        <li className={styles.nav_item} key={label}>
+    const linkItemsAuth = linksAuth.map(({ to, text, id }) => (
+        <li className={styles.nav_item} key={id}>
             <NavLink
                 exact
-                className={`${styles.nav_link} ${label === 'Profile' && invited ? styles.invitePoint : ''}`}
+                className={`${styles.nav_link} ${text === 'Profile' && invited ? styles.invitePoint : ''}`}
                 activeClassName={styles.nav_link_active}
                 aria-current="page"
                 to={to}>
-                {label}
+                {text}
             </NavLink>
         </li>
     ));
