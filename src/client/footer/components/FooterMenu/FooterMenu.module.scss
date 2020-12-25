@@ -1,0 +1,21 @@
+@import "src/shared/styles/scss/shared";
+
+.nav{
+
+    &_wraper{
+        float: right;
+    }
+
+    &_item {
+        margin-bottom: 12px;
+    }
+
+    &_link {
+        text-decoration: none;
+        @include font-source-sans(14px, #FFFFFF, 400);
+    }
+
+    &_link_active {
+        color: #8B79FF;
+    }
+}

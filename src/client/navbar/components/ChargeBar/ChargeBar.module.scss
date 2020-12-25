@@ -1,0 +1,14 @@
+@import "src/shared/styles/scss/shared";
+
+.charge_bar{
+
+    &__wrapper{
+        @include flex(flex-end, center)
+    }
+
+    &__account_balance {
+        @include font-source-sans(18px, #FFFFFF, 400);
+        margin-right: 18px;
+        margin-left: 3px;
+    }
+}

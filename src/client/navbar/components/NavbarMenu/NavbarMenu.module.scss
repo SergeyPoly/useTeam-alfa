@@ -1,0 +1,33 @@
+@import "src/shared/styles/scss/shared";
+
+.nav{
+    @include flex(flex-start, center);
+
+    &_item {
+        margin-right: 42px;
+    }
+
+    &_link {
+        text-decoration: none;
+        @include font-source-sans(18px, #FFFFFF, 400);
+    }
+
+    &_link_active {
+        color: #8B79FF;
+    }
+}
+
+.invitePoint{
+    position: relative;
+
+    &::after{
+        position: absolute;
+        top: -8px;
+        right: -11px;
+        width: 9px;
+        height: 9px;
+        content: '';
+        border-radius: 50%;
+        background: #99E47F;
+    }
+}
