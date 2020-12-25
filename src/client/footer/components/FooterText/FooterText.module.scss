@@ -1,0 +1,9 @@
+@import "src/shared/styles/scss/shared";
+
+.footer_text {
+    @include font-source-sans(12px, #747BAA, 400);
+
+    &__gap {
+        margin-bottom: 20px;
+    }
+}
