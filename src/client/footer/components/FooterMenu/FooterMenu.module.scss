@@ -1,8 +1,6 @@
 @import "src/shared/styles/scss/shared";
 
 .nav{
-    flex-direction: column;
-    @include flex(flex-start, flex-start);
 
     &_wraper{
         float: right;

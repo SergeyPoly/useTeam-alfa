@@ -1,14 +1,19 @@
+import { v4 } from 'uuid';
+
 export const linksAuth = [
     {
+        id: v4(),
         to: '/',
-        label: 'Profile',
+        text: 'Profile',
     },
     {
+        id: v4(),
         to: '/team/',
-        label: 'Team',
+        text: 'Team',
     },
     {
+        id: v4(),
         to: '/tournaments/',
-        label: 'Tournaments',
+        text: 'Tournaments',
     },
 ];
