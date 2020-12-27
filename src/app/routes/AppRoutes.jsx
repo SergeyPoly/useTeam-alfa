@@ -1,5 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { ExamplePage } from '../../client/example/pages/ExamplePage';
+import TeamPage from '../../client/Team/pages/TeamPage';
 import MainPage from '../../client/Main/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
 
@@ -31,7 +33,7 @@ export const AppRoutes = () => {
             </Route>
 
             <Route exact path="/team/">
-                <NotReadyPage text={'Team'}/>
+                <TeamPage />
             </Route>
 
             <Route exact path="/partnership/">
