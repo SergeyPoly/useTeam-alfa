@@ -1,0 +1,31 @@
+.slider-item{
+    height: 450px;
+    width: 1260px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 3px 35px 33px #26254F;
+    
+    &--header{
+        color: #fff;
+        font-weight: bolt;
+        font-size: 50px;
+        text-transform: uppercase;
+        margin: 15px;
+      }
+      
+      &--description {
+        color: #fff;
+        font-weight: bolt;
+        font-size: 32px;
+        margin: 15px;
+      };
+      &--button{
+        width: 205px;
+        height: 60px;
+        margin-left: 15px;
+      }
+}

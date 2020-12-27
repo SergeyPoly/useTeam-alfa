@@ -1,23 +1,12 @@
-$primary-color: #2D3357; //content blocks
-$secondary-color: #745FF8; //buttons
-$third-color: #252A48; //background
-
-$block-border-radius: 15px;
-
-$breakpoints: (
-    "phone": 320px,
-    "tablet": 768px,
-    "desktop": 1024px,
-);
-
-$border-radius: 15px;
-
-/*FONTS*/
-$font-main: 'Mukta Vaani', sans-serif;
 /*BACKGROUND COLOR*/
 $background-color--main: #26254f;
 $background-color--secondary: #2c2b5f;
 $background-color--third: #35346c;
+
+/*BORDER-COLORS*/
+//
+//
+//
 
 /*BORDER-RADIUS*/
 
@@ -31,4 +20,16 @@ $text-color--win: #99e47f;
 $text-color--def: #f65164;
 $text-color--error: #f65164;
 
+/*Z-INDEX*/
+$z-index--negative: -1;
+$z-index--low: 1;
+$z-index--middle: 2;
+$z-index--top: 3;
 
+/*TRANSITION*/
+$transition--main: all 0.4s ease;
+$transition--slow: all 0.6s ease;
+$transition--fast: all 0.2s ease;
+
+/*FONTS*/
+$font-main: 'Mukta Vaani', sans-serif;
