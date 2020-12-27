@@ -1,3 +1,5 @@
+@import "src/shared/styles/scss/shared";
+
 .slider-item{
     height: 450px;
     width: 1260px;
@@ -8,21 +10,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0 3px 35px 33px #26254F;
-    
+
     &--header{
-        color: #fff;
-        font-weight: bolt;
-        font-size: 50px;
+        @include font-source-sans(50px, #fff, bold);
         text-transform: uppercase;
         margin: 15px;
       }
-      
-      &--description {
-        color: #fff;
-        font-weight: bolt;
-        font-size: 32px;
+
+    &--description {
+        @include font-source-sans(32px, #fff, bold);
         margin: 15px;
-      };
+    }
+
       &--button{
         width: 205px;
         height: 60px;

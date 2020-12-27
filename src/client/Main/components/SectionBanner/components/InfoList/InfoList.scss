@@ -3,7 +3,7 @@
 .info-list{
     @include flex(space-evenly, center);
     width: 100%;
-    
+
     &--container{
     @include flex(space-evenly, center);
     width: 270px;
@@ -14,7 +14,7 @@
     }
     &--description{
         margin: 0;
-        color:#8988B6
+        @include font-source-sans(false, #8988B6);
     }
     &--text {
         color: $text-color--main;

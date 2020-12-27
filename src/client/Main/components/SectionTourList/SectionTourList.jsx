@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './SectionTourList.scss';
 import TourCard from './TourCard/TourCard';
+import Heading from '../../../../shared/components/Heading';
 
 const sliderCustom = {
   dots: false,
@@ -15,10 +16,10 @@ const sliderCustom = {
 
 const SectionTourList = () => {
   return (
-    <div>
-      <h2 className="title-style"> Tournaments live </h2>
-      <Slider {...sliderCustom}>{TourCard}</Slider>
-    </div>
+      <div>
+          <Heading type={'section'} text={'Tournaments live'}/>
+          <Slider {...sliderCustom}>{TourCard}</Slider>
+      </div>
   );
 };
 

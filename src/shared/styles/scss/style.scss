@@ -46,9 +46,16 @@ body,
     &-content {
         flex: 1 0 auto;
         display: flex;
+        background-color: $third-color;
     }
 
     &-footer, &-navbar {
         flex: 0 0 auto;
     }
+}
+
+.temporary-style__content {
+    width: 100%;
+    @include flex (flex-start, flex-start);
+    flex-wrap: nowrap
 }

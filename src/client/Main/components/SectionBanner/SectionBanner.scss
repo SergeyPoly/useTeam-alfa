@@ -1,12 +1,5 @@
 @import 'src/shared/styles/scss/shared';
 
-.title-style {
-  color: $text-color--main;
-  font-weight: bold;
-  margin: 40px 0;
-  font-family: $font-main;
-}
-
 .section-banner{
   &--container {
     background: $background-color--secondary;
