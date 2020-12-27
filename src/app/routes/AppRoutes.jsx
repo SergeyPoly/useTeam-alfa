@@ -13,7 +13,7 @@ export const AppRoutes = () => {
         <Switch>
             <Route exact path="/"
                    render={() => !isAuth ?
-                       <NotReadyPage text={'Main'}/> :
+                       <MainPage/> :
                        <NotReadyPage text={'Profile'}/>
                    }
             />
