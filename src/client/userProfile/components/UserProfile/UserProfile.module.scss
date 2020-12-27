@@ -1,0 +1,35 @@
+@import '../../_user.variables';
+
+p {
+  margin: 0;
+}
+
+.userProfile {
+  font-family: $FONT;
+  width: 715px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: $COLOR-PRIMARY;
+  background: $BACKGROUND-PRIMARY;
+  box-sizing: border-box;
+  padding: 20px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: left;
+  margin-bottom: 13px;
+}
+
+.subTitle {
+  font-size: 18px;
+  color: $COLOR-SECONDARY;
+  margin-bottom: 6px;
+}
+
