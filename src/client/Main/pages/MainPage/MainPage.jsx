@@ -12,10 +12,9 @@ const MainPage = () => {
   return (
     <div className="main-page">
       <div className="main-page--container">
-
         <SliderSection />
 
-        <SectionTourList/>
+        <SectionTourList />
 
         <SectionBanner
           title={sectionBannerEnticing.title}

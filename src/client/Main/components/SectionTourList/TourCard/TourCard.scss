@@ -22,7 +22,7 @@
       height: 150px;
     };
     &--name_container{
-      @include flex(space-between,start)
+      @include flex(space-between,flex-start)
     };
     &--name {
       color: white;
@@ -31,7 +31,7 @@
       word-wrap: break-word;
       overflow: hidden;
       margin:0;
-      text-align:start;
+      text-align:flex-start;
     };
     &--name_prize {
       color: #747BAA;

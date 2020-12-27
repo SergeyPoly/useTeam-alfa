@@ -12,7 +12,7 @@ const SliderItem = ({ elem, displaySlide }) => {
     <div className="slider-item" style={style}>
       <h3 className="slider-item--header">{elem.name}</h3>
       <p className="slider-item--description">{elem.description}</p>
-      <Button classType="success" additionalClass='slider-item--button' text='SIgn up'></Button>
+      <Button classType="alert" additionalClass='slider-item--button' text='SIgn up'></Button>
     </div>
   );
 };
