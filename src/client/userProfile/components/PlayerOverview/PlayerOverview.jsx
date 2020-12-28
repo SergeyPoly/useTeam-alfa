@@ -6,7 +6,7 @@ import userAvatar from '../../../../assets/images/userProfile/userAvatar-2x.jpg'
 import Unloader from '../Unloader';
 
 const PlayerOverview = props => {
-  const { playerName, playerItems } = props;
+  const { playerName, playerItems, editPlayer } = props;
 
   const playerItemsElem = playerItems.map(({ title: itemTitle, value }) => (
     <div className={styles.playerTextItem} key={itemTitle}>
@@ -29,12 +29,12 @@ const PlayerOverview = props => {
           </div>
           <div>{playerItemsElem}</div>
         </div>
-        <button type="button" className={styles.editProfileButton}>
+        <button type="button" className={styles.editProfileButton} onClick={editPlayer}>
           EDIT PROFILE
         </button>
       </div>
     ),
-    [playerName, playerItemsElem],
+    [playerName, playerItemsElem, editPlayer],
   );
 };
 
@@ -43,8 +43,10 @@ export default PlayerOverview;
 PlayerOverview.propTypes = {
   playerName: PropTypes.string.isRequired,
   playerItems: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  editPlayer: PropTypes.func,
 };
 
 PlayerOverview.defaultProps = {
   playerItems: [],
+  editPlayer: () => {},
 };

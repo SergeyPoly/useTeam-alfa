@@ -2,8 +2,16 @@
 .teamPage {
   @include font-source-sans(18px, #747baa);
   background: $third-color;
+    box-sizing: border-box;
+    padding: 20px;
 
   .title {
     @include font-source-sans(28px, #ffffff, 700);
+      line-height: 36px;
+      margin-bottom: 13px;
   }
+
+    h3 {
+        margin: 10px 0 !important;
+    }
 }

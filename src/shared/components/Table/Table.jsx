@@ -3,7 +3,6 @@ import style from './Table.module.scss';
 
 const Table = props => {
   const { list, children } = props;
-  console.log(children);
   const heads = Object.keys(list[0]);
   const headsElem = heads.map(head => (
     <th className={style.tableHead}>{head}</th>

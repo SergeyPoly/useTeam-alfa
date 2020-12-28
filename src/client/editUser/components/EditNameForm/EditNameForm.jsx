@@ -8,14 +8,16 @@ import Error from '../Error/Error';
 import Button from '../../../../shared/components/Button';
 
 const EditNameForm = props => {
-  const { name, setName } = props;
+  const { name, setName, setIsOpenPopup } = props;
 
   const initialValues = {
     name,
   };
+
   const onSubmit = values => {
-    setName(values.name);
-    alert(`Editing success! New name is ${values.name}`);
+      alert(`Editing success! New name is ${values.name}`);
+      setName(values.name);
+      setIsOpenPopup(false);
   };
 
   return (
@@ -50,4 +52,5 @@ export default EditNameForm;
 EditNameForm.propTypes = {
   name: PropTypes.string.isRequired,
   setName: PropTypes.func.isRequired,
+  setIsOpenPopup: PropTypes.func.isRequired,
 };

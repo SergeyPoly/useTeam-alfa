@@ -1,13 +1,24 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import Loader from 'react-loader-spinner';
 import styles from './TournamentHistory.module.scss';
 import Button from '../../../../shared/components/Button';
 
 const TournamentHistory = props => {
   const { tournaments } = props;
+  const [tournamentsState, setTournamentsState] = useState([...tournaments]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const tournamentElements = tournaments.map(
+  const loadMore = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setTournamentsState(state => [...state, ...tournaments]);
+      setIsLoading(false);
+    }, 1000);
+  };
+
+  const tournamentElements = tournamentsState.map(
     ({ name, date, mode, role, result }, number) => (
       <tr className={styles.tournamentItem} key={`${name}${date}${number}`}>
         <td>{name}</td>
@@ -18,6 +29,24 @@ const TournamentHistory = props => {
       </tr>
     ),
   );
+
+  const button = isLoading ? (
+    <Loader
+      type="TailSpin"
+      color="#567EF7"
+      height={25}
+      width={25}
+      timeout={1000}
+    />
+  ) : (
+    <Button
+      classType="outline"
+      text="Load More"
+      additionalClass={styles.loadMore}
+      handleClick={loadMore}
+    />
+  );
+
   return useMemo(
     () => (
       <div className={styles.container}>
@@ -33,17 +62,10 @@ const TournamentHistory = props => {
             {tournamentElements}
           </tbody>
         </table>
-        <div className={styles.buttonContainer}>
-          <Button
-            classType="outline"
-            text="Load More"
-            additionalClass={styles.loadMore}
-            handleClick={() => console.log('LOAD MORE')}
-          />
-        </div>
+        <div className={styles.buttonContainer}>{button}</div>
       </div>
     ),
-    [tournamentElements],
+    [button, tournamentElements],
   );
 };
 
