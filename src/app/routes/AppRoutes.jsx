@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import TeamPage from '../../client/Team/pages/TeamPage';
-import MainPage from '../../client/Main/pages/MainPage/MainPage';
+import MainPage from '../../client/mainPage/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
 
 import { NotReadyPage } from '../../client/NotReadyPage';

@@ -17,7 +17,7 @@ const Invites = props => {
       setInvitesState(state => [...state, ...invites]);
       setIsLoading(false);
     }, 1000);
-  };
+  }; 
 
   const acceptTeam = () => {
       setTeam(true);
