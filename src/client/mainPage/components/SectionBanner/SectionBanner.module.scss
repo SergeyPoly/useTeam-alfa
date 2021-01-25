@@ -6,11 +6,12 @@
   }
 
 .sectionBannerDescription {
-    height: 120px;
+    padding: 40px 0;
     @include flex(space-between,center);
     margin: 0 40px;
     @media screen and (max-width: 650px) {
       justify-content: center;
+      padding: 15px 0;
     }
   }
 
@@ -20,7 +21,7 @@
     font-weight: bold;
     font-family: $font-main;
     font-size: 24px;
-    margin: 0;
+    margin: 2% 0;
   }
   
 .sectionBannerButton{

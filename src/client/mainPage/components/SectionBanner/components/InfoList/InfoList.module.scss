@@ -10,7 +10,8 @@
     height: 170px;
     background: rgba(54, 72, 134, 0.6);
     border-radius: $border-radius;
-    padding: 0 4%;
+    margin: 2%;
+    flex-direction: column;
     }
 .infoListDescription{
     margin: 0;
