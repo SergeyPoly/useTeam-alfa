@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import MainPage from '../../client/Main/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
 
 import { NotReadyPage } from '../../client/NotReadyPage';
