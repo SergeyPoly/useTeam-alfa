@@ -1,0 +1,12 @@
+@import "src/shared/styles/scss/shared";
+
+.test_page {
+    background-color: $third-color;
+    flex: 0 0 100%;
+    padding: 20px 0;
+
+    &__content {
+        @include flex ();
+        flex-wrap: nowrap;
+    }
+}
