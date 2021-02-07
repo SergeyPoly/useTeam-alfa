@@ -1,6 +1,6 @@
 @import "src/shared/styles/scss/shared";
 
-.test_page {
+.tournaments_page {
     background-color: $third-color;
     flex: 0 0 100%;
     padding: 20px 0;
@@ -9,4 +9,5 @@
         @include flex ();
         flex-wrap: nowrap;
     }
+
 }
