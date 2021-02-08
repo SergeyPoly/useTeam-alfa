@@ -4,6 +4,7 @@ import Select from 'react-select'
 import PropTypes from 'prop-types';
 
 import './CustomSelectField.scss'
+import { selectStyles } from './styles'
 
 export const CustomSelectField = ({ label, additionalLabelClass, additionalContainerClass, ...props}) => {
     const { options } = props;
@@ -16,42 +17,13 @@ export const CustomSelectField = ({ label, additionalLabelClass, additionalConta
         <label className={ fullLabelClassName }>{label}</label> :
         null;
 
-    const customStyles = {
-        control: (styles) => ({
-            ...styles,
-            boxSizing: 'border-box',
-            width: '100%',
-            backgroundColor: '#252A48',
-            borderRadius: '5px',
-            border: 'none',
-            fontSize: '15px',
-            fontWeight: 'normal',
-        }),
-        singleValue: (styles) => ({
-            ...styles,
-            fontFamily: 'Roboto, sans-serif',
-            letterSpacing: '0.2px',
-            fontSize: '15px',
-            color: 'white',
-            fontWeight: 'normal',
-        }),
-        menuList: (styles) => ({
-            ...styles,
-            fontFamily: 'Roboto, sans-serif',
-            letterSpacing: '0.2px',
-            fontSize: '15px',
-            color: 'black',
-            fontWeight: 'normal',
-        }),
-    };
-
     return (
         <div className={fullContainerClassName}>
             {selectLabel}
             <Select
                 {...field}
                 {...props}
-                styles={customStyles}
+                styles={selectStyles}
                 value={(options.find(option => option.value === field.value) || '')}
                 onChange={({value}) => setValue(value)}
             />

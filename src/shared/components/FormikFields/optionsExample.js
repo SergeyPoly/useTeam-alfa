@@ -42,6 +42,6 @@ export const fieldOptions = {
             { value: 'chips', label: 'Pringles' },
             { value: 'fish', label: 'Stavridka' },
             { value: 'meat', label: 'Dry meat' }
-        ] //a same structure required!
+        ] //same structure required!
     }
 };
