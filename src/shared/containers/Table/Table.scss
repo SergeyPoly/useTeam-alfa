@@ -19,9 +19,19 @@
     }
 }
 
-.win-marker::after {
+.inline-block {
+    display: inline-block;
+}
+
+.win-marker {
     padding-left: 15px;
-    content: 'WIN';
     @include font-source-sans(18px, #99E47F, 700);
     text-transform: uppercase;
+}
+
+.sortable {
+    cursor: pointer;
+    &:hover {
+        color: white;
+    }
 }

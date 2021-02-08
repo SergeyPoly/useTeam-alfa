@@ -8,18 +8,27 @@ import './Table.scss'
 
 const Table = ({tableData, children}) => {
 
-    const {headingText, tableColTitles, winMarker, maxWidth} = tableData;
+    const {headingText, tableColTitles, winMarker, winMarkerElement, maxWidth} = tableData;
     const tableHeading = headingText ?
         <Heading
             type={'block'}
             text={headingText}
-            additionalClass={winMarker ? 'win-marker' : ''}
+            additionalClass={winMarker ? 'inline-block' : ''}
         /> : null;
-    const tableColTitle = tableColTitles.map(element => <span key={v4()} >{element}</span>);
+    const tableColTitle = tableColTitles.map(({name, sorter}) => {
+        return (
+            sorter ?
+                <span key={v4()} onClick={() => sorter()} className='sortable'>{name}</span> :
+                <span key={v4()}>{name}</span>
+        );
+    });
 
     return (
         <div style={{maxWidth}}>
-            {tableHeading}
+            <div>
+                {tableHeading}
+                {winMarkerElement}
+            </div>
             <div className={'table-container'}>
                 <div className={'table-col-title'} style={{display: 'grid', gridTemplateColumns: `repeat(${tableColTitles.length}, 1fr)`}}>
                     {tableColTitle}
@@ -43,7 +52,11 @@ Table.propTypes = {
     tableData: PropTypes.shape({
         headingText: PropTypes.string,
         winMarker: PropTypes.bool,
-        tableColTitles: PropTypes.arrayOf(PropTypes.string).isRequired,
+        winMarkerElement: PropTypes.element,
+        tableColTitles: PropTypes.arrayOf(PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            sorter: PropTypes.func
+        })).isRequired,
         maxWidth: PropTypes.string
     }).isRequired,
 };
