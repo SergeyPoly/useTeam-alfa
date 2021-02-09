@@ -1,0 +1,18 @@
+@import "src/shared/styles/scss/shared";
+
+.title {
+    @include font-source-sans(18px, #747BAA, 400);
+    margin-bottom: 15px;
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+.article {
+    @include font-source-sans(18px, white, 700)
+}
+
+.description {
+    @include font-source-sans(12px, #747BAA, 400)
+}
