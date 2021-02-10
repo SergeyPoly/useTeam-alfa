@@ -1,0 +1,13 @@
+@import "src/shared/styles/scss/shared";
+
+.select {
+    &-label {
+        display: block;
+        @include font-source-sans(18px, #747BAA, normal);
+        margin-bottom: 6px;
+    }
+
+    &-container {
+        margin-bottom: 10px;
+    }
+}

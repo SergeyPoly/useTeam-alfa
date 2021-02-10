@@ -1,0 +1,21 @@
+@import "src/shared/styles/scss/shared";
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.first_cell {
+    @include flex(flex-start, center)
+}
+
+.text {
+    &_normal {
+        @include font-source-sans(15px, #8988B6, 400);
+    }
+    &_highlited {
+        @include font-source-sans(15px, white, 400);
+    }
+}
