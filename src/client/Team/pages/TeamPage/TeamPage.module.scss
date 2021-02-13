@@ -1,17 +1,11 @@
-@import 'src/shared/styles/scss/style.scss';
+@import "src/shared/styles/scss/shared";
 .teamPage {
-  @include font-source-sans(18px, #747baa);
-  background: $third-color;
-    box-sizing: border-box;
-    padding: 20px;
+    background-color: $third-color;
+    flex: 0 0 100%;
+    padding: 20px 0;
 
-  .title {
-    @include font-source-sans(28px, #ffffff, 700);
-      line-height: 36px;
-      margin-bottom: 13px;
-  }
-
-    h3 {
-        margin: 10px 0 !important;
+    &__content {
+        @include flex ();
+        flex-wrap: nowrap;
     }
 }

@@ -27,7 +27,7 @@ const SectionTourList = () => {
 
   return (
     <div>
-      <Heading type={'section'} text={'Tournaments live'} />
+      <Heading type={'section'} text={'Tournaments live'} additionalClass={styles.headTextTopDistance}/>
       <div className={styles.tourList}>{TourCards}</div>
       <Loaders func={addCards} visible={visible} />
     </div>

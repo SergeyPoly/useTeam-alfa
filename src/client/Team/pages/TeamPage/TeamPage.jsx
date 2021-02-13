@@ -1,22 +1,30 @@
 import React from 'react';
 import FormCreateTeam from '../../components/FormCreateTeam';
 import style from './TeamPage.module.scss';
-import OverviewTeam from '../../components/OverviewTeam';
-import { overviewTeamProps } from '../../components/OverviewTeam/overviewTeamProps';
-import Teammates from '../../components/Teammates';
-import { teammatesListProps } from '../../components/Teammates/teammatesListProps';
-import TournamentHistory from '../../components/TornamentHistory';
-import { tournamentHistoryProps } from '../../components/TornamentHistory/tournamentHistoryProps';
+import styles from '../../../Tournaments/pages/TournamentsPage/TournamentsPage.module.scss';
+import Sidebar from '../../../../shared/containers/Sidebar';
+import Achievements from '../../components/Achievements';
+
 
 const TeamPage = () => {
+    const sidebarData = [
+        {
+            headingText: 'Achievements',
+            Component: <Achievements/>
+        },
+    ];
+
   return (
-    <div className={style.teamPage}>
-      <h2 className={style.title}>Team</h2>
-      <FormCreateTeam />
-      <OverviewTeam {...overviewTeamProps} />
-      <Teammates {...teammatesListProps} />
-      <TournamentHistory {...tournamentHistoryProps} />
-    </div>
+      <div className={style.teamPage}>
+          <div className={`${style.teamPage__content} container`}>
+              <div className={'column-3'}>
+                  <Sidebar sidebarData={sidebarData}/>
+              </div>
+              <div className={'column-9'}>
+                  <FormCreateTeam />
+              </div>
+          </div>
+      </div>
   );
 };
 

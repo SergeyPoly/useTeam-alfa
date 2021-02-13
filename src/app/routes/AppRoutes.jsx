@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import TeamPage from '../../client/Team/pages/TeamPage';
 import MainPage from '../../client/mainPage/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
@@ -11,6 +10,8 @@ import UserProfile from '../../client/userProfile/components/UserProfile';
 import userProfileProps from './../../client/userProfile/userProfileProps';
 import Achievements from '../../client/achievements/components/Achievements';
 import achivementsProps from './../../client/achievements/achievementsProps';
+import TournamentsPage from '../../client/Tournaments/pages/TournamentsPage';
+
 
 export const AppRoutes = () => {
     const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual);
@@ -33,11 +34,11 @@ export const AppRoutes = () => {
             </Route>
 
             <Route exact path="/tournaments/">
-                <NotReadyPage text={'Tournaments'}/>
+                <TournamentsPage />
             </Route>
 
             <Route exact path="/tournaments/:id">
-                <NotReadyPage text={'Tournament'}/>
+                <NotReadyPage text={'Tournaments'}/>
             </Route>
 
             <Route exact path="/team/"

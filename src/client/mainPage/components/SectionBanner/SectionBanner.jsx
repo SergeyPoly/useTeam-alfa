@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 const SectionBanner = ({ title, text, children }) => {
   return (
     <div className={styles.sectionBanner}>
-      <Heading type={'section'} text={title} />
+      <Heading type={'section'} text={title} additionalClass={styles.headTextTopDistance}/>
       <div className={styles.sectionBannerContainer}>
         {children}
         <div className={styles.sectionBannerDescription}>
