@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default class BaseHttpService {
-  BASE_URL = "https://students-store-app.herokuapp.com";
+  BASE_URL = 'https://students-store-app.herokuapp.com';
 
   _accessToken = null;
 
@@ -9,40 +9,40 @@ export default class BaseHttpService {
 
   _expiresIn = null;
 
-  async get(endpoint = "", options = {}) {
+  async get(endpoint = '', options = {}) {
     Object.assign(options, this._getCommonOptions());
     return axios
       .get(`${this.BASE_URL}/${endpoint}`, options)
-      .then((res) => res.data)
-      .catch((error) => this._handleHttpError(error));
+      .then(res => res.data)
+      .catch(error => this._handleHttpError(error));
   }
 
-  async post(endpoint = "", data = {}, options = {}) {
+  async post(endpoint = '', data = {}, options = {}) {
     Object.assign(options, this._getCommonOptions());
     return axios
       .post(`${this.BASE_URL}/${endpoint}`, data, options)
-      .catch((error) => this._handleHttpError(error));
+      .catch(error => this._handleHttpError(error));
   }
 
-  async put(endpoint = "", data = {}, options = {}) {
+  async put(endpoint = '', data = {}, options = {}) {
     Object.assign(options, this._getCommonOptions());
     return axios
       .put(`${this.BASE_URL}/${endpoint}`, data, options)
-      .catch((error) => this._handleHttpError(error));
+      .catch(error => this._handleHttpError(error));
   }
 
-  async delete(endpoint = "", options = {}) {
+  async delete(endpoint = '', options = {}) {
     Object.assign(options, this._getCommonOptions());
     return axios
       .delete(`${this.BASE_URL}/${endpoint}`, options)
-      .catch((error) => this._handleHttpError(error));
+      .catch(error => this._handleHttpError(error));
   }
 
-  async patch(endpoint = "", data = {}, options = {}) {
+  async patch(endpoint = '', data = {}, options = {}) {
     Object.assign(options, this._getCommonOptions());
     return axios
       .patch(`${this.BASE_URL}/${endpoint}`, data, options)
-      .catch((error) => this._handleHttpError(error));
+      .catch(error => this._handleHttpError(error));
   }
 
   _handleHttpError(error) {
@@ -59,7 +59,7 @@ export default class BaseHttpService {
     this._refreshToken = null;
     this._expiresIn = null;
     this.removeToken();
-    window.location.replace("/");
+    window.location.replace('/');
   };
 
   _getCommonOptions = () => {
@@ -76,15 +76,15 @@ export default class BaseHttpService {
     return this._accessToken ? this._accessToken : this.loadToken();
   }
 
-  saveToken = (data) => {
+  saveToken = data => {
     const { accessToken, expiresIn, refreshToken } = data;
     this._accessToken = accessToken;
     this._refreshToken = refreshToken;
     this._expiresIn = expiresIn;
 
-    localStorage.setItem("accessToken", accessToken);
-    localStorage.setItem("refreshToken", refreshToken);
-    localStorage.setItem("expiresIn", expiresIn);
+    localStorage.setItem('accessToken', accessToken);
+    localStorage.setItem('refreshToken', refreshToken);
+    localStorage.setItem('expiresIn', expiresIn);
 
     return {
       accessToken,
@@ -94,9 +94,9 @@ export default class BaseHttpService {
   };
 
   loadToken() {
-    const accessToken = localStorage.getItem("accessToken");
-    const refreshToken = localStorage.getItem("refreshToken");
-    const expiresIn = localStorage.getItem("expiresIn");
+    const accessToken = localStorage.getItem('accessToken');
+    const refreshToken = localStorage.getItem('refreshToken');
+    const expiresIn = localStorage.getItem('expiresIn');
 
     this._accessToken = accessToken;
     this._refreshToken = refreshToken;
@@ -110,9 +110,8 @@ export default class BaseHttpService {
   }
 
   removeToken = () => {
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("refreshToken");
-    localStorage.removeItem("expiresIn");
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('expiresIn');
   };
-
 }
