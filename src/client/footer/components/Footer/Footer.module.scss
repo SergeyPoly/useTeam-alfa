@@ -1,0 +1,12 @@
+@import "src/shared/styles/scss/shared";
+
+.footer {
+    background-color: #2D3357;
+    padding: 43px 0;
+
+    &__content {
+        height: 100%;
+        @include flex(flex-start, flex-start);
+        flex-wrap: nowrap;
+    }
+}

@@ -13,4 +13,8 @@ export const types = {
         Component: ({children, fullClassName}) => <h3 className={fullClassName}>{children}</h3>,
         className: "heading-block"
     },
+    sidebar: {
+        Component: ({children, fullClassName}) => <h3 className={fullClassName}>{children}</h3>,
+        className: "heading-sidebar"
+    },
 };

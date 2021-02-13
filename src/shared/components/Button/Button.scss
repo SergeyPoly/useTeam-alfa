@@ -1,9 +1,16 @@
 @import "src/shared/styles/scss/shared";
 
 .button {
+<<<<<<< HEAD
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
+=======
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+>>>>>>> main
 
   &-basic {
     border: none;
@@ -31,11 +38,24 @@
     padding: 10px 30px;
   }
 
+<<<<<<< HEAD
   &-success {
     border: none;
     background-color: #D99A51;
     @include font-source-sans(24px, #FFFFFF, 700);
     padding: 15px 52px;
   }
+=======
+    &-alert {
+        border: none;
+        background-color: #D99A51;
+        @include font-source-sans(24px, #FFFFFF, 700);
+        padding: 15px 52px;
+    }
+
+    &-disabled {
+        cursor: not-allowed;
+    }
+>>>>>>> main
 }
 

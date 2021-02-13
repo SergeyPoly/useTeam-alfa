@@ -3,7 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@ant-design/icons": "^4.3.0",
         "@reduxjs/toolkit": "^1.4.0",
+        "antd": "^4.9.2",
         "formik": "^2.2.5",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
@@ -12,8 +14,13 @@
         "react-redux": "^7.2.1",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.3",
+        "react-select": "^4.0.2",
+        "react-slick": "^0.27.13",
         "redux": "^4.0.5",
-        "web-vitals": "^0.2.4"
+        "slick-carousel": "^1.8.1",
+        "uuid": "^8.3.2",
+        "web-vitals": "^0.2.4",
+        "yup": "^0.32.8"
     },
     "devDependencies": {
         "eslint-config-airbnb": "^18.2.0",
