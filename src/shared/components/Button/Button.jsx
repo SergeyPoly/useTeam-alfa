@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import {types} from "./types"
 import './Button.scss'
 
@@ -20,13 +19,11 @@ const Button = props => {
             {text}
         </button>
     );
-
 };
 
 export default Button;
 
 Button.defaultProps = {
-
     additionalClass: '',
     type: 'button',
     disabled: false
@@ -49,5 +46,4 @@ Button.propTypes = {
     additionalClass: PropTypes.string,
     handleClick: PropTypes.func,
     disabled: PropTypes.bool
-
-}
+};
