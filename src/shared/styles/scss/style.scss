@@ -19,7 +19,8 @@
 
 @for $i from 1 through 12 {
   .column-#{$i} {
-    flex-basis: (100 / (12 / $i) ) * 1%;
+
+    flex-basis: (100 / (12 / $i)) * 1%;
     padding: 0 15px;
   }
 }
@@ -36,7 +37,6 @@ body,
 }
 
 .app {
-
     &-wraper {
         display: flex;
         flex-direction: column;
@@ -52,10 +52,4 @@ body,
     &-footer, &-navbar {
         flex: 0 0 auto;
     }
-}
-
-.temporary-style__content {
-    width: 100%;
-    @include flex (flex-start, flex-start);
-    flex-wrap: nowrap
 }

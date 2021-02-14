@@ -1,36 +1,37 @@
 @import "src/shared/styles/scss/shared";
 
 .button {
+
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
     outline: none;
 
-    &-basic {
-        border: none;
-        background-color: $secondary-color;
-        @include font-source-sans(false, #FFFFFF, 700);
-    }
+  &-basic {
+    border: none;
+    background-color: $secondary-color;
+    @include font-source-sans(false, #FFFFFF, 700);
+  }
 
-    &-outline {
-        background-color: transparent;
-        border: 1px solid #567EF7;
-        @include font-source-sans(12px, #567EF7, 400);
-        padding: 7px 30px;
-    }
+  &-outline {
+    background-color: transparent;
+    border: 1px solid #567EF7;
+    @include font-source-sans(12px, #567EF7, 400);
+    padding: 7px 30px;
+  }
 
-    &-inactive {
-        border: none;
-        background-color: #3F456C;
-        @include font-source-sans(false, rgba(255, 255, 255, 0.75), 700);
-    }
+  &-inactive {
+    border: none;
+    background-color: #3F456C;
+    @include font-source-sans(false, rgba(255, 255, 255, 0.75), 700);
+  }
 
-    &-success {
-        border: none;
-        background-color: #99E47F;
-        @include font-source-sans(15px, #FFFFFF, 700);
-        padding: 10px 30px;
-    }
+  &-success {
+    border: none;
+    background-color: #99E47F;
+    @include font-source-sans(15px, #FFFFFF, 700);
+    padding: 10px 30px;
+  }
 
     &-alert {
         border: none;

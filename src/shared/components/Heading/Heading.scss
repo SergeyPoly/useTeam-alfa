@@ -12,6 +12,7 @@
         text-align: center;
     }
 
+
     &-block {
         @include font-source-sans(18px, #747BAA, 400);
         margin-bottom: 10px;
@@ -20,6 +21,7 @@
         @include font-source-sans(24px, #747BAA, 400);
         margin-bottom: 20px;
     }
+
 }
 
 
