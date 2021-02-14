@@ -9,7 +9,7 @@ import Button from '../../../../shared/components/Button';
 import Unloader from '../Unloader';
 
 const TeamUserProfile = props => {
-  const { team, teamProps } = props;
+  const { team, teamProps, openPopup, openChoosePopup } = props;
   const { name, charge, date, invites } = teamProps;
 
   if (team) {
@@ -31,7 +31,7 @@ const TeamUserProfile = props => {
           <span className={styles.name}>{name}</span>
           <span className={styles.date}>{`From ${date}`}</span>
 
-          <button type="button" className={styles.leaveTeam}>
+          <button type="button" className={styles.leaveTeam} onClick={openPopup}>
             LEAVE TEAM
           </button>
         </div>
@@ -49,7 +49,7 @@ const TeamUserProfile = props => {
         <span className={styles.date}>{`Invites to team - ${invites}`}</span>
         <Button
           classType="basic"
-          handleClick={() => console.log('CHECK INVITES')}
+          handleClick={openChoosePopup}
           text="CHECK INVITES"
           additionalClass={styles.checkInvites}
         />
@@ -63,9 +63,13 @@ export default TeamUserProfile;
 TeamUserProfile.propTypes = {
   team: PropTypes.bool,
   teamProps: PropTypes.objectOf(PropTypes.string),
+    openPopup: PropTypes.func,
+    openChoosePopup: PropTypes.func,
 };
 
 TeamUserProfile.defaultProps = {
   team: false,
   teamProps: {},
+    openPopup: () => {},
+    openChoosePopup: () => {},
 };

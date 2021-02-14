@@ -15,5 +15,10 @@ $BACKGROUND-PRIMARY: #252A48;
 $BACKGROUND-SECONDARY: #2D3357;
 $BACKGROUND-THIRD: #364886;
 
+div::-webkit-scrollbar {
+    color: transparent !important;
+    width: 0 !important;
+}
+
 
 

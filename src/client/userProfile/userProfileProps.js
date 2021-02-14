@@ -61,6 +61,32 @@ const userProfileProps = {
       result: '1/4',
     },
   ],
+  invites: [
+    {
+      team: 'Anasurimbor Kellhus',
+      matches: '250',
+      tournaments: '100',
+      cups: '1',
+    },
+    {
+      team: 'Drusas Achamian',
+      matches: '350',
+      tournaments: '300',
+      cups: '1',
+    },
+    {
+      team: 'Esmenet',
+      matches: '350',
+      tournaments: '999',
+      cups: '1',
+    },
+    {
+      team: 'Anasûrimbor Moënghus',
+      matches: '150',
+      tournaments: '1000',
+      cups: '1',
+    },
+  ],
   team: {
     name: 'JabbasTeam 2',
     date: 'Nov 3, 2020 13:47',
