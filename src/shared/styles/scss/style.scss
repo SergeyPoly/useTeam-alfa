@@ -19,11 +19,7 @@
 
 @for $i from 1 through 12 {
   .column-#{$i} {
-<<<<<<< HEAD
-    flex-basis: (100 / (12 / $i) ) * 1%;
-=======
     flex-basis: (100 / (12 / $i)) * 1%;
->>>>>>> main
     padding: 0 15px;
   }
 }
@@ -31,8 +27,6 @@
 .img-fluid {
   max-width: 100%;
   height: auto;
-<<<<<<< HEAD
-=======
 }
 
 html,
@@ -57,5 +51,4 @@ body,
     &-footer, &-navbar {
         flex: 0 0 auto;
     }
->>>>>>> main
 }
