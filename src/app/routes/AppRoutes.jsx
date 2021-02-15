@@ -11,6 +11,7 @@ import userProfileProps from './../../client/userProfile/userProfileProps';
 import Achievements from '../../client/achievements/components/Achievements';
 import achivementsProps from './../../client/achievements/achievementsProps';
 import TournamentsPage from '../../client/Tournaments/pages/TournamentsPage';
+import PartnershipPage from "../../client/Partnership/pages/PartnershipPage";
 
 
 export const AppRoutes = () => {
@@ -52,7 +53,7 @@ export const AppRoutes = () => {
             />
 
             <Route exact path="/partnership/">
-                <NotReadyPage text={'Partnership'}/>
+                <PartnershipPage/>
             </Route>
 
             <Route exact path="/terms/">
