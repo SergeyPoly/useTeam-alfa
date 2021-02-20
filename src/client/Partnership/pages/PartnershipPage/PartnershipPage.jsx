@@ -3,7 +3,8 @@ import styles from './PartnershipPage.module.scss'
 
 import Sidebar from '../../../../shared/containers/Sidebar';
 import PartnershipMainContent from "../../components/PartnershipMainContent";
-
+import Heading from "../../../../shared/components/Heading";
+import partnerProfileProps from '../../partnerProfileProps'
 
 const PartnershipPage = () => {
 
@@ -28,7 +29,8 @@ const PartnershipPage = () => {
                     <Sidebar sidebarData={sidebarDataBottom}/>
                 </div>
                 <div className={'column-9'}>
-                    <PartnershipMainContent />
+                    <Heading type={'page'} text='Partnership'/>
+                    <PartnershipMainContent partnerProfileProps={partnerProfileProps}/>
                 </div>
             </div>
         </div>
