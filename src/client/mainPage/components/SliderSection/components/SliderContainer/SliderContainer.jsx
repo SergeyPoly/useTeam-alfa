@@ -4,7 +4,7 @@ import SliderItem from '../SliderItem';
 import styles from './SliderContainer.module.scss';
 import PropTypes from 'prop-types';
 
-const SliderContainer = ({actualSlide }) => {
+const SliderContainer = ({ actualSlide }) => {
   let widthBreakPoints = 1260;
   let sliderLength = GetTour('announce').length * (widthBreakPoints + 3);
 
@@ -29,10 +29,10 @@ const SliderContainer = ({actualSlide }) => {
 
 export default SliderContainer;
 
-SliderContainer.propTypes={
-  actualSlide:PropTypes.number,
-}
+SliderContainer.propTypes = {
+  actualSlide: PropTypes.number,
+};
 
-SliderContainer.defaultProps={
-  actualSlide:0
-}
+SliderContainer.defaultProps = {
+  actualSlide: 0,
+};

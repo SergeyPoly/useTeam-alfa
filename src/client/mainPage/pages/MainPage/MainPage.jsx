@@ -7,9 +7,10 @@ import InfoList from '../../components/SectionBanner/components/InfoList';
 import styles from './MainPage.module.scss';
 import SectionTourList from '../../components/SectionTourList/SectionTourList';
 
+
 const MainPage = () => {
   const { sectionBannerEnticing, sectionBannerAdvantage } = pageProps;
-  return (
+    return (
     <div className={`${styles.container} ${styles.mainPage}`}>
       <SliderSection />
 
