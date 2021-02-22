@@ -1,24 +1,13 @@
-@import '../../_achievements.variables';
+@import "src/shared/styles/scss/shared";
 
 .noTournamentItems {
-    width: 100%;
-    border-radius: 15px;
-    background: $BACKGROUND-THIRD;
-    box-sizing: border-box;
+    border-radius: $border-radius;
+    background-color: $background-color--third;
     padding: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $COLOR-SECONDARY;
-    font-size: 12px;
-
-    p {
-        width: 40%;
-        line-height: 16px;
+    @include flex (space-between, center);
+    &__text {
+        @include font-source-sans(50px, false, false, 16px);
     }
 }
 
-.button {
-    box-sizing: border-box;
-    padding: 11px 25px;
-}
+

@@ -23,11 +23,11 @@ const Achievements = props => {
     ) : (
       <NoTournamentsItem />
     );
+
   return (
-    <section className={styles.achivements}>
+    <section className={styles.achievements}>
       <Heading type={"block"} text={"Tournaments won"}/>
-      <div className={styles.container}>
-        <p className={styles.subTitle}>Tournaments won</p>
+      <div>
         {achievementsElements}
       </div>
     </section>

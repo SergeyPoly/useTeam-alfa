@@ -1,26 +1,38 @@
-@import 'src/shared/styles/scss/style.scss';
+@import "src/shared/styles/scss/shared";
 .form {
-  @include flex();
-  border-radius: $block-border-radius;
-  background-color: $primary-color;
-  padding: 20px;
-  max-width: 450px;
-  //max-height: 180px;
+    @include flex();
+    border-radius: $block-border-radius;
+    background-color: $primary-color;
+    padding: 20px;
+    max-width: 450px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+
+    &__label {
+        margin-bottom: 50px;
+    }
+
+    &__charge {
+        @include font-source-sans(18px, $secondary-color, 700);
+        @include flex(center, center);
+      //margin: 10px 30px;
+    }
+    &__chargeLogo {
+      margin-right: 5px;
+      width: 7px;
+      height: 13px;
+      fill: none;
+    }
+    &__chargeSvg {
+        fill: $secondary-color;
+    }
+    &__submit {
+        justify-self: center;
+        padding: 11px 20px;
+    }
 }
-.formItem {
-  @include flex(center, center);
-  margin-bottom: 15px;
-}
-.formCharge {
-  @include font-source-sans(18px, $secondary-color, 700);
-  margin: 10px 30px;
-}
-.formChargeLogo {
-  margin-right: 5px;
-  width: 7px;
-  height: 18px;
-  fill: none;
-}
-.formChargeSvg {
-  fill: $secondary-color;
-}
+

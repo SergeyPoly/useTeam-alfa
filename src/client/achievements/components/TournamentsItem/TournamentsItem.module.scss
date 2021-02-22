@@ -1,18 +1,11 @@
 @import '../../_achievements.variables.scss';
 
 .tournamentItem {
-    width: 100%;
-    border-radius: 15px;
-    background: $BACKGROUND-THIRD;
-    box-sizing: border-box;
-    padding: 13px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    border-radius: $border-radius;
+    background-color: $background-color--third;
+    padding: 16px;
+    @include flex (space-between, center);
 
-    &:last-of-type {
-        margin-bottom: 0;
-    }
 }
 
 

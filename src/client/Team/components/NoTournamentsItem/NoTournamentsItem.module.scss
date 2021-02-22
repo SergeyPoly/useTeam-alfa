@@ -1,24 +1,18 @@
+@import "src/shared/styles/scss/shared";
+
+.noTournamentItems {
+    padding: 15px;
+    background-color: #364886;
+    border-radius: $border-radius;
+    @include flex(space-between, center);
+
+    &__text {
+        width: 40%;
+        @include font-source-sans(12px, $text-color--third, false, 16px);
+    }
+    &__button {
+        padding: 11px 25px;
+    }
+}
 
 
-//.noTournamentItems {
-//    width: 100%;
-//    border-radius: 15px;
-//    background: $BACKGROUND-THIRD;
-//    box-sizing: border-box;
-//    padding: 16px;
-//    display: flex;
-//    justify-content: space-between;
-//    align-items: center;
-//    color: $COLOR-SECONDARY;
-//    font-size: 12px;
-//
-//    p {
-//        width: 40%;
-//        line-height: 16px;
-//    }
-//}
-//
-//.button {
-//    box-sizing: border-box;
-//    padding: 11px 25px;
-//}
