@@ -1,21 +1,31 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import TeamPage from '../../client/Team/pages/TeamPage';
+import MainPage from '../../client/mainPage/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
 
 import { NotReadyPage } from '../../client/NotReadyPage';
 import { NoMatchPage } from '../../client/NoMatchPage';
+import UserProfile from '../../client/userProfile/components/UserProfile';
+import userProfileProps from './../../client/userProfile/userProfileProps';
+import Achievements from '../../client/achievements/components/Achievements';
+import achivementsProps from './../../client/achievements/achievementsProps';
 import TournamentsPage from '../../client/Tournaments/pages/TournamentsPage';
-import TeamPage from '../../client/Team/pages/TeamPage';
+
 
 export const AppRoutes = () => {
     const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual);
 
     return (
         <Switch>
+
             <Route exact path="/"
                    render={() => !isAuth ?
-                       <NotReadyPage text={'Main'}/> :
-                       <NotReadyPage text={'Profile'}/>
+                       <MainPage/> :
+                       <div className={'container temporary-style__content'}>
+                           <Achievements {...achivementsProps}/>
+                           <UserProfile {...userProfileProps} />
+                       </div>
                    }
             />
 
@@ -31,10 +41,15 @@ export const AppRoutes = () => {
                 <NotReadyPage text={'Tournaments'}/>
             </Route>
 
-            <Route exact path="/team/">
-                <TeamPage/>
-                <NotReadyPage text={'Team'}/>
-            </Route>
+            <Route exact path="/team/"
+                   render={() => !isAuth ?
+                       <MainPage/> :
+                       <div className={'container temporary-style__content'}>
+                           <Achievements {...achivementsProps}/>
+                           <TeamPage />
+                       </div>
+                   }
+            />
 
             <Route exact path="/partnership/">
                 <NotReadyPage text={'Partnership'}/>

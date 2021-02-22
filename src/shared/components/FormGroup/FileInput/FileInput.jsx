@@ -8,7 +8,6 @@ const FileInput = ({ label, ...props }) => {
     meta.touched && meta.error ? (
       <div className="error">{meta.error}</div>
     ) : null;
-  console.log(style);
   return (
     <>
       <label className={style.fileInputLabel}>
