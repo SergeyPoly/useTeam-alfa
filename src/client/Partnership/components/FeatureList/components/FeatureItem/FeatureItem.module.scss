@@ -1,0 +1,47 @@
+@import "src/shared/styles/scss/shared";
+
+.featureItem {
+    background: #2D3357;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.featureText {
+    padding: 0 10px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.featureTextItem {
+    padding-bottom: 10px;
+}
+
+.featureImg {
+    width: 85px;
+    height: 85px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.featureTitle {
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.featureDescr {
+    color: #747BAA;
+    max-width: 180px;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+.featureLink {
+    color: #fff;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+

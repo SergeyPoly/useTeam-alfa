@@ -1,0 +1,10 @@
+@import "src/shared/styles/scss/shared";
+
+.featureList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featureItem {
+    display: flex;
+}
