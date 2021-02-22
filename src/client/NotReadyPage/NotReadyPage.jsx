@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './NotReadyPage.module.scss'
 
 const NotReadyPage = ({text}) => {

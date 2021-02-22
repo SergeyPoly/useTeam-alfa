@@ -1,9 +1,12 @@
-@import 'src/shared/styles/scss/style.scss';
-.teamPage {
-  @include font-source-sans(18px, #747baa);
-  background: $third-color;
+@import "src/shared/styles/scss/shared";
 
-  .title {
-    @include font-source-sans(28px, #ffffff, 700);
-  }
+.teamPage {
+    background-color: $third-color;
+    flex: 0 0 100%;
+    padding: 20px 0;
+
+    &__content {
+        @include flex ();
+        flex-wrap: nowrap;
+    }
 }
