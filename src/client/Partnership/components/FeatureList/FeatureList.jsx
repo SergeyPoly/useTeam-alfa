@@ -18,7 +18,7 @@ const FeatureList = () => {
         },
     ]
 
-    const featureList = featureProps.map(item => <FeatureItem props = {item}/>)
+    const featureList = featureProps.map(item => <FeatureItem key={item.name} props = {item}/>);
     return(
         <div className={style.featureList}>
             {featureList}

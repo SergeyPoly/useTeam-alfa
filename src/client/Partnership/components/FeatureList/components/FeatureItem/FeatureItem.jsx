@@ -4,7 +4,6 @@ import {Img} from "react-image";
 
 const FeatureItem = ({props}) => {
     const {name, text, image, link} = props;
-    console.log(props);
     return(
         <div className={styles.featureItem}>
             <Img

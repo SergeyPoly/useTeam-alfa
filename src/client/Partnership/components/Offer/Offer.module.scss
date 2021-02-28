@@ -1,0 +1,113 @@
+@import "src/shared/styles/scss/shared";
+.offer {
+    margin-bottom: 40px;
+}
+.offerBase {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    padding: 27px 19px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #2D3357;
+    width: 460px;
+    h2 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    h3 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    p.offerDescr {
+        color: #747BAA;
+        font-size: 12px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .dates {
+        display: flex;
+        .datesTextItem {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            width: unset!important;
+            padding: 0 20px 20px 0;
+            & span:first-of-type {
+                font-size: 14px;
+                color: #747BAA;
+                padding-bottom: 5px;
+            }
+
+            & span:last-of-type {
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
+    .termsCheck {
+        color: #fff;
+        font-size: 12px;
+    }
+}
+.offerButtons {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    .offerCost {
+        color: #fff;
+        font-weight: bold;
+        padding-right: 20px;
+        font-size: 18px
+    }
+}
+.someButton {
+    padding: 10px 20px;
+}
+.form_radio_group {
+    display: inline-block;
+    overflow: hidden;
+}
+.form_radio_group_item {
+    display: inline-block;
+    float: left;
+}
+.form_radio_group input[type=radio] {
+    display: none;
+}
+.form_radio_group label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-right: none;
+    user-select: none;
+}
+
+.form_radio_group .form_radio_group_item:first-child label {
+    border-radius: 6px 0 0 6px;
+}
+.form_radio_group .form_radio_group_item:last-child label {
+    border-radius: 0 6px 6px 0;
+    border-right: 1px solid #999;
+}
+
+/* Checked */
+.form_radio_group input[type=radio]:checked + label {
+    background: #ffe0a6;
+}
+
+/* Hover */
+.form_radio_group label:hover {
+    color: #666;
+}

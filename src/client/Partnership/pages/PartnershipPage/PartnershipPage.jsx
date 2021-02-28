@@ -6,6 +6,7 @@ import PartnershipMainContent from "../../components/PartnershipMainContent";
 import Heading from "../../../../shared/components/Heading";
 import partnerProfileProps from '../../partnerProfileProps'
 import FeatureList from "../../components/FeatureList";
+import Offer from "../../components/Offer";
 
 const PartnershipPage = () => {
 
@@ -25,6 +26,7 @@ const PartnershipPage = () => {
                 <div className={'column-9'}>
                     <Heading type={'page'} text='Partnership'/>
                     <PartnershipMainContent partnerProfileProps={partnerProfileProps}/>
+                    <Offer />
                     <FeatureList />
                 </div>
             </div>
