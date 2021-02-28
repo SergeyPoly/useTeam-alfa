@@ -4,10 +4,11 @@ import { shallowEqual, useSelector } from 'react-redux';
 
 import { NotReadyPage } from '../../client/NotReadyPage';
 import { NoMatchPage } from '../../client/NoMatchPage';
-import TournamentsPage from '../../client/Tournaments/pages/TournamentsPage';
+import TournamentsPage from '../../client/tournaments/pages/TournamentsPage';
+import TournamentDetailsPage from '../../client/tournaments/pages/TournamentDetailsPage';
 
 export const AppRoutes = () => {
-    const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual);
+    const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
 
     return (
         <Switch>
@@ -27,7 +28,7 @@ export const AppRoutes = () => {
             </Route>
 
             <Route exact path="/tournaments/:id">
-                <NotReadyPage text={'Tournaments'}/>
+                <TournamentDetailsPage />
             </Route>
 
             <Route exact path="/team/">

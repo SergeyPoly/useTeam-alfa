@@ -10,7 +10,7 @@ export const types = {
         className: "textarea-field"
     },
     radio: {
-        Component: ({fullFieldClassName, ...props}) => <input className={fullFieldClassName} {...props}/>,
+        Component: ({fullFieldClassName, ...props}) => <input className={fullFieldClassName} {...props} />,
         className: "radio-field"
     },
     checkbox: {

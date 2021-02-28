@@ -2,10 +2,9 @@ import React from 'react';
 
 import { ReactComponent as Lightening } from '../../../../assets/icons/lightening.svg'
 import styles from './ChargeBar.module.scss';
-import { shallowEqual, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const ChargeBar = () => {
-    const accountBalance = useSelector(state => state.navbar.accountBalance, shallowEqual); // AJAX data required
+const ChargeBar = ({accountBalance}) => {
 
     return (
         <div className={styles.charge_bar}>
@@ -16,4 +15,9 @@ const ChargeBar = () => {
         </div>
     )
 };
+
+ChargeBar.propTypes = {
+    accountBalance: PropTypes.number.isRequired,
+};
+
 export default ChargeBar;
