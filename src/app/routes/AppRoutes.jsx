@@ -20,13 +20,13 @@ export const AppRoutes = () => {
         <Switch>
 
             <Route exact path="/"
-                   render={() => !isAuth ?
-                       <MainPage/> :
-                       <div className={'container temporary-style__content'}>
-                           <Achievements {...achivementsProps}/>
-                           <UserProfile {...userProfileProps} />
-                       </div>
-                   }
+                   // render={() => !isAuth ?
+                   //     <MainPage/> :
+                   //     // <div className={'container temporary-style__content'}>
+                   //     //     <Achievements {...achivementsProps}/>
+                   //     //     <UserProfile {...userProfileProps} />
+                   //     // </div>
+                   // }
             />
 
             <Route path="/players/:id">
@@ -44,10 +44,7 @@ export const AppRoutes = () => {
             <Route exact path="/team/"
                    render={() => !isAuth ?
                        <MainPage/> :
-                       <div className={'container temporary-style__content'}>
-                           <Achievements {...achivementsProps}/>
-                           <TeamPage />
-                       </div>
+                       <TeamPage />
                    }
             />
 
