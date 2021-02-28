@@ -8,8 +8,6 @@ import { NotReadyPage } from '../../client/NotReadyPage';
 import { NoMatchPage } from '../../client/NoMatchPage';
 import UserProfile from '../../client/userProfile/components/UserProfile';
 import userProfileProps from './../../client/userProfile/userProfileProps';
-import Achievements from '../../client/achievements/components/Achievements';
-import achivementsProps from './../../client/achievements/achievementsProps';
 import TournamentsPage from '../../client/Tournaments/pages/TournamentsPage';
 
 
