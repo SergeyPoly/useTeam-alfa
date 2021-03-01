@@ -13,7 +13,6 @@ export const AppRoutes = () => {
 
     return (
         <Switch>
-
             <Route exact path="/"
                    render={() => !isAuth ?
                        <MainPage/> :

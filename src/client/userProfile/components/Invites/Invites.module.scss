@@ -1,0 +1,150 @@
+@import '../../_user.variables';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $FONT;
+    background: $BACKGROUND-PRIMARY;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.invites {
+    width: 675px;
+    box-sizing: border-box;
+    padding: 15px 17px;
+    border-radius: 5px;
+}
+
+.title {
+    background: rgba(116, 123, 170, 0.25);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 7px 22px;
+    margin-bottom: 10px;
+}
+
+.title th {
+    color: #8988B6;
+    font-size: 10px;
+    text-align: center;
+
+    &:first-of-type {
+        width: 33%;
+        text-align: left;
+    }
+
+    &:nth-of-type(2) {
+        width: 12%
+
+    }
+
+    &:nth-of-type(3) {
+        width: 12%
+    }
+
+    &:nth-of-type(4) {
+        width: 12%
+    }
+
+    &:nth-of-type(5) {
+        width: 15%;
+    }
+
+    &:nth-of-type(6) {
+        width: 15%;
+    }
+}
+
+.invitesItem {
+    padding: 8px 22px;
+    box-sizing: border-box;
+}
+
+.invitesItem td {
+    color: #8988B6;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+
+    &:first-of-type {
+        width: 33%;
+        text-align: left;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+
+
+        img {
+            width: 18px;
+            height: 18px;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+
+        span {
+            width: 136px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &:nth-of-type(2) {
+        width: 12%
+
+    }
+
+    &:nth-of-type(3) {
+        width: 12%
+    }
+
+    &:nth-of-type(4) {
+        width: 12%
+    }
+
+    &:nth-of-type(5) {
+        width: 15%;
+
+        button {
+            outline: none;
+            border: none;
+            color: #99E47F;
+            background: none;
+            font-size: 15px;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+
+    &:nth-of-type(6) {
+        width: 15%;
+        button {
+            outline: none;
+            border: none;
+            color: #E45D68;
+            background: none;
+            font-size: 15px;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
