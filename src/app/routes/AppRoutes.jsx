@@ -1,20 +1,22 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import MainPage from '../../client/pages/main/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
 
-import { NotReadyPage } from '../../client/NotReadyPage';
-import { NoMatchPage } from '../../client/NoMatchPage';
-import TournamentsPage from '../../client/tournaments/pages/TournamentsPage';
-import TournamentDetailsPage from '../../client/tournaments/pages/TournamentDetailsPage';
+import { NotReadyPage } from '../../client/pages/NotReadyPage';
+import { NoMatchPage } from '../../client/pages/NoMatchPage';
+import TournamentsPage from '../../client/pages/tournaments/pages/TournamentsPage';
+import TournamentDetailsPage from '../../client/pages/tournaments/pages/TournamentDetailsPage';
 
 export const AppRoutes = () => {
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
 
     return (
         <Switch>
+
             <Route exact path="/"
                    render={() => !isAuth ?
-                       <NotReadyPage text={'Main'}/> :
+                       <MainPage/> :
                        <NotReadyPage text={'Profile'}/>
                    }
             />
@@ -23,7 +25,7 @@ export const AppRoutes = () => {
                 <NotReadyPage text={'Player'}/>
             </Route>
 
-            <Route exact path="/tournaments/">
+            <Route exact path="/tournaments">
                 <TournamentsPage />
             </Route>
 
@@ -31,23 +33,26 @@ export const AppRoutes = () => {
                 <TournamentDetailsPage />
             </Route>
 
-            <Route exact path="/team/">
-                <NotReadyPage text={'Team'}/>
-            </Route>
+            <Route exact path="/team"
+                   render={() => !isAuth ?
+                       <MainPage/> :
+                       <NotReadyPage text={'Team'}/>
+                   }
+            />
 
-            <Route exact path="/partnership/">
+            <Route exact path="/partnership">
                 <NotReadyPage text={'Partnership'}/>
             </Route>
 
-            <Route exact path="/terms/">
+            <Route exact path="/terms">
                 <NotReadyPage text={'Terms'}/>
             </Route>
 
-            <Route exact path="/about/">
+            <Route exact path="/about">
                 <NotReadyPage text={'About'}/>
             </Route>
 
-            <Route exact path="/contacts/">
+            <Route exact path="/contacts">
                 <NotReadyPage text={'Contacts'}/>
             </Route>
 

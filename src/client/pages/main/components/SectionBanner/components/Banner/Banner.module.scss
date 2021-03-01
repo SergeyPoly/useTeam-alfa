@@ -1,0 +1,10 @@
+@import 'src/shared/styles/scss/shared';
+
+.banner {
+    min-height: 258px;
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: $border-radius;
+    @include flex(space-evenly);
+}
