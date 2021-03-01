@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './CustomFileField.scss'
 
-export const CustomFileField = ({ additionalContainerClass, ...props}) => {
+const CustomFileField = ({ additionalContainerClass, ...props}) => {
     const [ , , helpers ] = useField(props);
     const { setValue } = helpers;
     const fullContainerClassName = `file-container ${additionalContainerClass}`;
@@ -26,6 +26,8 @@ export const CustomFileField = ({ additionalContainerClass, ...props}) => {
         </div>
     );
 };
+
+export default CustomFileField;
 
 CustomFileField.defaultProps = {
     additionalContainerClass: '',

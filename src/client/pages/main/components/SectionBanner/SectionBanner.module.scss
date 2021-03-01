@@ -1,0 +1,33 @@
+@import 'src/shared/styles/scss/shared';
+
+.headTextTopDistance{
+padding-top: 40px;
+}
+
+.sectionBannerContainer {
+    background: $third-color;
+    border-radius: $block-border-radius;
+  }
+
+.sectionBannerDescription {
+    padding: 40px 0;
+    @include flex(space-between,center);
+    margin: 0 40px;
+    @media screen and (max-width: 650px) {
+      justify-content: center;
+      padding: 15px 0;
+    }
+  }
+
+.sectionBannerText {
+    @include font-source-sans(24px, white, 700);
+    text-align: center;
+    margin: 2% 0;
+  }
+
+.sectionBannerButton{
+    width: 170px;
+    height: 47px;
+    text-transform: uppercase;
+    font-size: 18px;
+  }

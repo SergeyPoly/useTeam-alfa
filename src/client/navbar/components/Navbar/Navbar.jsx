@@ -1,16 +1,19 @@
 import React from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 
-import { setAuthData } from '../reducer/NavbarActionCreators';
-import styles from './Navbar.module.scss'
 import NavbarMenu from '../NavbarMenu';
 import Logo from '../../../../shared/components/Logo';
 import Button from '../../../../shared/components/Button';
 import ChargeBar from '../ChargeBar';
+import { toggleAuthStatus } from '../../reducer/authReducer';
+import { userData } from '../../userData';
+
+import styles from './Navbar.module.scss'
 
 export const Navbar = () => {
     const dispatch = useDispatch();
-    const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual); // AJAX data required
+    const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
+    const {accountBalance, invited} = userData;
     const text = isAuth ? 'recharge' : 'sign up';
 
     return (
@@ -22,16 +25,17 @@ export const Navbar = () => {
                 <div className={'column-5'}>
                     <NavbarMenu
                         isAuth={isAuth}
+                        invited={invited}
                     />
                 </div>
                 <div className={`column-4 ${styles.navbar__wraper}`}>
-                    {isAuth ? <ChargeBar/> : null}
+                    {isAuth ? <ChargeBar accountBalance={accountBalance}/> : null}
                     <Button
                         type={'button'}
                         classType={'basic'}
                         additionalClass={styles.navbar__button}
                         text={text}
-                        handleClick={() => dispatch(setAuthData())}
+                        handleClick={() => dispatch(toggleAuthStatus())}
                     />
                 </div>
             </div>

@@ -9,7 +9,7 @@ export const linksAuth = [
     {
         id: v4(),
         to: '/team/',
-        text: 'Team',
+        text: 'team',
     },
     {
         id: v4(),

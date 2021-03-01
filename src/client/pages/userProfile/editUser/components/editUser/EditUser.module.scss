@@ -1,0 +1,21 @@
+@import "../../editUser.variables";
+
+.editUser {
+  width: 360px;
+  background: $BACKGROUND-SECONDARY;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: $FONT;
+    border-radius: 10px;
+}
+
+.title {
+  font-size: 24px;
+  color: $COLOR-SECONDARY;
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-top: 40px;
+  }
+}
+

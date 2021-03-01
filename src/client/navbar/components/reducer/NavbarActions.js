@@ -1,6 +1,0 @@
-export const SET_ACCOUNT_BALANCE = "SET_ACCOUNT_BALANCE";
-export const SET_AUTH_DATA = "SET_AUTH_DATA";
-export const SET_INVITE_DATA = "SET_INVITE_DATA";
-
-
-
