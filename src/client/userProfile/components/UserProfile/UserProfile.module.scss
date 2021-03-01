@@ -1,0 +1,76 @@
+@import '../../_user.variables';
+
+p {
+  margin: 0;
+}
+
+.userProfile {
+  font-family: $FONT;
+  width: 715px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: $COLOR-PRIMARY;
+  background: $BACKGROUND-PRIMARY;
+  box-sizing: border-box;
+  padding: 20px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: left;
+  margin-bottom: 13px;
+}
+
+.subTitle {
+  font-size: 18px;
+  color: $COLOR-SECONDARY;
+  margin-bottom: 6px;
+}
+
+.popupClose {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        top:50%;
+        left:50%;
+        margin-top: -24px;
+        margin-left: -24px;
+        cursor: pointer;
+    }
+}
+
+.leaveTeamPopup {
+    width: 430px;
+    padding: 40px 20px;
+    background: $BACKGROUND-SECONDARY;
+    color: $COLOR-PRIMARY;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $FONT;
+    border-radius: 10px;
+
+    div {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 7px 20px;
+        margin: 0 20px;
+    }
+}

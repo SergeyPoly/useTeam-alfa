@@ -1,5 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import TeamPage from '../../client/Team/pages/TeamPage';
+import MainPage from '../../client/mainPage/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
 
 import { NotReadyPage } from '../../client/NotReadyPage';
@@ -8,7 +10,7 @@ import TournamentsPage from '../../client/tournaments/pages/TournamentsPage';
 import TournamentDetailsPage from '../../client/tournaments/pages/TournamentDetailsPage';
 
 export const AppRoutes = () => {
-    const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
+    const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual);
 
     return (
         <Switch>
