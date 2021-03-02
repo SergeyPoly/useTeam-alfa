@@ -1,5 +1,5 @@
 import React from 'react';
-import { InfoListData } from '../../../../../../mainPage/pages/MainPage/pageProps;';
+import { InfoListData } from '../../../../../main/pages/MainPage/pageProps;';
 
 import styles from './InfoList.module.scss';
 

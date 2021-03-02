@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GetTour } from '../../../../mainPage/pages/MainPage/pageProps;';
+import { GetTour } from '../../../../pages/main/pages/MainPage/pageProps;';
 import SliderContainer from './components/SliderContainer';
 import SliderDots from './components/SliderDots/SliderDots';
 
