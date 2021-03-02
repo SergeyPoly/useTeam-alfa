@@ -18,13 +18,10 @@ export const AppRoutes = () => {
         <Switch>
 
             <Route exact path="/"
-                   // render={() => !isAuth ?
-                   //     <MainPage/> :
-                   //     // <div className={'container temporary-style__content'}>
-                   //     //     <Achievements {...achivementsProps}/>
-                   //     //     <UserProfile {...userProfileProps} />
-                   //     // </div>
-                   // }
+                   render={() => !isAuth ?
+                       <MainPage/> :
+                       <NotReadyPage text={'Player'}/>
+                   }
             />
 
             <Route path="/players/:id">

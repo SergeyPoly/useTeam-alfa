@@ -6,15 +6,19 @@
     &__block{
         border-radius: $block-border-radius;
         background-color: $primary-color;
-        padding: 20px;
+        padding: 25px;
         max-width: 540px;
         @include flex(flex-start, center);
     }
-    &__logo{
+    &__avatar{
         border-radius: $block-border-radius;
         width: 85px;
-        height: 85px;
+        max-height: 85px;
+        overflow: hidden;
+        //height: 100%;
         margin-right: 15px;
+        color: #FFFFFF;
+        background-color: #fff;
     }
     &__info {
         @include flex(center, stretch);

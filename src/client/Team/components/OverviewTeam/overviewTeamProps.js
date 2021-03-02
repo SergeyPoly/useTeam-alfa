@@ -1,7 +1,7 @@
-import teamLogo from './logoTeam.png';
+import teamAvatar from './logoTeam.png';
 export const overviewTeamProps = {
   teamName: 'Baby Yoda’s Team',
-  teamLogo: teamLogo,
+  teamAvatar: teamAvatar,
   teamStatistics: [
     {
       title: 'Matches',
