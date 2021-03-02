@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { GetTour } from '../../../../pages/main/pages/MainPage/pageProps;';
 import SliderContainer from './components/SliderContainer';
-import { GetTour } from '../../pages/MainPage/pageProps;';
 import SliderDots from './components/SliderDots/SliderDots';
 
 const SliderSection = () => {

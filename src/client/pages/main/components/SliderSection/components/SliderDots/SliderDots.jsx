@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from '../../../../../../../shared/components/Button/Button';
-import { GetTour } from '../../../../pages/MainPage/pageProps;';
 import './SliderDots.scss';
 import PropTypes from 'prop-types';
+import { GetTour } from '../../../../../main/pages/MainPage/pageProps;';
 
 const SliderDots = ({ setActualSlide }) => {
   const sliderUnit = GetTour('announce').map((elem, index) => {
