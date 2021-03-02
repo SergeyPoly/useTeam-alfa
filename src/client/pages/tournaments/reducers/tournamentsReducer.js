@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const tournamentsSlice = createSlice({
-    name: 'tournaments',
+    name: 'api',
     initialState: {
         filterOptions: {
             prizePool: '',

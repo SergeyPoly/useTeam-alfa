@@ -1,8 +1,8 @@
 import React from 'react';
-import { GetTour } from '../../../../pages/MainPage/pageProps;';
 import SliderItem from '../SliderItem';
 import styles from './SliderContainer.module.scss';
 import PropTypes from 'prop-types';
+import { GetTour } from '../../../../../main/pages/MainPage/pageProps;';
 
 const SliderContainer = ({actualSlide }) => {
   let widthBreakPoints = 1260;
