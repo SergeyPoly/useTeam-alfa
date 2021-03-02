@@ -27,7 +27,7 @@ const Table = ({tableData, children}) => {
         <div style={{maxWidth}}>
             <div>
                 {tableHeading}
-                {winMarkerElement}
+                {winMarker ? winMarkerElement : null}
             </div>
             <div className={'table-container'}>
                 <div className={'table-col-title'} style={{display: 'grid', gridTemplateColumns: `repeat(${tableColTitles.length}, 1fr)`}}>

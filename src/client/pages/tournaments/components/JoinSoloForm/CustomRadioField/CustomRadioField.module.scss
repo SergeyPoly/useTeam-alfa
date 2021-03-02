@@ -1,0 +1,50 @@
+@import "src/shared/styles/scss/shared";
+
+.radio {
+    &__container {
+        @include flex(flex-start, center);
+        padding: 5px 0;
+    }
+    &__label {
+        @include font-source-sans(12px, #747BAA, normal);
+    }
+    &__field {
+        position: absolute;
+        z-index: -1;
+        display: none;
+        opacity: 0;
+        margin: 10px 0 0 7px;
+    }
+}
+
+.radio__field + .radio__label {
+    position: relative;
+    padding: 0 0 0 24px;
+    cursor: pointer;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #567EF7;
+        border-radius: 50%;
+        background: transparent;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #567EF7;
+        opacity: 0;
+        transition: .2s;
+    }
+}
+.radio__field:checked + .radio__label:after {
+    opacity: 1;
+}
