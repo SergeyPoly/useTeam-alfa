@@ -16,7 +16,7 @@ const CustomRadioField = ({ label, ...props }) => {
             <input className={styles.radio__field} id={label} {...field} {...helpers} {...props} onChange={
                 (event) => {
                     const currentValue = event.currentTarget.value;
-                    currentValue === 'core' ? dispatch(setSoloDiscount('0')) : dispatch(setSoloDiscount('10'));
+                    currentValue === 'Core' ? dispatch(setSoloDiscount('0')) : dispatch(setSoloDiscount('10'));
                     setValue(currentValue);
                 }
             } />

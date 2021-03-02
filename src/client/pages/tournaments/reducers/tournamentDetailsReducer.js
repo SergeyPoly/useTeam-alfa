@@ -53,12 +53,15 @@ export const tournamentDetailsSlice = createSlice({
             solo: '0',
             team: '25',
         },
-        userData: {},
-        joinStatus: {
-            notJoined: true,
+        // userData: {},
+        joinSoloStatus: {
+            disabled: false,
+            ready: true,
             joined: false,
-            confirmed: false
+            confirmed: false,
         },
+        joinOption: 'Core',
+        tournamentTeam: [],
     },
     reducers: {
         setTimerData: (state, action) => ({ ...state, timerData: action.payload }),
@@ -66,14 +69,15 @@ export const tournamentDetailsSlice = createSlice({
         toggleTermsModal: state => ({ ...state, termsModalActive: !state.termsModalActive }),
         toggleMatchDetailsMode: state => ({ ...state, matchDetailsModeActive: !state.matchDetailsModeActive }),
         setMatchDetailsData: (state, action) => ({ ...state, matchDetailsData: action.payload }),
-        setUserData: (state, action) => ({ ...state, userData: action.payload }),
         setSoloDiscount: (state, action) => ({ ...state, discount: {...state.discount, solo: action.payload }}),
-        changeJoinStatus: (state, action) => ({
+        setJoinOption: (state, action) => ({ ...state, joinOption: action.payload }),
+        toggleJoinSoloStatus: (state, action) => ({
             ...state,
-            joinStatus: Object.fromEntries(Object.entries(state.joinStatus).map(([key, ]) =>
+            joinSoloStatus: Object.fromEntries(Object.entries(state.joinSoloStatus).map(([key, ]) =>
                 (key === action.payload ? [key, true] : [key, false])
             ))
         }),
+        setTournamentTeam: (state, action) => ({ ...state, tournamentTeam: action.payload }),
     }
 });
 
@@ -83,7 +87,8 @@ export const {
     toggleTermsModal,
     toggleMatchDetailsMode,
     setMatchDetailsData,
-    setUserData,
     setSoloDiscount,
-    changeJoinStatus
+    toggleJoinSoloStatus,
+    setJoinOption,
+    setTournamentTeam,
 } = tournamentDetailsSlice.actions;

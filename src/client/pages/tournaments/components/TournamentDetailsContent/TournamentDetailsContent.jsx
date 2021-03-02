@@ -15,11 +15,12 @@ import JoinSoloBlock from '../JoinSoloBlock';
 
 const TournamentDetailsContent = ({itemHeading, terms, streamSrc, stages, championReward, entry, ...rest}) => {
     const dispatch = useDispatch();
+    const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
     const termsModalActive = useSelector(({tournamentDetails}) => tournamentDetails.termsModalActive, shallowEqual);
     const matchDetailsModeActive = useSelector(({tournamentDetails}) => tournamentDetails.matchDetailsModeActive, shallowEqual);
     const tournamentContent = !matchDetailsModeActive ?
         <>
-            <JoinSoloBlock entry={entry}/>
+            {isAuth && <JoinSoloBlock entry={entry}/>}
             <TournamentStream streamSrc={streamSrc}/>
             <TournamentBracket stages = {stages} championReward = {championReward}/>
         </> : <MatchDetails/>;

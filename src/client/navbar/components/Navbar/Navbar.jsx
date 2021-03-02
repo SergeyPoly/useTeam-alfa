@@ -6,13 +6,15 @@ import Logo from '../../../../shared/components/Logo';
 import Button from '../../../../shared/components/Button';
 import ChargeBar from '../ChargeBar';
 import { toggleAuthStatus } from '../../reducer/authReducer';
-import { userData } from '../../userData';
 
 import styles from './Navbar.module.scss'
+import { usersData } from '../../../pages/tournaments/usersData';
+import { setUserData } from '../../reducer/authReducer';
 
 export const Navbar = () => {
     const dispatch = useDispatch();
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
+    const userData = useSelector(({auth}) => auth.userData, shallowEqual);
     const {accountBalance, invited} = userData;
     const text = isAuth ? 'recharge' : 'sign up';
 
@@ -35,7 +37,11 @@ export const Navbar = () => {
                         classType={'basic'}
                         additionalClass={styles.navbar__button}
                         text={text}
-                        handleClick={() => dispatch(toggleAuthStatus())}
+                        handleClick={() => {
+                            dispatch(toggleAuthStatus());
+                            const currentUser = usersData.find(element => element.id === '1'); //mocked Navbar logic, remove after back-end fully operational
+                            dispatch(setUserData(currentUser)); //mocked Navbar logic, remove after back-end fully operational
+                        }}
                     />
                 </div>
             </div>

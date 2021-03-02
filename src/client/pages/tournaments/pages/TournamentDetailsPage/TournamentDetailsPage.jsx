@@ -9,7 +9,7 @@ import { tournamentsData } from '../../tournamentsData'; //logic rethink needed 
 import { usersData } from '../../usersData'; //logic rethink needed after back-end fully operational
 import styles from './TournamentDetailsPage.module.scss'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { setProcessedTournamentData, setUserData } from '../../reducers/tournamentDetailsReducer';
+import { setProcessedTournamentData } from '../../reducers/tournamentDetailsReducer';
 import { tournamentTeamsData } from '../../tournamentTeamsData';
 
 const TournamentDetailsPage = () => {
@@ -46,8 +46,6 @@ const TournamentDetailsPage = () => {
             }))
         };
         dispatch(setProcessedTournamentData(responseTournamentData));
-        const currentUser = usersData.find(element => element.id === '1'); //mocked Navbar logic, remove after back-end fully operational
-        dispatch(setUserData(currentUser)); //mocked Navbar logic, remove after back-end fully operational
     }, []);
 
     const { partners, ...rest } = processedTournamentData;

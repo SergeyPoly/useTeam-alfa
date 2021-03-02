@@ -8,7 +8,26 @@ export const tournamentTeamsData = [
         name: 'Gambit',
         smallImgSrc: teamImg1,
         players: [
-
+            {
+                id: '1',
+                role: 'Sup'
+            },
+            {
+                id: '2',
+                role: 'Sup'
+            },
+            {
+                id: '3',
+                role: 'Core'
+            },
+            {
+                id: '4',
+                role: 'Core'
+            },
+            {
+                id: '5',
+                role: 'Core'
+            },
         ]
     },
     {
@@ -178,7 +197,7 @@ export const tournamentTeamsData = [
     },
     {
         id: '35',
-        name: 'Oblivion',
+        name: 'New team',
         smallImgSrc: teamImg1
     },
 ];

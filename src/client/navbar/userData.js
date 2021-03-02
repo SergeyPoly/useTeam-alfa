@@ -6,5 +6,5 @@ export const userData = {
     avatarImg: playerAvatar,
     accountBalance: 725,
     invited: false,
-    team: ['1'],
+    team: '1',
 };

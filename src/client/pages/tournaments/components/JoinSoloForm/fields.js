@@ -3,12 +3,12 @@ export const fields = {
         name: 'joinAs',
         type: 'radio',
         label: 'Core',
-        value: 'core'
+        value: 'Core'
     },
     joinSoloOption2: {
         name: 'joinAs',
         type: 'radio',
         label: 'Support (Save 10%)',
-        value: 'support'
+        value: 'Sup'
     },
 };
