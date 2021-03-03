@@ -1,6 +1,5 @@
 import React from 'react';
 import { FormCreateTeamProps } from './FormCreateTeamProps';
-import FormItem from '../../../../shared/components/FormGroup/FormItem';
 import { Form, Formik } from 'formik';
 import style from './FormCreateTeam.module.scss';
 import Heading from '../../../../shared/components/Heading';
