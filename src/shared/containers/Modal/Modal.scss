@@ -9,6 +9,7 @@
         width: 100%;
         background-color: rgba(0,0,0,0.6);
         @include flex(center, center);
+        z-index: 1;
     }
 
     &-container {

@@ -1,0 +1,6 @@
+@import "src/shared/styles/scss/shared";
+
+.wraper {
+    @include flex (flex-start);
+    margin: 0 -7px;
+}

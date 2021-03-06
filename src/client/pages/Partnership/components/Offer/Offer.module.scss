@@ -1,0 +1,121 @@
+@import "src/shared/styles/scss/shared";
+.offer {
+    margin-bottom: 40px;
+}
+.offerBase {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    padding: 27px 19px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #2D3357;
+    width: 460px;
+    h2 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    h3 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    p.offerDescr {
+        color: #747BAA;
+        font-size: 12px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .dates {
+        display: flex;
+        .datesTextItem {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            width: unset!important;
+            padding: 0 20px 20px 0;
+            & span:first-of-type {
+                font-size: 14px;
+                color: #747BAA;
+                padding-bottom: 5px;
+            }
+
+            & span:last-of-type {
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
+    .termsCheck {
+        color: #fff;
+        font-size: 12px;
+    }
+}
+.offerButtons {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    .offerCost {
+        color: #fff;
+        font-weight: bold;
+        padding-right: 20px;
+        font-size: 18px
+    }
+}
+.someButton {
+    padding: 10px 20px;
+}
+.offerPartner {
+    margin-bottom: 20px;
+    .partnerGroup {
+        display: flex;
+        margin-top: 20px;
+        .partner {
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            height: 87px;
+            background: #252A48;
+            border: 1px solid #252A48;
+            border-radius: 5px;
+            margin-right: 20px;
+            align-items: center;
+            cursor: pointer;
+            h4 {
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+            .banner{
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                color: #747BAA;
+                margin-bottom: 5px;
+            }
+            .bannerSize{
+                font-weight: bold;
+                font-size: 18px;
+                color: #FFFFFF;
+
+
+            }
+
+        }
+    }
+}
+.active{
+    background: rgba(86, 126, 247, .2) !important;
+    border: 1px solid #567ef7 !important;
+}
+

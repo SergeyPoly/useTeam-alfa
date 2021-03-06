@@ -1,32 +1,23 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import TeamPage from '../../client/Team/pages/TeamPage';
-import MainPage from '../../client/mainPage/pages/MainPage/MainPage';
+import MainPage from '../../client/pages/main/pages/MainPage/MainPage';
 import { shallowEqual, useSelector } from 'react-redux';
 
-import { NotReadyPage } from '../../client/NotReadyPage';
-import { NoMatchPage } from '../../client/NoMatchPage';
-import UserProfile from '../../client/userProfile/components/UserProfile';
-import userProfileProps from './../../client/userProfile/userProfileProps';
-import Achievements from '../../client/achievements/components/Achievements';
-import achivementsProps from './../../client/achievements/achievementsProps';
-import TournamentsPage from '../../client/Tournaments/pages/TournamentsPage';
-import PartnershipPage from "../../client/Partnership/pages/PartnershipPage";
-
+import { NotReadyPage } from '../../client/pages/NotReadyPage';
+import { NoMatchPage } from '../../client/pages/NoMatchPage';
+import TournamentsPage from '../../client/pages/tournaments/pages/TournamentsPage';
+import TournamentDetailsPage from '../../client/pages/tournaments/pages/TournamentDetailsPage';
+import PartnershipPage from "../../client/pages/Partnership/pages/PartnershipPage";
 
 export const AppRoutes = () => {
-    const isAuth = useSelector(state => state.navbar.isAuth, shallowEqual);
+    const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
 
     return (
         <Switch>
-
             <Route exact path="/"
                    render={() => !isAuth ?
                        <MainPage/> :
-                       <div className={'container temporary-style__content'}>
-                           <Achievements {...achivementsProps}/>
-                           <UserProfile {...userProfileProps} />
-                       </div>
+                       <NotReadyPage text={'Profile'}/>
                    }
             />
 
@@ -34,21 +25,18 @@ export const AppRoutes = () => {
                 <NotReadyPage text={'Player'}/>
             </Route>
 
-            <Route exact path="/tournaments/">
+            <Route exact path="/tournaments">
                 <TournamentsPage />
             </Route>
 
             <Route exact path="/tournaments/:id">
-                <NotReadyPage text={'Tournaments'}/>
+                <TournamentDetailsPage />
             </Route>
 
-            <Route exact path="/team/"
+            <Route exact path="/team"
                    render={() => !isAuth ?
                        <MainPage/> :
-                       <div className={'container temporary-style__content'}>
-                           <Achievements {...achivementsProps}/>
-                           <TeamPage />
-                       </div>
+                       <NotReadyPage text={'Team'}/>
                    }
             />
 
@@ -56,15 +44,15 @@ export const AppRoutes = () => {
                 <PartnershipPage/>
             </Route>
 
-            <Route exact path="/terms/">
+            <Route exact path="/terms">
                 <NotReadyPage text={'Terms'}/>
             </Route>
 
-            <Route exact path="/about/">
+            <Route exact path="/about">
                 <NotReadyPage text={'About'}/>
             </Route>
 
-            <Route exact path="/contacts/">
+            <Route exact path="/contacts">
                 <NotReadyPage text={'Contacts'}/>
             </Route>
 

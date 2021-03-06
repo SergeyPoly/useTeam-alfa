@@ -1,0 +1,35 @@
+@import "src/shared/styles/scss/shared";
+
+.item {
+    &__container {
+        background-color: rgba(116, 123, 170, 0.25);
+        border-radius: 10px;
+        width: 90px;
+        height: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        @include flex(center, center);
+        flex-direction: column;
+        text-align: center;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        & a {
+            text-decoration: none;
+        }
+    }
+    &__score {
+        @include font-source-sans(16px, false, 700);
+        padding-left: 20px;
+    }
+
+    &__img {
+        border-radius: 50%;
+    }
+    &__wraper {
+        width: 100%;
+        @include flex(center, center);
+        padding: 3px 0;
+    }
+}

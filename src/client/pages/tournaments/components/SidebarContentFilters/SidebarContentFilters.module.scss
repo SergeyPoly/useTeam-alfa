@@ -1,0 +1,27 @@
+@import "src/shared/styles/scss/shared";
+
+.filters {
+
+    &__heading {
+        margin-bottom: 25px;
+    }
+
+    &__double_group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 50px;
+    }
+
+    &__quadruple_group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 50px;
+    }
+
+    &__submit {
+        padding: 15px 50px;
+    }
+
+
+}
