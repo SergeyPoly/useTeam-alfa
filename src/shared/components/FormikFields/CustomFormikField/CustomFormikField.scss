@@ -1,0 +1,141 @@
+@import "src/shared/styles/scss/shared";
+
+.text {
+    &-container {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    &-label {
+        display: block;
+        @include font-source-sans(18px, #747BAA, normal);
+        margin-bottom: 6px;
+    }
+    &-field {
+        box-sizing: border-box;
+        width: 100%;
+        @include font-source-sans(15px, white, normal);
+        background-color: #252A48;
+        border-radius: 5px;
+        border: none;
+        padding: 7px 10px;
+        outline: none;
+    }
+}
+
+.textarea {
+    &-label {
+        display: block;
+        @include font-source-sans(18px, #747BAA, normal);
+        margin-bottom: 6px;
+    }
+    &-field {
+        box-sizing: border-box;
+        width: 100%;
+        @include font-source-sans(15px, white, normal);
+        background-color: #252A48;
+        border-radius: 5px;
+        border: none;
+        padding: 7px 10px;
+        margin: 0px;
+        outline: none;
+    }
+}
+
+.radio {
+    &-container {
+        @include flex(flex-start, center);
+        padding: 5px 0;
+    }
+    &-label {
+        @include font-source-sans(12px, #747BAA, normal);
+    }
+    &-field {
+        position: absolute;
+        z-index: -1;
+        display: none;
+        opacity: 0;
+        margin: 10px 0 0 7px;
+    }
+}
+
+.radio-field + .radio-label {
+    position: relative;
+    padding: 0 0 0 24px;
+    cursor: pointer;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #567EF7;
+        border-radius: 50%;
+        background: transparent;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #567EF7;
+        opacity: 0;
+        transition: .2s;
+    }
+}
+.radio-field:checked + .radio-label:after {
+    opacity: 1;
+}
+.checkbox {
+    &-container {
+        @include flex(flex-start, center);
+        padding: 5px 0;
+    }
+    &-label {
+        @include font-source-sans(12px, #747BAA, normal);
+    }
+    &-field {
+        position: absolute;
+        z-index: -1;
+        display: none;
+        opacity: 0;
+        margin: 10px 0 0 7px;
+    }
+}
+
+.checkbox-field + .checkbox-label {
+    position: relative;
+    padding: 0 0 0 24px;
+    cursor: pointer;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #567EF7;
+        border-radius: 5px;
+        background: transparent;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+        background: #567EF7;
+        opacity: 0;
+        transition: .2s;
+    }
+}
+.checkbox-field:checked + .checkbox-label:after {
+    opacity: 1;
+}
+

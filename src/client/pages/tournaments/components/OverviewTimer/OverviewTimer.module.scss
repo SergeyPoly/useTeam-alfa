@@ -1,0 +1,5 @@
+@import "src/shared/styles/scss/shared";
+
+.cell_text {
+    @include font-source-sans(18px, white, 700);
+}

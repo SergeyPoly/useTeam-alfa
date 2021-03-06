@@ -26,6 +26,7 @@ Heading.propTypes = {
         'page',
         'section',
         'block',
+        'sidebar',
     ]).isRequired,
     additionalClass: PropTypes.string,
 };

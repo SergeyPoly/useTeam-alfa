@@ -1,0 +1,35 @@
+@import "src/shared/styles/scss/shared";
+
+.join {
+    &__container {
+        margin-bottom: 15px;
+    }
+    &__card {
+        background-color: $primary-color;
+        border-radius: $border-radius;
+        padding: 10px 15px;
+        max-width: 315px;
+    }
+    &__heading {
+        @include font-source-sans(18px, white, 700);
+        margin-bottom: 3px;
+    }
+    &__desription {
+        @include font-source-sans(12px, #747BAA, 400);
+        margin-bottom: 15px;
+    }
+    &__username {
+        @include font-source-sans(14px, white, 700);
+        margin-bottom: 3px;
+    }
+    &__entry {
+        padding-left: 2px;
+        @include font-source-sans(18px, #8B79FF, 700)
+    }
+}
+.user_img {
+    width: 90px;
+    height: 90px;
+    border-radius: $border-radius;
+    margin-bottom: 20px;
+}
