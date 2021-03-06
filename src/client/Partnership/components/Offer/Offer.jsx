@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Offer.module.scss"
 import Heading from "../../../../shared/components/Heading";
 import EventList from "./componetns/EventList";
-import {Formik, Field, Form } from "formik";
+import {Formik, Field } from "formik";
 import Button from "../../../../shared/components/Button";
 import {useState} from "react";
 
@@ -23,19 +23,20 @@ const Offer = () => {
                      <h3>Type of partnership</h3>
                      <div>
                          <div className={styles.form_radio_group}>
+                             <Formik  initialValues={{partner: ""}} >
+                                 {({ values }) => (
                              <div className={styles.form_radio_group_item}>
-                                 <input type="radio" name="radio"
-                                        value="1" checked />
-                                     <label htmlFor="radio-1">Radio button
-                                         1</label>
-                             </div>
+                                 <label htmlFor="radio-1">
+                                     <Field type="radio" name="partner"  value="1" checked />
+                                     Title partner</label>
+                             </div>)}
                              <div className={styles.form_radio_group_item}>
-                                 <input  type="radio" name="radio"
-                                        value="2" />
-                                     <label htmlFor="radio-2">Radio button
-                                         2</label>
+                                 <label htmlFor="radio-2">
+                                     <Field  type="radio" name="partner" value="2" />
+                                     Partner</label>
                              </div>
 
+                             </Formik>
                          </div>
                      </div>
                  </div>
