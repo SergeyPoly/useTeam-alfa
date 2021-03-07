@@ -2,16 +2,22 @@ import React from 'react';
 import Button from '../../../../../../../shared/components/Button/Button';
 import './SliderDots.scss';
 import PropTypes from 'prop-types';
-import { GetTour } from '../../../../../main/pages/MainPage/pageProps;';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+
 
 const SliderDots = ({ setActualSlide }) => {
-  const sliderUnit = GetTour('announce').map((elem, index) => {
+  const dispatch = useDispatch();
+  const processedTournamentsData = useSelector(
+    ({ tournaments }) => tournaments.processedTournamentsData,
+    shallowEqual,
+  );
+  const sliderUnit = processedTournamentsData.map((elem, index) => {
     return (
       <li key={elem.id}>
         <Button
           classType="inactive"
           additionalClass="slider-dots--unit"
-          handleClick={() => setActualSlide(index)}
+          handleClick={() => dispatch(setActualSlide(index))}
           text=""
         />
       </li>
