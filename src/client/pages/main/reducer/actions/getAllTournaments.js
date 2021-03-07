@@ -14,7 +14,7 @@ let createFullUrl = (model, propertiesArray) => {
   let fullURL;
   !propertiesArray
     ? (fullURL = url + model)
-    : (fullURL = url + model + '?' + propertiesArray.join('&'));
+    : (fullURL = `${url}${model}'?'${propertiesArray.join('&')}`);
   return fullURL;
 };
 

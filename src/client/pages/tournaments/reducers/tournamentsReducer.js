@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const tournamentsSlice = createSlice({
-    name: 'api',
+    name: 'tournaments',
     initialState: {
         filterOptions: {
             prizePool: '',
@@ -9,7 +9,19 @@ export const tournamentsSlice = createSlice({
             mode: '',
             slots: '',
         },
-        processedTournamentsData: [],
+        processedTournamentsData: [
+            {
+                id: '',
+                prizePool: {
+                    currencyValue: '',
+                    amount: '',
+                },
+                slots: {
+                    engaged: [],
+                    total: ''
+                }
+            },
+        ],
     },
     reducers: {
         setFilterOptions: (state, action) => ({ ...state, filterOptions: action.payload }),

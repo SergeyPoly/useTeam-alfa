@@ -3,7 +3,7 @@ import tournamentImg from '../../../assets/images/tournaments/tournament_item_im
 export const tournamentsData = [
     {
         id: '1',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '5x5 Mars Arena of Universe #57',
         mode: '5x5',
         prizePool: {
@@ -314,7 +314,7 @@ export const tournamentsData = [
     },
     {
         id: '2',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '5x5 Venus Arena of Universe #43',
         mode: '5x5',
         prizePool: {
@@ -393,7 +393,7 @@ export const tournamentsData = [
     },
     {
         id: '3',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '5x5 Dragon Arena of Universe #32',
         mode: '5x5',
         prizePool: {
@@ -491,7 +491,7 @@ export const tournamentsData = [
     },
     {
         id: '4',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '1x1 Kremlin Arena of Universe #25',
         mode: '1x1',
         prizePool: {
@@ -570,7 +570,7 @@ export const tournamentsData = [
     },
     {
         id: '5',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '5x5 Mars Arena of Universe #57',
         mode: '5x5',
         prizePool: {
@@ -630,7 +630,7 @@ export const tournamentsData = [
     },
     {
         id: '6',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '1x1 Kremlin Arena of Universe #46',
         mode: '1x1',
         prizePool: {
@@ -699,7 +699,7 @@ export const tournamentsData = [
     },
     {
         id: '7',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '5x5 Dragon Arena of Universe #57',
         mode: '5x5',
         prizePool: {
@@ -712,7 +712,7 @@ export const tournamentsData = [
         },
         slots: {
             total: '32',
-            engaged: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19']
+            engaged: []
         },
         entry: '15',
         server: 'CN',
@@ -788,7 +788,7 @@ export const tournamentsData = [
     },
     {
         id: '8',
-        src: tournamentImg,
+        url_for_card: tournamentImg,
         itemHeading: '1x1 Venus Arena of Universe #58',
         mode: '1x1',
         prizePool: {
