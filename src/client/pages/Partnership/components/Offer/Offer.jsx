@@ -5,8 +5,15 @@ import EventList from "./componetns/EventList";
 import {Formik, Field } from "formik";
 import Button from "../../../../../shared/components/Button";
 import {useState} from "react";
+import {setStatus} from "../../reducers/partnerReducer";
+import {shallowEqual, useDispatch, useSelector} from "react-redux";
 
 const Offer = () => {
+    const status = useSelector(({partners}) => partners.status, shallowEqual);
+    const dispatch = useDispatch();
+
+
+
     const eventsProps = ["1", "2", "3", "4", "5", "6", "7"];
     const [buttonStatus,setButtonStatus] = useState(true);
     const [buttonClass,setButtonClass] = useState("inactive");
@@ -14,7 +21,12 @@ const Offer = () => {
     const checkTitle = (titlePartnerStatus) => titlePartnerStatus ? styles.active : "";
     const switchOffer = () => {
         setTitlePartnerStatus(!titlePartnerStatus);
+        dispatch(setStatus(!status));
     }
+
+
+
+
 
  return(
      <div className={styles.offer}>
