@@ -8,7 +8,7 @@ export const links = [
     },
     {
         id: v4(),
-        to: '/tournaments/',
+        to: '/tournaments',
         text: 'Tournaments',
     },
 ];
