@@ -7,5 +7,6 @@ export default class TournamentsService extends BaseHttpService {
         const response = await this.get(endpoint);
         return response;
     }
+
 };
 
