@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './SectionTourList.module.scss';
 import Heading from '../../../../../shared/components/Heading';
 import Loaders from '../../../../../shared/components/Loaders';
-import { GetTour } from '../../pages/MainPage/pageProps;';
+// import { GetTour } from '../../pages/MainPage/pageProps;';
 
 import { useSelector, shallowEqual } from 'react-redux';
 import TournamentCard from '../../../../../shared/components/TournamentCard';
@@ -13,6 +13,7 @@ const SectionTourList = () => {
   const [numCards, SetNumCards] = useState(4);
   const [visible, SetVisible] = useState(true);
 
+
   const isLoading = useSelector(({api}) => api.isLoading, shallowEqual);
     const processedTournamentsData = useSelector(({tournaments}) => tournaments.processedTournamentsData, shallowEqual);
 
@@ -21,10 +22,17 @@ const SectionTourList = () => {
   };
 
   useEffect(() => {
-      if (numCards >= GetTour().length) {
+    console.log(numCards)
+    console.log(processedTournamentsData.length)
+
+      if (numCards >= processedTournamentsData.length) {
       SetVisible(false);
+      
+    }else if(numCards <= processedTournamentsData.length) {
+      SetVisible(true);
+
     }
-  }, [numCards]);
+  }, [processedTournamentsData]);
 
   const tourList = isLoading ? (
     <div className={styles.tourLoader}>

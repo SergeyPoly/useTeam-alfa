@@ -6,9 +6,9 @@ import {
 import axios from 'axios';
 import { tournamentsDataNew } from '../../pages/MainPage/newPageProps';
 
-const url = 'https://cybersports.herokuapp.com/';
+const url = 'https://cybersports.herokuapp.com';
 
-// const url = 'http://localhost:5000/';
+// const url = 'http://localhost:5000/:6043f044aaae1110e8a34d69';
 
 let createFullUrl = (model, propertiesArray) => {
   let fullURL;
@@ -32,17 +32,17 @@ export const getAllTournaments = (model, propertiesArray) => {
   return action;
 };
 
-// export const postAllTournaments = (model, data) => {
-//   return axios
-//     .post(createFullUrl(model), data, options)
-//     .catch(error => this._handleHttpError(error));
-// };
+export const postAllTournaments = () =>
+  tournamentsDataNew.map(elem => {
+    return axios
+      .post('http://localhost:5000/tournaments', elem, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .catch(error => console.log(error));
+  });
 
-export const postAllTournaments =()=> tournamentsDataNew.map((elem) => {
-  return axios.post('https://cybersports.herokuapp.com/tournaments', elem)
-
-    .catch(error =>error);
-});
-// http://localhost:5000/tournaments
-postAllTournaments()
+  
+ 
 

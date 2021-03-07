@@ -3,17 +3,22 @@ import SliderItem from '../SliderItem';
 import styles from './SliderContainer.module.scss';
 import PropTypes from 'prop-types';
 import { GetTour } from '../../../../../main/pages/MainPage/pageProps;';
+import { shallowEqual, useSelector } from 'react-redux';
 
-const SliderContainer = ({actualSlide }) => {
+const SliderContainer = ({ actualSlide }) => {
   let widthBreakPoints = 1260;
-  let sliderLength = GetTour('announce').length * (widthBreakPoints + 3);
+  const processedTournamentsData = useSelector(
+    ({ tournaments }) => tournaments.processedTournamentsData,
+    shallowEqual,
+  );
+  let sliderLength = processedTournamentsData.length * (widthBreakPoints + 3);
 
   const style = {
     width: `${sliderLength}px`,
     transform: `translate3d(${-actualSlide * widthBreakPoints}px, 0, 0)`,
   };
 
-  const sliderItemsArr = GetTour('announce').map((elem, index) => {
+  const sliderItemsArr = processedTournamentsData.map((elem, index) => {
     const displaySlide = actualSlide === index ? 'visible ' : 'hidden ';
     return <SliderItem elem={elem} displaySlide={displaySlide} key={elem.id} />;
   });
@@ -29,10 +34,10 @@ const SliderContainer = ({actualSlide }) => {
 
 export default SliderContainer;
 
-SliderContainer.propTypes={
-  actualSlide:PropTypes.number,
-}
+SliderContainer.propTypes = {
+  actualSlide: PropTypes.number,
+};
 
-SliderContainer.defaultProps={
-  actualSlide:0
-}
+SliderContainer.defaultProps = {
+  actualSlide: 0,
+};

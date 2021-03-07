@@ -5,13 +5,15 @@ import { tournamentsSlice } from '../../client/pages/tournaments/reducers/tourna
 import { tournamentDetailsSlice } from '../../client/pages/tournamentDetails/reducers/tournamentDetailsReducer';
 import { matchDetailsSlice } from '../../client/pages/matchDetails/reducers/matchDetailsReducer';
 import { apiSlice } from './apiReducer';
+import { sliderSlice } from '../../client/pages/main/reducer/sliderReducer';
 
 const rootReducer = combineReducers({
     auth: authSlice.reducer,
     tournaments: tournamentsSlice.reducer,
     tournamentDetails: tournamentDetailsSlice.reducer,
     matchDetails: matchDetailsSlice.reducer,
-    api: apiSlice.reducer
+    api: apiSlice.reducer,
+    slider:sliderSlice.reducer
 });
 
 export default rootReducer;

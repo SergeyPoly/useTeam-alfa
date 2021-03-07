@@ -4,7 +4,7 @@ export const tournamentsDataNew = [
         url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '5x5 Mars Arena of Universe #57',
         mode: '5x5',
         prizePool: {
@@ -316,9 +316,9 @@ export const tournamentsDataNew = [
     {
         id: '2',
         url_for_banner:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/dota-2-banner-2_dweulm.jpg',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '5x5 Venus Arena of Universe #43',
         mode: '5x5',
         prizePool: {
@@ -398,9 +398,9 @@ export const tournamentsDataNew = [
     {
         id: '3',
         url_for_banner:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1609686795/useTeam/Dota-2-by-Valve-1280x384_ctgtsm.jpg',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '5x5 Dragon Arena of Universe #32',
         mode: '5x5',
         prizePool: {
@@ -501,7 +501,7 @@ export const tournamentsDataNew = [
         url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '1x1 Kremlin Arena of Universe #25',
         mode: '1x1',
         prizePool: {
@@ -581,9 +581,9 @@ export const tournamentsDataNew = [
     {
         id: '5',
         url_for_banner:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/dota-2-banner-2_dweulm.jpg',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '5x5 Mars Arena of Universe #58',
         mode: '5x5',
         prizePool: {
@@ -644,9 +644,9 @@ export const tournamentsDataNew = [
     {
         id: '6',
         url_for_banner:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1609686795/useTeam/Dota-2-by-Valve-1280x384_ctgtsm.jpg',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '1x1 Kremlin Arena of Universe #46',
         mode: '1x1',
         prizePool: {
@@ -718,7 +718,7 @@ export const tournamentsDataNew = [
         url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '5x5 Dragon Arena of Universe #57',
         mode: '5x5',
         prizePool: {
@@ -808,9 +808,9 @@ export const tournamentsDataNew = [
     {
         id: '8',
         url_for_banner:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/dota-2-banner-2_dweulm.jpg',
       url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
         itemHeading: '1x1 Venus Arena of Universe #58',
         mode: '1x1',
         prizePool: {
