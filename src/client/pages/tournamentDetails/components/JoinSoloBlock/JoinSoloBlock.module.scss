@@ -1,0 +1,64 @@
+@import "src/shared/styles/scss/shared";
+
+.join {
+    &__container {
+        margin-bottom: 15px;
+        display: inline-block;
+        margin-right: 45px;
+    }
+    &__card {
+        background-color: $primary-color;
+        border-radius: $border-radius;
+        padding: 10px 15px;
+        width: 315px;
+        height: 230px;
+    }
+    &__heading {
+        @include font-source-sans(18px, white, 700);
+        margin-bottom: 3px;
+    }
+    &__desription {
+        @include font-source-sans(12px, #747BAA, 400);
+        margin-bottom: 15px;
+    }
+    &__username {
+        @include font-source-sans(14px, white, 700);
+        margin-bottom: 3px;
+    }
+    &__entry {
+        padding-left: 2px;
+        @include font-source-sans(18px, #8B79FF, 700)
+    }
+    &__confirmed {
+        @include font-source-sans(15px, white, 700);
+        width: 130px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__team_item {
+        @include font-source-sans(10px, #747BAA, 400);
+        display: inline-block;
+        text-align: center;
+        padding: 0 2px;
+    }
+}
+.user_img {
+    width: 90px;
+    height: 90px;
+    border-radius: $border-radius;
+    margin-bottom: 20px;
+}
+.small_avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.btn {
+    &_confirm {
+        padding: 12px 15px;
+        margin-right: 15px;
+    }
+    &_cancel {
+        padding: 12px 15px;
+    }
+}

@@ -5,11 +5,13 @@ import NavbarMenu from '../NavbarMenu';
 import Logo from '../../../../shared/components/Logo';
 import Button from '../../../../shared/components/Button';
 import ChargeBar from '../ChargeBar';
-import { toggleAuthStatus } from '../../reducer/authReducer';
+import { setTeamData, toggleAuthStatus, setUserData } from '../../reducer/authReducer';
 
 import styles from './Navbar.module.scss'
-import { usersData } from '../../../pages/tournaments/usersData';
-import { setUserData } from '../../reducer/authReducer';
+
+import { responseUserData } from '../../userData'; //mocked Navbar logic, remove after back-end fully operational
+import { teamData } from '../../teamData'; //mocked Navbar logic, remove after back-end fully operational
+import { usersData } from '../../../pages/tournamentDetails/usersData';
 
 export const Navbar = () => {
     const dispatch = useDispatch();
@@ -38,13 +40,17 @@ export const Navbar = () => {
                         additionalClass={styles.navbar__button}
                         text={text}
                         handleClick={() => {
+                            dispatch(setUserData(responseUserData)); //mocked Navbar logic, remove after back-end fully operational
+                            const responseTeamData = {
+                                ...teamData,
+                                teammates: teamData.teammates.map(element => usersData.find(({id}) => id === element))
+                            };
+                            dispatch(setTeamData(responseTeamData)); //mocked Navbar logic, remove after back-end fully operational
                             dispatch(toggleAuthStatus());
-                            const currentUser = usersData.find(element => element.id === '1'); //mocked Navbar logic, remove after back-end fully operational
-                            dispatch(setUserData(currentUser)); //mocked Navbar logic, remove after back-end fully operational
                         }}
                     />
                 </div>
             </div>
         </div>
-    );
+    )
 };
