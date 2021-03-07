@@ -103,8 +103,6 @@ export const {
     setProcessedTournamentData,
     toggleTermsModal,
     toggleInviteModal,
-    toggleMatchDetailsMode,
-    setMatchDetailsData,
     setSoloDiscount,
     toggleJoinSoloStatus,
     setJoinOption,
