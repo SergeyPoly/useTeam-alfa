@@ -2,6 +2,7 @@
 
 .tourList{
     @include flex(space-between, flex-start);
+    
     @media screen and (max-width: 650px) {
     @include flex(center, flex-start)
     }
