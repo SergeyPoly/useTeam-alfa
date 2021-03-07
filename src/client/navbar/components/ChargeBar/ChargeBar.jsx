@@ -17,7 +17,7 @@ const ChargeBar = ({accountBalance}) => {
 };
 
 ChargeBar.propTypes = {
-    accountBalance: PropTypes.number.isRequired,
+    accountBalance: PropTypes.string.isRequired,
 };
 
 export default ChargeBar;
