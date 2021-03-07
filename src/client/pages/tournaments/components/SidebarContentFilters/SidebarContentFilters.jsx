@@ -28,24 +28,36 @@ const SidebarContentFilters = () => {
         <Formik {...formProps} enableReinitialize>
             <Form>
                 <div>
-                    <Heading type='block' text='Prize pool' additionalClass={styles.filters__heading}/>
+                    <Heading
+                        type='block'
+                        text='Prize pool'
+                        additionalClass={styles.filters__heading}/>
                     <div className={styles.filters__double_group}>
                         <CustomFormikField {...fields.prizePool1}/>
                         <CustomFormikField {...fields.prizePool2}/>
                     </div>
-                    <Heading type='block' text='Server' additionalClass={styles.filters__heading}/>
+                    <Heading
+                        type='block'
+                        text='Server'
+                        additionalClass={styles.filters__heading}/>
                     <div className={styles.filters__quadruple_group}>
                         <CustomFormikField {...fields.server1}/>
                         <CustomFormikField {...fields.server2}/>
                         <CustomFormikField {...fields.server3}/>
                         <CustomFormikField {...fields.server4}/>
                     </div>
-                    <Heading type='block' text='Mode' additionalClass={styles.filters__heading}/>
+                    <Heading
+                        type='block'
+                        text='Mode'
+                        additionalClass={styles.filters__heading}/>
                     <div className={styles.filters__double_group}>
                         <CustomFormikField {...fields.mode1}/>
                         <CustomFormikField {...fields.mode2}/>
                     </div>
-                    <Heading type='block' text='Slots' additionalClass={styles.filters__heading}/>
+                    <Heading
+                        type='block'
+                        text='Slots'
+                        additionalClass={styles.filters__heading}/>
                     <div className={styles.filters__double_group}>
                         <CustomFormikField {...fields.slots1}/>
                         <CustomFormikField {...fields.slots3}/>
@@ -53,7 +65,11 @@ const SidebarContentFilters = () => {
                         <CustomFormikField {...fields.slots4}/>
                     </div>
                 </div>
-                <Button text='ACCEPT' type='submit' classType='basic' additionalClass={styles.filters__submit}/>
+                <Button
+                    text='ACCEPT'
+                    type='submit'
+                    classType='basic'
+                    additionalClass={styles.filters__submit}/>
             </Form>
         </Formik>
     );

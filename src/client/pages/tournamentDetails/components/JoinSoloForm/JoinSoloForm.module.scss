@@ -1,0 +1,10 @@
+@import "src/shared/styles/scss/shared";
+
+.join_button {
+    padding: 12px 45px;
+    &_disabled {
+        padding: 12px 45px;
+        background-color: #3F456C;
+        color: rgba(255, 255, 255, 0.75);
+    }
+}

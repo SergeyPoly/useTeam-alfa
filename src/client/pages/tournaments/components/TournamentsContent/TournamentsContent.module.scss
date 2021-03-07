@@ -4,3 +4,8 @@
     @include flex (flex-start);
     margin: 0 -7px;
 }
+
+.loader {
+    @include flex (center, center);
+    height: 400px;
+}
