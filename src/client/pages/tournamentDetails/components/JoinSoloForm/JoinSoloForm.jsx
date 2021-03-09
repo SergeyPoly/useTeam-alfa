@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Formik } from 'formik';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 
-import {fields} from './fields'
+import { fields } from './fields'
 import Button from '../../../../../shared/components/Button';
 
 import styles from './JoinSoloForm.module.scss';

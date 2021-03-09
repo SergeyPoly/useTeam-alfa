@@ -48,7 +48,7 @@ export const tournamentsData = [
                 losers: ['2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30', '32'],
                 matches: [
                     {
-                        id: '1',
+                        id:'1' ,
                         teams: [
                             { imgSrc: '1', score: '1' },
                             { imgSrc: '2', score: '0' },
