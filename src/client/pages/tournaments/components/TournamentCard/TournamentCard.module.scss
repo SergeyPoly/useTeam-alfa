@@ -1,0 +1,60 @@
+@import "src/shared/styles/scss/shared";
+
+.item {
+    &__container {
+        width: 285px;
+        background-color: $primary-color;
+        border-radius: $border-radius;
+    }
+    &__image {
+        border-radius: $border-radius;
+        width: 100%;
+        height: auto;
+    }
+    &__tournament_info {
+        padding: 15px 15px 30px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 10px;
+    }
+    &__heading {
+        @include font-source-sans(18px, white, 700);
+    }
+    &__subtitle {
+        @include font-source-sans(12px, #747BAA, 400);
+        display: block;
+        margin-bottom: 3px;
+    }
+    &__prize {
+        padding-left: 2px;
+        @include font-source-sans(18px, #8B79FF, 700)
+    }
+    &__status {
+        &_now {
+            @include font-source-sans(15px, #99E47F, 700);
+        }
+        &_soon {
+            @include font-source-sans(15px, white, 700);
+        }
+    }
+    &__slots {
+        @include font-source-sans(15px, white, 700)
+    }
+    &__btn_wraper {
+        @include flex(flex-start, center)
+    }
+    &__btn {
+        padding: 14px 42px;
+    }
+    &__entry {
+        padding-left: 2px;
+        @include font-source-sans(15px, #8B79FF, 700)
+    }
+    &__centered {
+        text-align: center;
+    }
+}
+.dollar path {
+    fill: #8B79FF;
+}
