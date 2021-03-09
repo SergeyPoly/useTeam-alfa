@@ -4,8 +4,7 @@ import { useSelector } from 'react-redux';
 
 export const getOverviewTeamProps = (team) =>{
     const winMatches = team.matches.filter( ({result})=>result==="win");
-    const winrate = Math.round(winMatches.length/team.matches.length *100);
-    console.log(winMatches);
+    const winrate = (team.matches.length ===0) ? 0 : Math.round(winMatches.length/team.matches.length *100);
     return {
         name: 'Baby Yoda’s Team',
         avatar: teamAvatar,

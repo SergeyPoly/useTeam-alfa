@@ -22,6 +22,9 @@ const  FormCreateTeam = () => {
                                     cups:0,
                                     date: "",
                                     owner: "",
+                                    matches: [],
+                                    tournaments: [],
+                                    teammates: []
                                     }));
   };
   const formProps = {

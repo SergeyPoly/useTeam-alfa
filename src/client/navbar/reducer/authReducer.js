@@ -10,7 +10,7 @@ export const authSlice = createSlice({
         team: {}
     },
     reducers: {
-        toggleAuthStatus: state => ({ ...state, isAuth: !state.isAuth, user: userProfileData}),
+        toggleAuthStatus: state => ({ ...state, isAuth: !state.isAuth, user: userProfileData, team: teamData}),
         setTeamData: (state, action) => ({...state, team: {...action.payload}}),
     }
 });
