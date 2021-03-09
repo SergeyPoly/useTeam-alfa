@@ -23,8 +23,8 @@ export const usersData = [
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
-            matches: '250',
-            tournaments: '50',
+            matches: '146',
+            tournaments: '21',
             cups: '1',
         },
         invites: []
@@ -36,9 +36,9 @@ export const usersData = [
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
-            matches: '250',
-            tournaments: '50',
-            cups: '1',
+            matches: '120',
+            tournaments: '15',
+            cups: '2',
         },
         invites: []
     },
@@ -49,8 +49,8 @@ export const usersData = [
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
-            matches: '250',
-            tournaments: '50',
+            matches: '244',
+            tournaments: '35',
             cups: '1',
         },
         invites: []
@@ -62,9 +62,9 @@ export const usersData = [
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
-            matches: '250',
-            tournaments: '50',
-            cups: '1',
+            matches: '131',
+            tournaments: '20',
+            cups: '5',
         },
         invites: []
     },
@@ -77,7 +77,7 @@ export const usersData = [
         statistics: {
             matches: '250',
             tournaments: '50',
-            cups: '1',
+            cups: '3',
         },
         invites: []
     },

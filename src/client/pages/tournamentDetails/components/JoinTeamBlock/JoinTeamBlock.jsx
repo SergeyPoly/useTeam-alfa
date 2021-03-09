@@ -6,11 +6,13 @@ import { ReactComponent as Lightening } from '../../../../../assets/icons/lighte
 import Button from '../../../../../shared/components/Button';
 import {
     setTournamentOwnerTeam, toggleJoinSoloStatus, toggleInviteModal,
-    toggleJoinTeamStatus,
+    toggleJoinTeamStatus, setTournamentSoloTeam,
 } from '../../reducers/tournamentDetailsReducer';
 import { setBalance } from '../../../../navbar/reducer/authReducer';
 
-import styles from './JoinTeamBlock.module.scss'
+import styles from './JoinTeamBlock.module.scss';
+
+import { randomPlayersData } from '../../randomPlayersData'; //logic rethink needed after back-end fully operational
 
 const JoinTeamBlock = () => {
     const dispatch = useDispatch();
@@ -37,7 +39,19 @@ const JoinTeamBlock = () => {
             createdTournamentTeam.push(owner);
             dispatch(setTournamentOwnerTeam(createdTournamentTeam));
         }
-    }, );
+    });
+
+    const addRandomPlayers = (team) => {
+        if (team.length < 5) {
+            const randomTournamentTeam = [...team];
+            const randomPlayers = [...randomPlayersData];
+            const randomIndex = () => Math.floor(Math.random()*(randomPlayers.length));
+            do {
+                randomTournamentTeam.push(randomPlayers.splice(randomIndex(), 1)[0]);
+            } while (randomTournamentTeam.length < 5);
+            dispatch(setTournamentOwnerTeam(randomTournamentTeam));
+        }
+    }
 
     const tournamentTeamList = tournamentOwnerTeam.map(({smallAvatarImg}) =>
         <div className={styles.join__team_item} key={v4()}>
@@ -87,6 +101,7 @@ const JoinTeamBlock = () => {
                                 additionalClass={additionalClass}
                                 disabled={disabled || notReady}
                                 handleClick={() => {
+                                    addRandomPlayers(tournamentOwnerTeam);
                                     dispatch(toggleJoinTeamStatus('joined'));
                                     dispatch(toggleJoinSoloStatus('disabled'));
                                 }}
