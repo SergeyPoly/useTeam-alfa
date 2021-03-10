@@ -9,17 +9,16 @@ const TournamentItem = props => {
   return useMemo(
     () => (
       <div className={styles.tournamentItem}>
-        <div className={styles.firstWrapper}>
-          <img src={avatar} alt={`${name}s avatar`} />
-          <div className={styles.textWrapper}>
-            <span>{name}</span>
-            <span>{type}</span>
-          </div>
+          <img src={avatar} alt={`${name}s avatar`} className={styles.tournamentItem__avatar}/>
+        <div className={styles.tournamentItem__info}>
+            <div className={styles.tournamentItem__text}>
+                <span>{name}</span>
+                <span>{type}</span>
+            </div>
+            <span className={styles.tournamentItem__status}>{status}</span>
         </div>
 
-        <div className={styles.secondWrapper}>
-          <span>{status}</span>
-        </div>
+
       </div>
     ),
     [avatar, name, type, status],

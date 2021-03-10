@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './SteamConnection.module.scss';
 import steamIcon from '../../../../../assets/images/userProfile/steam.jpg';
+import Heading from '../../../../../shared/components/Heading';
 
 const SteamConnection = props => {
   const { connected } = props;
@@ -18,7 +19,11 @@ const SteamConnection = props => {
     </div>
   );
 
-  return useMemo(() => <>{steamElem}</>, [steamElem]);
+  return useMemo(() =>
+      <>
+          <Heading type={'block'} text={"Steam connection"}/>
+          {steamElem}
+      </>, [steamElem]);
 };
 
 export default SteamConnection;

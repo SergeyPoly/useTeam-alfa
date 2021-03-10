@@ -8,8 +8,8 @@ import JoinTeamBlock from '../JoinTeamBlock';
 import styles from './JoinSection.module.scss'
 
 const JoinSection = () => {
-    const userData = useSelector(({auth}) => auth.userData, shallowEqual);
-    const {tournamentTeams} = userData;
+    const user = useSelector(({auth}) => auth.user, shallowEqual);
+    const {tournamentTeams} = user;
     const {slots} = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
     const { engaged } = slots;
     const {confirmed: soloConfirmed} = useSelector(({tournamentDetails}) => tournamentDetails.joinSoloStatus, shallowEqual);
