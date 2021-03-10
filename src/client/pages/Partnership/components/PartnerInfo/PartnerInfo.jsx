@@ -2,18 +2,17 @@ import React from "react"
 import Heading from "../../../../../shared/components/Heading";
 import styles from "./PartnerInfo.module.scss"
 import {Img} from "react-image";
-import partnerAvatar from "../../../../../assets/images/partner/s1.png";
 
 
 const PartnerInfo = ({partnerProfileProps}) => {
-    const {partnerName, link, matches, events} = partnerProfileProps;
+    const {partnerName, link, matches, events, src} = partnerProfileProps;
 
     return (
         <div className={styles.partnerContainerOverview}>
             <Heading type={'block'} text='Overview'/>
             <div className={styles.partnerContainer}>
                 <Img className={styles.picSmall}
-                    src={partnerAvatar}
+                    src={src}
                     alt={`It's partner ${partnerName}`}
                 />
                 <div className={styles.partnerTextWrapper}>

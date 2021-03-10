@@ -5,28 +5,51 @@ import EventList from "./componetns/EventList";
 import {Formik, Field } from "formik";
 import Button from "../../../../../shared/components/Button";
 import {useState} from "react";
-import {setStatus} from "../../reducers/partnerReducer";
+import {setStatus, setNewPartner} from "../../reducers/partnerReducer";
 import {shallowEqual, useDispatch, useSelector} from "react-redux";
 
+
+import partnerProfileProps from "../../partnerProfileProps";
+
 const Offer = () => {
+    const {link, src, srcSmall} = partnerProfileProps;
     const status = useSelector(({partners}) => partners.status, shallowEqual);
+    const partners = useSelector(({partners}) => partners.partnersData, shallowEqual);
     const dispatch = useDispatch();
-
-
+    const {sub, title} = partners;
 
     const eventsProps = ["1", "2", "3", "4", "5", "6", "7"];
     const [buttonStatus,setButtonStatus] = useState(true);
+    const [acceptStatus,setAcceptStatus] = useState(false);
     const [buttonClass,setButtonClass] = useState("inactive");
     const [titlePartnerStatus, setTitlePartnerStatus] = useState(true);
+
     const checkTitle = (titlePartnerStatus) => titlePartnerStatus ? styles.active : "";
+    const checkAccept = (acceptStatus) => !acceptStatus ? styles.hide : "";
     const switchOffer = () => {
         setTitlePartnerStatus(!titlePartnerStatus);
-        dispatch(setStatus(!status));
+        dispatch(setStatus((status === "title") ? "sub" : "title"));
     }
-
-
-
-
+    const switchAccept = () => {
+        setAcceptStatus(!acceptStatus);
+        let newTitle, newSub;
+        if (status === "title")
+        {
+            newTitle = {
+                link: link,
+                src: src
+            }
+            newSub = [...sub];
+        }
+        else {
+            newTitle = {...title};
+            newSub = [...sub, {
+                link: link,
+                src: srcSmall
+            }];
+        }
+        dispatch(setNewPartner({sub : newSub, title : newTitle} ))
+    }
 
  return(
      <div className={styles.offer}>
@@ -81,22 +104,27 @@ const Offer = () => {
                          </label>
 
                      </Formik>
+
                  </div>
 
              </div>
          </div>
-             <div className={styles.offerButtons}>
+            <div className={`${styles.offerButtons} ${checkAccept(acceptStatus)}`}>
+                <div className={styles.offerCost}>Partnership approved</div>
+            </div>
+             <div className={`${styles.offerButtons} ${checkAccept(!acceptStatus)}`}>
                  <div className={styles.offerCost}>
                      $1000
                  </div>
                  <div>
+
                      <Button
                          type={'button'}
                          classType={buttonClass}
                          additionalClass={styles.someButton}
                          text='Become partner'
                          disabled={buttonStatus}
-                        // handleClick={}
+                         handleClick={switchAccept}
                      />
                  </div>
              </div>

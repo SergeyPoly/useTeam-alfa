@@ -7,32 +7,30 @@ import subPartner3 from '../../../../assets/images/tournaments/subpartner_3.png'
 export const partnersSlice = createSlice({
     name: 'partners',
     initialState: {
-        status: false,
-        partnersData : [
-            {
-                id: '1',
-                src: mainPartner
-            },
-            {
-                id: '2',
-                src: subPartner1
-            },
-            {
-                id: '3',
-                src: subPartner2
-            },
-            {
-                id: '4',
-                src: subPartner3
-            },
-        ]
+        status: "title",
+        partnersData : {
+            title:
+                {
+                    link: 'google.com',
+                    src: mainPartner
+                },
+            sub:
+                [
+                    {
+                        link: 'www.ikea.com',
+                        src: subPartner3
+                    }
+                ]
+        }
 
     },
     reducers: {
         setStatus: (state, action) => ({ ...state, status: action.payload }),
+        setNewPartner: (state, action) => ({ ...state, partnersData: action.payload }),
     }
 });
 
 export const {
     setStatus,
+    setNewPartner
 } = partnersSlice.actions;

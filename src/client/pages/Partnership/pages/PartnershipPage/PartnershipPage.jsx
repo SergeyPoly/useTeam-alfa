@@ -15,7 +15,7 @@ const PartnershipPage = () => {
     const sidebarData = [
 {
     headingText: '5x5 Tournaments',
-    Component: <Bar />
+    Component: <Bar partnerProfileProps={partnerProfileProps} />
 },
 ];
 
