@@ -4,7 +4,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408878/useTeam/photo%20tournaments/290x145_0001_%D0%A1%D0%BB%D0%BE%D0%B9-9_z86jch.png',
     itemHeading: '5x5 Mars Arena of Universe #571',
     mode: '5x5',
     prizePool: {
@@ -386,7 +386,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/dota-2-banner-2_dweulm.jpg',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408879/useTeam/photo%20tournaments/290x145_0009_%D0%A1%D0%BB%D0%BE%D0%B9-1_ix72zz.png',
     itemHeading: '5x5 Venus Arena of Universe #431',
     mode: '5x5',
     prizePool: {
@@ -471,7 +471,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1609686795/useTeam/Dota-2-by-Valve-1280x384_ctgtsm.jpg',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408878/useTeam/photo%20tournaments/290x145_0002_%D0%A1%D0%BB%D0%BE%D0%B9-8_askzmt.png',
     itemHeading: '5x5 Dragon Arena of Universe #321',
     mode: '5x5',
     prizePool: {
@@ -573,7 +573,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408879/useTeam/photo%20tournaments/290x145_0007_%D0%A1%D0%BB%D0%BE%D0%B9-3_lg5ezg.png',
     itemHeading: '1x1 Kremlin Arena of Universe #251',
     mode: '1x1',
     prizePool: {
@@ -673,7 +673,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/dota-2-banner-2_dweulm.jpg',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408879/useTeam/photo%20tournaments/290x145_0008_%D0%A1%D0%BB%D0%BE%D0%B9-2_rtk2dc.png',
     itemHeading: '5x5 Mars Arena of Universe #581',
     mode: '5x5',
     prizePool: {
@@ -737,7 +737,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1609686795/useTeam/Dota-2-by-Valve-1280x384_ctgtsm.jpg',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408879/useTeam/photo%20tournaments/290x145_0006_%D0%A1%D0%BB%D0%BE%D0%B9-4_ry26tf.png',
     itemHeading: '1x1 Kremlin Arena of Universe #461',
     mode: '1x1',
     prizePool: {
@@ -810,7 +810,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606327391/useTeam/tournament1_r2lflx.png',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408878/useTeam/photo%20tournaments/290x145_0000_%D0%A1%D0%BB%D0%BE%D0%B9-10_tjbrvs.png',
     itemHeading: '5x5 Dragon Arena of Universe #571',
     mode: '5x5',
     prizePool: {
@@ -903,7 +903,7 @@ export const tournamentsDataNew = [
     url_for_banner:
       'https://res.cloudinary.com/dk88eyahu/image/upload/v1606398096/useTeam/dota-2-banner-2_dweulm.jpg',
     url_for_card:
-      'https://res.cloudinary.com/dk88eyahu/image/upload/v1614687721/useTeam/tournament_item_image_zlrg2w.png',
+      'https://res.cloudinary.com/dk88eyahu/image/upload/v1615408878/useTeam/photo%20tournaments/290x145_0004_%D0%A1%D0%BB%D0%BE%D0%B9-6_lhqnqn.png',
     itemHeading: '1x1 Venus Arena of Universe #581',
     mode: '1x1',
     prizePool: {
