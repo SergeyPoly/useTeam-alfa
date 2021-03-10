@@ -15,7 +15,7 @@ import styles from './JoinSoloBlock.module.scss'
 
 const JoinSoloBlock = () => {
     const dispatch = useDispatch();
-    const {avatarImg, name, accountBalance} = useSelector(({auth}) => auth.user, shallowEqual);
+    const {avatarImg, name, charge} = useSelector(({auth}) => auth.user, shallowEqual);
     const {entry} = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
     const {solo} = useSelector(({tournamentDetails}) => tournamentDetails.discount, shallowEqual);
     const tournamentSoloTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentSoloTeam, shallowEqual);
@@ -64,8 +64,8 @@ const JoinSoloBlock = () => {
                                 additionalClass={styles.btn_confirm}
                                 handleClick={() => {
                                     dispatch(toggleJoinSoloStatus('confirmed'));
-                                    const currentBalance = accountBalance - discountedEntry;
-                                    dispatch(setBalance(currentBalance.toString()));
+                                    const currentBalance = charge - discountedEntry;
+                                    dispatch(setBalance(currentBalance));
                                 }}
                             />
                             <Button
