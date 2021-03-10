@@ -14,6 +14,7 @@ export const tournamentDetailsRequestCreator = (id) => {
             await tournamentDetailsService.getCurrentTournament(id)
                 .then((res) => {
                     const currentTournament = res.result;
+                    // console.log(currentTournament);
                     //REFACTOR NEXT STEPS after back-end fully operational!
                     const responseTournamentData = {
                         ...currentTournament,

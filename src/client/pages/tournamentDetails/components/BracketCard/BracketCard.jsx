@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import styles from './BracketCard.module.scss'
 
-const BracketCard = ({ id, teams }) => {
+const BracketCard = ({_id: id, teams}) => {
     const cardContent = teams.map(({ imgSrc, score }) =>
         <div className={styles.item__wraper} key={v4()}>
             <img className={styles.item__img} src={imgSrc} alt="team avatar"/>
