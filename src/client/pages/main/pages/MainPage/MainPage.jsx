@@ -8,12 +8,18 @@ import styles from './MainPage.module.scss';
 import SectionTourList from '../../components/SectionTourList/SectionTourList';
 import { tournamentsRequestCreator } from '../../../tournaments/reducers/tournamentsActionCreators';
 import { useDispatch } from 'react-redux';
-// import { postAllTournaments } from '../../reducer/actions/getAllTournaments';
+import { getAllMatches, getOneTournament, getAllUsers, postAllMatches, postAllTournaments } from '../../reducer/actions/getAllTournaments';
 
 const MainPage = () => {
   const { sectionBannerEnticing, sectionBannerAdvantage } = pageProps;
   const dispatch = useDispatch();
+
   // postAllTournaments();
+  // getAllUsers()+
+  // postAllMatches()+*2
+  // getAllMatches()
+  getOneTournament()
+
   useEffect(() => {
     dispatch(
       tournamentsRequestCreator([
