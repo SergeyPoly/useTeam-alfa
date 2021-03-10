@@ -10,6 +10,7 @@ import {
 import Button from '../../../../../shared/components/Button';
 import Table from '../../../../../shared/containers/Table';
 import InviteTableItems from '../InviteTableItems';
+import { setSortedTeammates } from '../../../../navbar/reducer/authReducer';
 
 import styles from './TeammatesInvitation.module.scss';
 
@@ -18,6 +19,22 @@ const TeammatesInvitation = () => {
     const tournamentOwnerTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentOwnerTeam, shallowEqual);
     const teamData = useSelector(({auth}) => auth.teamData, shallowEqual);
     const {teammates} = teamData;
+
+    const sorterName = () => {
+        const sorted = [...teammates];
+        sorted.sort((a, b) => {
+            let x = a.name.toLowerCase();
+            let y = b.name.toLowerCase();
+            return x < y ? -1 : x > y ? 1 : 0;
+        });
+        dispatch(setSortedTeammates(sorted));
+    };
+
+    const sorterStatistics = (data) => {
+        const sorted = [...teammates];
+        sorted.sort((a, b) => a.statistics[data] - b.statistics[data]);
+        dispatch(setSortedTeammates(sorted));
+    };
 
     const removeTeammate = (id) => {
         const createdTournamentTeam = [...tournamentOwnerTeam];
@@ -53,10 +70,20 @@ const TeammatesInvitation = () => {
         tableColTitles: [
             {
                 name: 'teammates',
+                sorter: () => sorterName(),
             },
-            { name: 'matches' },
-            { name: 'tournaments' },
-            { name: 'cups' },
+            {
+                name: 'matches',
+                sorter: () => sorterStatistics('matches'),
+            },
+            {
+                name: 'tournaments',
+                sorter: () => sorterStatistics('tournaments'),
+            },
+            {
+                name: 'cups',
+                sorter: () => sorterStatistics('cups'),
+            },
             { name: 'invite' },
         ],
     };

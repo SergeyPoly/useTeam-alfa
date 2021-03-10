@@ -11,7 +11,12 @@ export const responseUserData = {
     mediumAvatarImg: mediumPlayerAvatar,
     smallAvatarImg: smallPlayerAvatar,
     accountBalance: '725',
-    invited: false,
     team: '1',
     tournamentTeams: ['5', '15', '25'],
+    statistics: {
+        matches: '250',
+        tournaments: '50',
+        cups: '1',
+    },
+    invites: []
 };

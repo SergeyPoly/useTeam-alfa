@@ -2,15 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { GetTour } from '../../../../pages/main/pages/MainPage/pageProps;';
 import SliderContainer from './components/SliderContainer';
 import SliderDots from './components/SliderDots/SliderDots';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { setActualSlide } from '../../reducer/sliderReducer';
 
 const SliderSection = () => {
-  const [actualSlide, setActualSlide] = useState(0);
+  const actualSlide = useSelector(
+    ({ slider }) => slider.actualSlide,
+    shallowEqual,
+  );
+
+  const processedTournamentsData = useSelector(
+    ({ tournaments }) => tournaments.processedTournamentsData,
+    shallowEqual,
+  );
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const changeSlide = () => {
-      actualSlide < GetTour('announce').length - 1
-        ? setActualSlide(actualSlide + 1)
-        : setActualSlide(0);
+      actualSlide < processedTournamentsData.length - 1
+        ? dispatch(setActualSlide(actualSlide + 1)) 
+        : dispatch(setActualSlide(0));
     };
     const changer = setInterval(changeSlide, 3000);
     return () => clearInterval(changer);
@@ -25,4 +37,3 @@ const SliderSection = () => {
 };
 
 export default SliderSection;
-
