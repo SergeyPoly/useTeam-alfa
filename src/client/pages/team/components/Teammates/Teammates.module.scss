@@ -1,68 +1,45 @@
-@import 'src/shared/styles/scss/style.scss';
+@import "src/shared/styles/scss/shared";
 
 .teammates {
-  margin-bottom: 20px;
-  max-width: 765px;
-}
-.teammatesBlock {
-  border-radius: $block-border-radius;
-  background-color: $primary-color;
-  padding: 15px 30px;
-  max-width: 765px;
-  @include flex();
-  flex-direction: column;
-  flex-grow: 1;
-  margin-bottom: 10px;
-}
-.teammatesBtn {
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
-.filter {
-  border-radius: $block-border-radius;
-  background-color: #3f456b;
-  padding: 10px;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  margin-bottom: 8px;
-}
-.filterItem {
-  @include font-source-sans(10px, #747baa, 400);
-  text-transform: uppercase;
+    margin-bottom: 20px;
+    max-width: 764px;
+    &__btn{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .teammate {
-  padding: 10px;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-}
-.teammateItem {
-  @include flex(center, center);
-  flex-wrap: nowrap;
-}
-.teammateAvatar {
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 8px;
-  @include font-source-sans(15px, #747baa, 400);
-}
-.teammateName {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  @include font-source-sans(15px, #ffffff, 400);
-  max-width: 150px;
-}
+    margin: 10px 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
 
-.teammateBtnKick {
-  @include font-source-sans(12px, #e45d68, 400);
-  background-color: transparent;
-  border: none;
-  text-transform: uppercase;
+    &__item {
+        @include flex(space-between, center);
+        flex-wrap: nowrap;
+        max-width: 110px;
+        @include font-source-sans(15px, #747baa, 400);
+    }
+    &__avatar {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 8px;
+        @include font-source-sans(15px, #747baa, 400);
+    }
+    &__name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @include font-source-sans(15px, #ffffff, 400);
+    }
+    &__btnKick {
+        @include font-source-sans(12px, #e45d68, 400);
+        background-color: transparent;
+        border: none;
+        text-transform: uppercase;
+    }
+
 }

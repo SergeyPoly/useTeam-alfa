@@ -1,53 +1,44 @@
-//
-//
-//.tournamentItem {
-//    width: 100%;
-//    border-radius: 15px;
-//    background: $BACKGROUND-THIRD;
-//    box-sizing: border-box;
-//    padding: 13px;
-//    display: flex;
-//    justify-content: space-between;
-//    margin-bottom: 20px;
-//
-//    &:last-of-type {
-//        margin-bottom: 0;
-//    }
-//}
-//
-//
-//.firstWrapper {
-//    display: flex;
-//
-//    img {
-//        width: 45px;
-//        height: 45px;
-//        border-radius: 10px;
-//        margin-right: 9px;
-//    }
-//}
-//
-//.textWrapper {
-//    display: flex;
-//    flex-direction: column;
-//
-//    span:first-of-type {
-//        font-size: 14px;
-//        line-height: 24px;
-//    }
-//
-//    span:last-of-type {
-//        font-size: 15px;
-//        color: $COLOR-SECONDARY
-//    }
-//}
-//
-//.secondWrapper span {
-//    font-size: 12px;
-//    line-height: 24px;
-//    text-transform: uppercase;
-//    color: $COLOR-THIRD;
-//    font-weight: 700;
-//}
-//
-//
+@import "src/shared/styles/scss/shared";
+
+.tournamentItem {
+    padding: 15px;
+    background-color: #364886;
+    border-radius: $border-radius;
+    @include flex(flex-start, center);
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        margin-right: 9px;
+    }
+
+    &__info {
+        @include flex(space-between, baseline);
+        min-width: 75%;
+    }
+    &__text {
+        @include flex(space-between, start);
+        flex-direction: column;
+
+        span:first-of-type {
+            @include font-source-sans(14px, #ffffff, 400);
+            margin-bottom: 3px;
+        }
+
+        span:last-of-type {
+            @include font-source-sans(15px, #8B79FF);
+        }
+    }
+    &__status {
+        text-transform: uppercase;
+        @include font-source-sans(12px, $secondary-color, 700);
+    }
+
+}
+
