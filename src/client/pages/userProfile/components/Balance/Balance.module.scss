@@ -6,6 +6,7 @@
   border-radius: $border-radius;
     @include flex (center,center);
   margin-bottom: 10px;
+    max-width: 540px;
     &__item{
         @include font-source-sans(25px, #ffffff, 700);
         @include flex (space-around,center);
