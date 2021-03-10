@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../../components/SectionBanner/components/Banner/Banner';
 import SliderSection from '../../components/SliderSection';
 import { pageProps } from './pageProps;';
@@ -6,9 +6,30 @@ import SectionBanner from '../../components/SectionBanner/SectionBanner';
 import InfoList from '../../components/SectionBanner/components/InfoList';
 import styles from './MainPage.module.scss';
 import SectionTourList from '../../components/SectionTourList/SectionTourList';
+import { tournamentsRequestCreator } from '../../../tournaments/reducers/tournamentsActionCreators';
+import { useDispatch } from 'react-redux';
+// import { postAllTournaments } from '../../reducer/actions/getAllTournaments';
 
 const MainPage = () => {
   const { sectionBannerEnticing, sectionBannerAdvantage } = pageProps;
+  const dispatch = useDispatch();
+  // postAllTournaments();
+  useEffect(() => {
+    dispatch(
+      tournamentsRequestCreator([
+        'url_for_card',
+        'url_for_banner',
+        'terms',
+        'itemHeading',
+        'prizePool',
+        'slots',
+        'id',
+        'entry',
+        'startTime',
+      ]),
+    );
+  }, []);
+
   return (
     <div className={`${styles.container} ${styles.mainPage}`}>
       <SliderSection />

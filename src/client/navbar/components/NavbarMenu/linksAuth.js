@@ -8,12 +8,12 @@ export const linksAuth = [
     },
     {
         id: v4(),
-        to: '/team/',
-        text: 'team',
+        to: '/team',
+        text: 'Team',
     },
     {
         id: v4(),
-        to: '/tournaments/',
+        to: '/tournaments',
         text: 'Tournaments',
     },
 ];

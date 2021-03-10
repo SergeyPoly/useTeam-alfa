@@ -6,9 +6,11 @@ import { shallowEqual, useSelector } from 'react-redux';
 import { NotReadyPage } from '../../client/pages/NotReadyPage';
 import { NoMatchPage } from '../../client/pages/NoMatchPage';
 import TournamentsPage from '../../client/pages/tournaments/pages/TournamentsPage';
-import TournamentDetailsPage from '../../client/pages/tournaments/pages/TournamentDetailsPage';
-import TeamPage from '../../client/pages/team/pages/TeamPage';
+import TournamentDetailsPage from '../../client/pages/tournamentDetails/pages/TournamentDetailsPage';
+import MatchDetailsPage
+    from '../../client/pages/matchDetails/pages/MatchDetailsPage';
 import UserProfile from '../../client/pages/userProfile/pages/UserProfile';
+import TeamPage from '../../client/pages/team/pages/TeamPage';
 
 export const AppRoutes = () => {
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
@@ -32,6 +34,10 @@ export const AppRoutes = () => {
 
             <Route exact path="/tournaments/:id">
                 <TournamentDetailsPage />
+            </Route>
+
+            <Route exact path="/matches/:id">
+                <MatchDetailsPage />
             </Route>
 
             <Route exact path="/team"

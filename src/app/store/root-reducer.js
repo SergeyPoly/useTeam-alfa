@@ -1,16 +1,19 @@
 import { combineReducers } from '@reduxjs/toolkit';
+
+import { authSlice } from '../../client/navbar/reducer/authReducer';
 import { tournamentsSlice } from '../../client/pages/tournaments/reducers/tournamentsReducer';
-import { authSlice } from '../../client/navbar/reducer/authReducer'
-import { tournamentDetailsSlice } from '../../client/pages/tournaments/reducers/tournamentDetailsReducer'
-import { apiReducer } from '../../client/pages/main/reducer/ApiReducer';
-import { teamSlice } from '../../client/pages/team/reducers/teamReducer';
+import { tournamentDetailsSlice } from '../../client/pages/tournamentDetails/reducers/tournamentDetailsReducer';
+import { matchDetailsSlice } from '../../client/pages/matchDetails/reducers/matchDetailsReducer';
+import { apiSlice } from './apiReducer';
+import { sliderSlice } from '../../client/pages/main/reducer/sliderReducer';
 
 const rootReducer = combineReducers({
     auth: authSlice.reducer,
     tournaments: tournamentsSlice.reducer,
     tournamentDetails: tournamentDetailsSlice.reducer,
-    team: teamSlice.reducer,
-    api:apiReducer
+    matchDetails: matchDetailsSlice.reducer,
+    api: apiSlice.reducer,
+    slider:sliderSlice.reducer
 });
 
 export default rootReducer;

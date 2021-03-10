@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import styles from './SectionTourList.module.scss';
 import Heading from '../../../../../shared/components/Heading';
 import Loaders from '../../../../../shared/components/Loaders';
-import { GetTour } from '../../pages/MainPage/pageProps;';
+// import { GetTour } from '../../pages/MainPage/pageProps;';
 
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import { getAllTournaments } from '../../reducer/actions/getAllTournaments';
+import { useSelector, shallowEqual } from 'react-redux';
 import TournamentCard from '../../../../../shared/components/TournamentCard';
 
 import Loader from 'react-loader-spinner';
@@ -14,39 +13,35 @@ const SectionTourList = () => {
   const [numCards, SetNumCards] = useState(4);
   const [visible, SetVisible] = useState(true);
 
-  const dispatch = useDispatch();
-  const { isLoading, TournamentsData } = useSelector(
-    state => state.api,
-    shallowEqual,
-  );
+
+  const isLoading = useSelector(({api}) => api.isLoading, shallowEqual);
+    const processedTournamentsData = useSelector(({tournaments}) => tournaments.processedTournamentsData, shallowEqual);
+
   const addCards = () => {
     SetNumCards(numCards + 4);
   };
 
   useEffect(() => {
-    const action = getAllTournaments('tournaments', [
-      'url_for_card',
-      'itemHeading',
-      'prizePool',
-      'slots',
-      'id',
-      'entry',
-      'startTime',
-    ]);
-    dispatch(action);
-      if (numCards >= GetTour().length) {
+    console.log(numCards)
+    console.log(processedTournamentsData.length)
+
+      if (numCards >= processedTournamentsData.length) {
       SetVisible(false);
+      
+    }else if(numCards <= processedTournamentsData.length) {
+      SetVisible(true);
+
     }
-  }, [numCards]);
-  
+  }, [processedTournamentsData]);
+
   const tourList = isLoading ? (
     <div className={styles.tourLoader}>
       <Loader type="TailSpin" color="#567EF7" height={25} width={25} />
     </div>
   ) : (
-    TournamentsData.map((elem, i) => {
+      processedTournamentsData.map((elem, i) => {
       if (i < numCards) {
-        return <TournamentCard elem={elem} key={elem.id} />;
+        return <TournamentCard {...elem} key={elem.id} />;
       }
     })
   );

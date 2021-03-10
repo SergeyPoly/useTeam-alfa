@@ -1,15 +1,15 @@
-@import '../../user.variables';
+@import "src/shared/styles/scss/shared";
 
 .steamContainer {
   width: 270px;
   height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $BACKGROUND-SECONDARY;
+    @include flex (center, center);
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  background: $primary-color;
   border-radius: 15px;
-  color: $COLOR-SECONDARY;
-  font-size: 15px;
+    @include font-source-sans(15px, #8988B6);
   margin-bottom: 10px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .steamContainer.connected {
-  color: $COLOR-THIRD;
+  color: #8B79FF;
 }
 
 .steamContainer.connected img {

@@ -15,7 +15,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-
+    align-items: center;
     &__item {
         @include flex(space-between, center);
         flex-wrap: nowrap;
@@ -24,5 +24,6 @@
     }
     &__text {
         @include font-source-sans(15px, #ffffff, 400);
+        text-align: center;
     }
 }

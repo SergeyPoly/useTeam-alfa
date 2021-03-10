@@ -1,53 +1,41 @@
-@import '../../user.variables';
+@import "src/shared/styles/scss/shared";
 
-.balanceContainer {
-  box-sizing: border-box;
+.balance{
   padding: 17px 19px;
-  background: $BACKGROUND-SECONDARY;
-  border-radius: 15px;
-  display: flex;
+  background: $primary-color;
+  border-radius: $border-radius;
+    @include flex (center,center);
   margin-bottom: 10px;
+    &__item{
+        @include font-source-sans(25px, #ffffff, 700);
+        @include flex (space-around,center);
+        width: 50%;
+    }
+    &__charge{
+        color: #8B79FF;
+    }
+    &__button {
+        padding: 10px 15px;
+    }
 }
 
-.balanceItem {
-  font-size: 25px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
 
-.balanceItem:first-of-type {
-  margin-right: 87px;
-  color: $COLOR-THIRD;
-}
-
-.balanceItem span {
-  margin-right: 20px;
-}
-
-.balanceItem svg {
-  margin-right: 4px;
-}
-
-.balanceItem button {
-  width: 125px;
-  height: 40px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 5px;
-  background: $BACKGROUND-BUTTON;
-  border: none;
-  outline: none;
-
-  &:hover {
-    background: $BACKGROUND-BUTTON--HOVER;
-  }
-
-  &:focus {
-    border: none;
-    outline: none;
-  }
-}
+//.balanceItem span {
+//  margin-right: 20px;
+//}
+//
+//.balanceItem svg {
+//  margin-right: 4px;
+//}
+//
+//.balanceItem button {
+//
+//  &:hover {
+//    background: #8B79FF;
+//  }
+//
+//  &:focus {
+//    border: none;
+//    outline: none;
+//  }
+//}

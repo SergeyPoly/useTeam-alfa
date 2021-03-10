@@ -4,11 +4,11 @@ import Sidebar from '../../../../../shared/containers/Sidebar';
 import Achievements from '../../components/Achievements';
 import achievementsProps from "../../components/achievementsProps"
 import Heading from '../../../../../shared/components/Heading';
-import { getOverviewTeamProps } from '../../components/OverviewTeam/getOverviewTeamProps';
+import { getOverviewTeamProps } from '../../getOverviewTeamProps';
 import Teammates from '../../components/Teammates';
 import { teammatesListProps } from '../../components/Teammates/teammatesListProps';
 import TournamentHistory from '../../components/TornamentHistory';
-import { tournamentHistoryProps } from '../../components/TornamentHistory/tournamentHistoryProps';
+import {tournamentsHistoryData} from '../../components/TornamentHistory/tournamentsHistoryData';
 import { shallowEqual, useSelector } from 'react-redux';
 import FormCreateTeam from '../../components/FormCreateTeam';
 import Overview from '../../../../../shared/components/Overview';
@@ -21,15 +21,25 @@ const TeamPage = () => {
             Component: <Achievements {...achievementsProps} />
         },
     ];
-    const team  = useSelector(state => state.auth.team, shallowEqual);
-    console.log(team);
+    const team  = useSelector(({ auth }) => auth.team, shallowEqual);
+
+    let tournamentHistoryProps=[];
+    for (let i = 0; i < team.tournamentHistory.countLoading && i < team.tournaments.length ; i++){
+        const {id, ...rest} = team.tournaments[i];
+        const  tournament = tournamentsHistoryData.tournamentHistory.find( (tournament) => tournament.id ===id);
+        tournamentHistoryProps[i] = {...rest, ...tournament};
+    }
+    // const tournamentHistoryProps = team.tournaments.map(({id, ...rest}) => {
+    //     const  tournament = tournamentsHistoryData.tournamentHistory.find( (tournament) => tournament.id ===id);
+    //     return {...rest, ...tournament};
+    // })
+    // console.log(tournamentHistoryProps);
 
     const content = Object.keys(team).length ?  <>
                                                     <Overview {...getOverviewTeamProps(team)}/>
                                                     <Teammates {...teammatesListProps}/>
-                                                    <TournamentHistory {...tournamentHistoryProps}/>
+                                                    <TournamentHistory tournamentHistory={tournamentHistoryProps}/>
                                                 </> : <FormCreateTeam />
-
 
 
   return (

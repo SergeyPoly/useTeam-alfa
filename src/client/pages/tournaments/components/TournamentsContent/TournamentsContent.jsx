@@ -1,22 +1,16 @@
-import React, {useEffect} from 'react';
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { shallowEqual, useSelector } from 'react-redux';
+import Loader from 'react-loader-spinner';
 
 import Heading from '../../../../../shared/components/Heading';
-import TournamentCard from '../TournamentCard';
-import {tournamentsData} from '../../tournamentsData' //imitation of back-end response
+import TournamentCard from '../../../../../shared/components/TournamentCard';
 
 import styles from './TournamentsContent.module.scss'
-import { setProcessedTournamentsData } from '../../reducers/tournamentsReducer';
 
 const TournamentsContent = () => {
     const filterOptions = useSelector(({tournaments}) => tournaments.filterOptions, shallowEqual);
     const processedTournamentsData = useSelector(({tournaments}) => tournaments.processedTournamentsData, shallowEqual);
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        const responseTournamentsData = tournamentsData.map(({ terms, streamSrc, partners, stages, ...rest }) => rest); //imitation of back-end response
-        dispatch(setProcessedTournamentsData(responseTournamentsData));
-    }, []);
+    const isLoading = useSelector(({api}) => api.isLoading, shallowEqual);
 
     const filteredCards = processedTournamentsData.filter(({prizePool, mode, slots, server}) => {
             const prizePoolOption = filterOptions.prizePool ? prizePool.currencyValue === filterOptions.prizePool : true;
@@ -27,17 +21,23 @@ const TournamentsContent = () => {
                 true;
             return (prizePoolOption && modeOption && slotsOption && serverOption)
     });
-    const tournamentCards = filteredCards.map(element =>
+
+    const tournamentCards = filteredCards.map(element => element.id ?
         <div key={element.id} style={{padding: '0 7px 15px'}}>
             <TournamentCard {...element} />
-        </div>);
+        </div> : null);
 
     return (
         <div>
             <Heading type={'page'} text='Dota 2 tournaments'/>
+            {isLoading &&
+            <div className={styles.loader}>
+                <Loader type="TailSpin" color="#567EF7" height={40} width={40} />
+            </div>}
+            {!isLoading &&
             <div className={styles.wraper}>
                 {tournamentCards}
-            </div>
+            </div>}
         </div>
     );
 };
