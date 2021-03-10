@@ -4,12 +4,9 @@ import { useDispatch } from 'react-redux';
 import Sidebar from '../../../../../shared/containers/Sidebar';
 import SidebarContentFilters from '../../components/SidebarContentFilters';
 import TournamentsContent from '../../components/TournamentsContent';
-
-import {tournamentsData} from '../../tournamentsData' //DELETE after back-end fully operational!
+import { tournamentsRequestCreator } from '../../reducers/tournamentsActionCreators';
 
 import styles from './TournamentsPage.module.scss'
-import { setProcessedTournamentsData } from '../../reducers/tournamentsReducer';
-import { tournamentsRequestCreator } from '../../reducers/tournamentsActionCreators';
 
 const TournamentsPage = () => {
     const dispatch = useDispatch();
@@ -25,9 +22,6 @@ const TournamentsPage = () => {
             'entry',
             'startTime',
         ]));
-        //REFACTOR NEXT STEPS after back-end fully operational!
-        // const responseTournamentsData = tournamentsData.map(({ terms, streamSrc, partners, stages, ...rest }) => rest);
-        // dispatch(setProcessedTournamentsData(responseTournamentsData));
     }, []);
 
     const sidebarData = [

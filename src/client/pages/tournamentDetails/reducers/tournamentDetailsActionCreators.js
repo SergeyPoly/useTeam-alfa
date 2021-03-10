@@ -1,8 +1,9 @@
 import TournamentDetailsService from '../services/tournamentDetails.service';
 import { setLoadingStatus } from '../../../../app/store/apiReducer';
 import { setProcessedTournamentData } from './tournamentDetailsReducer';
-import { partnersData } from '../partnersData';
-import { tournamentTeamsData } from '../tournamentTeamsData';
+
+import { partnersData } from '../partnersData'; //DELETE! after back-end fully operational!
+import { tournamentTeamsData } from '../tournamentTeamsData'; //DELETE! after back-end fully operational!
 
 const tournamentDetailsService = new TournamentDetailsService();
 
@@ -13,7 +14,8 @@ export const tournamentDetailsRequestCreator = (id) => {
             await tournamentDetailsService.getCurrentTournament(id)
                 .then((res) => {
                     const currentTournament = res.result;
-                    console.log(currentTournament);
+                    // console.log(currentTournament);
+                    //REFACTOR NEXT STEPS after back-end fully operational!
                     const responseTournamentData = {
                         ...currentTournament,
                         partners: {
@@ -40,7 +42,6 @@ export const tournamentDetailsRequestCreator = (id) => {
                                 )),
                         }))
                     };
-                    console.log(responseTournamentData);
                     dispatch(setProcessedTournamentData(responseTournamentData));
                     dispatch(setLoadingStatus(false));
                 })
