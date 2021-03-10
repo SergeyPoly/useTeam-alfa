@@ -38,7 +38,7 @@ const TournamentsPage = () => {
                     <Sidebar sidebarData={sidebarData}/>
                 </div>
                 <div className={'column-9'}>
-                   <TournamentsContent/>
+                    <TournamentsContent/>
                 </div>
             </div>
         </div>

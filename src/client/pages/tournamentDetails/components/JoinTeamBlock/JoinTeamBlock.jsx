@@ -16,9 +16,9 @@ import { randomPlayersData } from '../../randomPlayersData'; //logic rethink nee
 
 const JoinTeamBlock = () => {
     const dispatch = useDispatch();
-    const {teamAvatarImg, name} = useSelector(({auth}) => auth.teamData, shallowEqual);
+    const {teamAvatarImg, name} = useSelector(({auth}) => auth.team, shallowEqual);
     const {entry} = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
-    const {id, smallAvatarImg, mediumAvatarImg, accountBalance} = useSelector(({auth}) => auth.userData, shallowEqual);
+    const {id, smallAvatarImg, mediumAvatarImg, accountBalance} = useSelector(({auth}) => auth.user, shallowEqual);
     const {team} = useSelector(({tournamentDetails}) => tournamentDetails.discount, shallowEqual);
     const tournamentOwnerTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentOwnerTeam, shallowEqual);
     const {notReady, ready, joined, confirmed, disabled} = useSelector(({tournamentDetails}) => tournamentDetails.joinTeamStatus, shallowEqual);

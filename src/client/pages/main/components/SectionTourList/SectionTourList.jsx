@@ -13,24 +13,25 @@ const SectionTourList = () => {
   const [numCards, SetNumCards] = useState(4);
   const [visible, SetVisible] = useState(true);
 
-
-  const isLoading = useSelector(({api}) => api.isLoading, shallowEqual);
-    const processedTournamentsData = useSelector(({tournaments}) => tournaments.processedTournamentsData, shallowEqual);
+  const isLoading = useSelector(({ api }) => api.isLoading, shallowEqual);
+  const processedTournamentsData = useSelector(
+    ({ tournaments }) => tournaments.processedTournamentsData,
+    shallowEqual,
+  );
 
   const addCards = () => {
     SetNumCards(numCards + 4);
   };
 
   useEffect(() => {
-    console.log(numCards)
-    console.log(processedTournamentsData.length)
+    console.log(numCards);
+    console.log(processedTournamentsData.length);
 
-      if (numCards >= processedTournamentsData.length) {
+    if (numCards >= processedTournamentsData.length) {
       SetVisible(false);
-      
-    }else if(numCards <= processedTournamentsData.length) {
+    } 
+    else if ( numCards===4) {
       SetVisible(true);
-
     }
   }, [processedTournamentsData]);
 
@@ -39,9 +40,13 @@ const SectionTourList = () => {
       <Loader type="TailSpin" color="#567EF7" height={25} width={25} />
     </div>
   ) : (
-      processedTournamentsData.map((elem, i) => {
+    processedTournamentsData.map((elem, i) => {
       if (i < numCards) {
-        return <TournamentCard {...elem} key={elem.id} />;
+        return (
+          <div style={{ padding: '11px 7px' }}>
+              <TournamentCard {...elem} key={elem.id} />
+          </div>
+        );
       }
     })
   );

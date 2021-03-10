@@ -17,8 +17,8 @@ import styles from './TeammatesInvitation.module.scss';
 const TeammatesInvitation = () => {
     const dispatch = useDispatch();
     const tournamentOwnerTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentOwnerTeam, shallowEqual);
-    const teamData = useSelector(({auth}) => auth.teamData, shallowEqual);
-    const {teammates} = teamData;
+    const team = useSelector(({auth}) => auth.team, shallowEqual);
+    const {teammates} = team;
 
     const sorterName = () => {
         const sorted = [...teammates];
