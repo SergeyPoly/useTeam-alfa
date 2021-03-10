@@ -5,8 +5,8 @@ import { tournamentsSlice } from '../../client/pages/tournaments/reducers/tourna
 import { tournamentDetailsSlice } from '../../client/pages/tournamentDetails/reducers/tournamentDetailsReducer';
 import { matchDetailsSlice } from '../../client/pages/matchDetails/reducers/matchDetailsReducer';
 import { apiSlice } from './apiReducer';
+import { sliderSlice } from '../../client/pages/main/reducer/sliderReducer';
 import {partnersSlice} from "../../client/pages/Partnership/reducers/partnerReducer";
-
 
 const rootReducer = combineReducers({
     auth: authSlice.reducer,
@@ -14,7 +14,9 @@ const rootReducer = combineReducers({
     tournamentDetails: tournamentDetailsSlice.reducer,
     matchDetails: matchDetailsSlice.reducer,
     api: apiSlice.reducer,
+    slider:sliderSlice.reducer,
     partners: partnersSlice.reducer
+
 });
 
 export default rootReducer;

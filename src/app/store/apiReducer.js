@@ -7,7 +7,7 @@ export const apiSlice = createSlice({
     },
     reducers: {
         setLoadingStatus: (state, action) => ({ ...state, isLoading: action.payload }),
-    }
+    }   
 });
 
 export const {
