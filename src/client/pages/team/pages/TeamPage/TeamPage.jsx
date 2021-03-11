@@ -8,37 +8,39 @@ import { getOverviewTeamProps } from '../../getOverviewTeamProps';
 import Teammates from '../../components/Teammates';
 import { teammatesListProps } from '../../components/Teammates/teammatesListProps';
 import TournamentHistory from '../../components/TornamentHistory';
-import {tournamentsHistoryData} from '../../components/TornamentHistory/tournamentsHistoryData';
-import { shallowEqual, useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import FormCreateTeam from '../../components/FormCreateTeam';
 import Overview from '../../../../../shared/components/Overview';
+import {setTournamentsHistoryTeamData, setAchievementsTeamData} from "../../../../navbar/reducer/authReducer";
+import {getTournamentHistory} from "../../components/TornamentHistory/getTournamentHistory";
 
 
 const TeamPage = () => {
+
+    const team  = useSelector(({ auth }) => auth.team, shallowEqual);
+    const dispatch = useDispatch();
+    const winTournaments = team.tournaments.length === 0 ? null : team.tournaments.filter( (tournament) => tournament.result ==="Winner");
+
+    useEffect( () =>{
+        const tournamentHistoryProps = getTournamentHistory(team.tournaments, team.tournamentHistory.countLoading);
+        const achievements = getTournamentHistory(winTournaments, 5);
+        dispatch(setTournamentsHistoryTeamData(tournamentHistoryProps));
+        dispatch(setAchievementsTeamData(achievements));
+    }, [team.tournamentHistory.countLoading])
+    const { tournaments } = team.tournamentHistory;
+
+
     const sidebarData = [
         {
             headingText: 'Achievements',
-            Component: <Achievements {...achievementsProps} />
+            Component: <Achievements achievements={team.achievements} />
         },
     ];
-    const team  = useSelector(({ auth }) => auth.team, shallowEqual);
-
-    let tournamentHistoryProps=[];
-    for (let i = 0; i < team.tournamentHistory.countLoading && i < team.tournaments.length ; i++){
-        const {id, ...rest} = team.tournaments[i];
-        const  tournament = tournamentsHistoryData.tournamentHistory.find( (tournament) => tournament.id ===id);
-        tournamentHistoryProps[i] = {...rest, ...tournament};
-    }
-    // const tournamentHistoryProps = team.tournaments.map(({id, ...rest}) => {
-    //     const  tournament = tournamentsHistoryData.tournamentHistory.find( (tournament) => tournament.id ===id);
-    //     return {...rest, ...tournament};
-    // })
-    // console.log(tournamentHistoryProps);
 
     const content = Object.keys(team).length ?  <>
                                                     <Overview {...getOverviewTeamProps(team)}/>
-                                                    <Teammates {...teammatesListProps}/>
-                                                    <TournamentHistory tournamentHistory={tournamentHistoryProps}/>
+                                                    <Teammates listTeammates={team.teammates}/>
+                                                    <TournamentHistory tournaments={tournaments}/>
                                                 </> : <FormCreateTeam />
 
 

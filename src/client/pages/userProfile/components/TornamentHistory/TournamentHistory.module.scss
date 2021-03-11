@@ -1,0 +1,30 @@
+@import "src/shared/styles/scss/shared";
+
+.tournamentHistoryList {
+    margin-bottom: 20px;
+    max-width: 674px;
+    &__btn{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.tournamentHistory {
+    margin: 15px 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    &__item {
+        @include flex(space-between, center);
+        flex-wrap: nowrap;
+        max-width: 150px;
+        @include font-source-sans(15px, #747baa, 400);
+        text-align: center;
+    }
+    &__text {
+        @include font-source-sans(15px, #ffffff, 400);
+        text-align: center;
+    }
+}

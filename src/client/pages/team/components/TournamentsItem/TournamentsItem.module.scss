@@ -28,7 +28,10 @@
 
         span:first-of-type {
             @include font-source-sans(14px, #ffffff, 400);
-            margin-bottom: 3px;
+            margin-bottom: 7px;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         span:last-of-type {

@@ -14,7 +14,7 @@ export const userProfileData = {
     balance: 1000, //balance in dollars
     steam: null, //url steam
     team: {
-        id: 1, //team id
+        id: "1", //team id
         isOwner: true  // for button "edit team"
     },
     matches: [
@@ -33,21 +33,59 @@ export const userProfileData = {
     ],
     tournaments: [
         {
-            id: 1,
+            id:"51",
             role: "In team",
-            result: "win"
+            result: "Winner",
+            team: "1"
         },
         {
-            id: 2,
+            id:"52",
             role: "Core",
-            result: "1/4"
+            result: "Winner",
+            team: "2"
         },
         {
-            id: 3,
+            id:"53",
             role: "Support",
-            result: "1/4"
-        }
+            result: "1/4",
+            team: "1"
+        },
+        {
+            id:"54",
+            role: "Core",
+            result: "Winner",
+            team: "2"
+        },
+        {
+            id:"55",
+            role: "Core",
+            result: "Winner",
+            team: "1"
+        },
+
+        {
+            id:"56",
+            role: "Core",
+            result: "1/4",
+            team: "1"
+        },
+        {
+            id:"57",
+            role: "Core",
+            result: "Winner",
+            team: "1"
+        },
+        {
+            id:"58",
+            role: "Core",
+            result: "1/4",
+            team: "2"
+        },
     ],
+    tournamentHistory: {
+        tournaments: [],
+        countLoading: 5
+    },
     invites: [],
     tournamentTeams: ['5', '15', '25'],
     statistics: {

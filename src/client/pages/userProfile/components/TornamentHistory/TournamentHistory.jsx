@@ -3,34 +3,37 @@ import Heading from '../../../../../shared/components/Heading';
 import style from '../TornamentHistory/TournamentHistory.module.scss';
 import Table from '../../../../../shared/containers/Table';
 import Button from '../../../../../shared/components/Button';
-import { setTournamentsLoadingTeam } from '../../../../navbar/reducer/authReducer'
+import { setTournamentsLoadingUser } from '../../../../navbar/reducer/authReducer'
 import { useDispatch, useSelector } from 'react-redux';
 
 const TournamentHistory = (props) => {
   const { tournaments } = props;
-  // const {tournamentName, date, mode, result} = props;
+
+  // const {tournamentName, date, mode, role, result} = props;
     const dispatch = useDispatch();
     const resultTableData = {
         headingText: 'Tournament History',
         winMarker: false,
         tableColTitles: [
             {
-                name: 'tournaments',
+                name: 'tournament',
                 // sorter: sorterName,
             },
             { name: 'date' },
             { name: 'mode' },
+            { name: "role" },
             { name: 'result' }
         ],
-        maxWidth: '674px',
+        maxWidth: '680px',
     };
 
     const tournamentHistoryElem = tournaments.map(
-        ({ title, date, mode, result }) => (
+        ({ title, date, mode, role, result }) => (
             <div className={style.tournamentHistory}>
                 <span className={style.tournamentHistory__text}>{title}</span>
                 <span className={style.tournamentHistory__item}>{date}</span>
                 <span className={style.tournamentHistory__item}>{mode}</span>
+                <span className={style.tournamentHistory__item}>{role}</span>
                 <span className={style.tournamentHistory__text}>{result}</span>
             </div>
         ),
@@ -48,7 +51,7 @@ const TournamentHistory = (props) => {
         </Table>
           <Button
             classType="outline"
-            handleClick={() => dispatch(setTournamentsLoadingTeam(5))}
+            handleClick={() => dispatch(setTournamentsLoadingUser(5))}
             text="Load more"
             additionalClass={style.tournamentHistoryList__btn}
           />
