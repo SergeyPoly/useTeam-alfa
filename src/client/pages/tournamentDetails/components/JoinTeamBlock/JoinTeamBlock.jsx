@@ -6,19 +6,19 @@ import { ReactComponent as Lightening } from '../../../../../assets/icons/lighte
 import Button from '../../../../../shared/components/Button';
 import {
     setTournamentOwnerTeam, toggleJoinSoloStatus, toggleInviteModal,
-    toggleJoinTeamStatus, setTournamentSoloTeam,
+    toggleJoinTeamStatus,
 } from '../../reducers/tournamentDetailsReducer';
 import { setBalance } from '../../../../navbar/reducer/authReducer';
 
 import styles from './JoinTeamBlock.module.scss';
 
-import { randomPlayersData } from '../../randomPlayersData'; //logic rethink needed after back-end fully operational
+import { randomPlayersRequestCreator } from '../../reducers/tournamentDetailsActionCreators'; //logic rethink needed after back-end fully operational
 
 const JoinTeamBlock = () => {
     const dispatch = useDispatch();
     const {teamAvatarImg, name} = useSelector(({auth}) => auth.team, shallowEqual);
     const {entry} = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
-    const {id, smallAvatarImg, mediumAvatarImg, accountBalance} = useSelector(({auth}) => auth.user, shallowEqual);
+    const {id, avatarImg, accountBalance} = useSelector(({auth}) => auth.user, shallowEqual);
     const {team} = useSelector(({tournamentDetails}) => tournamentDetails.discount, shallowEqual);
     const tournamentOwnerTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentOwnerTeam, shallowEqual);
     const {notReady, ready, joined, confirmed, disabled} = useSelector(({tournamentDetails}) => tournamentDetails.joinTeamStatus, shallowEqual);
@@ -31,8 +31,7 @@ const JoinTeamBlock = () => {
         if (tournamentOwnerTeam.length === 0 && id) {
             const owner = {
                 id: id,
-                smallAvatarImg: smallAvatarImg,
-                mediumAvatarImg: mediumAvatarImg,
+                avatarImg: avatarImg,
                 owner: true
             };
             const createdTournamentTeam = [...tournamentOwnerTeam];
@@ -41,21 +40,18 @@ const JoinTeamBlock = () => {
         }
     });
 
+    const handleResponse = (newRandomTeam) => setTournamentOwnerTeam(newRandomTeam);
+
     const addRandomPlayers = (team) => {
         if (team.length < 5) {
             const randomTournamentTeam = [...team];
-            const randomPlayers = [...randomPlayersData];
-            const randomIndex = () => Math.floor(Math.random()*(randomPlayers.length));
-            do {
-                randomTournamentTeam.push(randomPlayers.splice(randomIndex(), 1)[0]);
-            } while (randomTournamentTeam.length < 5);
-            dispatch(setTournamentOwnerTeam(randomTournamentTeam));
+            dispatch(randomPlayersRequestCreator((5 - team.length), randomTournamentTeam, handleResponse));
         }
     }
 
-    const tournamentTeamList = tournamentOwnerTeam.map(({smallAvatarImg}) =>
+    const tournamentTeamList = tournamentOwnerTeam.map(({avatarImg}) =>
         <div className={styles.join__team_item} key={v4()}>
-            <img className={styles.small_avatar} src={smallAvatarImg} alt="small avatar" />
+            <img className={styles.small_avatar} src={avatarImg} alt="small avatar" />
         </div>);
 
     return (

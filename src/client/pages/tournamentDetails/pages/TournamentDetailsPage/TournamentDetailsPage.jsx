@@ -14,6 +14,7 @@ import {
     toggleJoinSoloStatus,
     toggleJoinTeamStatus,
 } from '../../reducers/tournamentDetailsReducer';
+import { partnersDataRequestCreator } from '../../../partnership/reducers/partnershipActionCreators';
 
 const TournamentDetailsPage = () => {
     const {id} = useParams();
@@ -22,6 +23,7 @@ const TournamentDetailsPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         dispatch(tournamentDetailsRequestCreator(id));
+        dispatch(partnersDataRequestCreator());
         return () => {
             dispatch(toggleJoinSoloStatus('ready'));
             dispatch(toggleJoinTeamStatus('notReady'));

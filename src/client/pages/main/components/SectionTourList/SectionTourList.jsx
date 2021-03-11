@@ -24,12 +24,9 @@ const SectionTourList = () => {
   };
 
   useEffect(() => {
-    console.log(numCards);
-    console.log(processedTournamentsData.length);
-
     if (numCards >= processedTournamentsData.length) {
       SetVisible(false);
-    } 
+    }
     else if ( numCards===4) {
       SetVisible(true);
     }

@@ -5,10 +5,12 @@ export const authSlice = createSlice({
     initialState: {
         isAuth: false,
         user: {},
-        team: {}
+        team: {},
+        authModalActive: false
     },
     reducers: {
         toggleAuthStatus: state => ({ ...state, isAuth: !state.isAuth }),
+        toggleAuthModalStatus: state => ({ ...state, authModalActive: !state.authModalActive }),
         setUserData: (state, action) => ({ ...state, user: action.payload }),
         setTeamData: (state, action) => ({ ...state, team: action.payload }),
         setTournamentsHistoryTeamData: (state,action) => ({...state, team: {...state.team, tournamentHistory: action.payload}}),
@@ -25,7 +27,7 @@ export const {
     setTeamData,
     setSortedTeammates,
     setTournamentsHistoryTeamData,
-    setTournamentsLoading
-
+    setTournamentsLoading,
+    toggleAuthModalStatus
 } = authSlice.actions;
 

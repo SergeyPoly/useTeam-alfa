@@ -5,20 +5,20 @@ import NavbarMenu from '../NavbarMenu';
 import Logo from '../../../../shared/components/Logo';
 import Button from '../../../../shared/components/Button';
 import ChargeBar from '../ChargeBar';
-import { setTeamData, toggleAuthStatus, setUserData } from '../../reducer/authReducer';
+import Modal from '../../../../shared/containers/Modal';
+import AuthImitator from '../AuthImitator';
+import {
+    toggleAuthModalStatus, toggleAuthStatus,
+} from '../../reducer/authReducer';
 
 import styles from './Navbar.module.scss'
-
-import {userProfileData as responseUserData} from '../../../pages/userProfile/pages/userProfileData'; //mocked Navbar logic, remove after back-end fully operational
-import { teamData } from '../../../pages/team/teamData'; //mocked Navbar logic, remove after back-end fully operational
-import { usersData } from '../../../pages/tournamentDetails/usersData';
 
 export const Navbar = () => {
     const dispatch = useDispatch();
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
+    const authModalActive = useSelector(({auth}) => auth.authModalActive, shallowEqual);
     const userData = useSelector(({auth}) => auth.user, shallowEqual);
     const {charge, invited} = userData;
-    const text = isAuth ? 'recharge' : 'sign up';
 
     return (
         <div className={styles.navbar}>
@@ -34,22 +34,30 @@ export const Navbar = () => {
                 </div>
                 <div className={`column-4 ${styles.navbar__wraper}`}>
                     {isAuth ? <ChargeBar accountBalance={charge}/> : null}
-                    <Button
-                        type={'button'}
-                        classType={'basic'}
-                        additionalClass={styles.navbar__button}
-                        text={text}
-                        handleClick={() => {
-                            dispatch(setUserData(responseUserData)); //mocked Navbar logic, remove after back-end fully operational
-                            const responseTeamData = {
-                                ...teamData,
-                                teammates: teamData.teammates.map(element => usersData.find(({id}) => id === element))
-                            };
-                            dispatch(setTeamData(responseTeamData)); //mocked Navbar logic, remove after back-end fully operational
-                            dispatch(toggleAuthStatus());
-                        }}
-                    />
+                    {isAuth ?
+                        <Button
+                            type={'button'}
+                            classType={'basic'}
+                            additionalClass={styles.navbar__button}
+                            text='recharge'
+                            handleClick={() => {
+                                dispatch(toggleAuthStatus());
+                            }}
+                        /> :
+                        <Button
+                            type={'button'}
+                            classType={'basic'}
+                            additionalClass={styles.navbar__button}
+                            text='sign up'
+                            handleClick={() => {
+                                dispatch(toggleAuthModalStatus());
+                            }}
+                        />
+                    }
                 </div>
+                <Modal isOpen={authModalActive} toggleModal={() => dispatch(toggleAuthModalStatus())} minWidth={'300px'} minHeight={'200px'} >
+                    <AuthImitator/>
+                </Modal>
             </div>
         </div>
     )
