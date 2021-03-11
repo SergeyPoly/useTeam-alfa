@@ -15,7 +15,7 @@ import { randomPlayersData } from '../../randomPlayersData'; //logic rethink nee
 
 const JoinSoloForm = ({disabled}) => {
     const dispatch = useDispatch();
-    const {id, smallAvatarImg} = useSelector(({auth}) => auth.userData, shallowEqual);
+    const {id, smallAvatarImg} = useSelector(({auth}) => auth.user, shallowEqual);
     const joinOption = useSelector(({tournamentDetails}) => tournamentDetails.joinOption, shallowEqual);
     const tournamentSoloTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentSoloTeam, shallowEqual);
     const initialValues = {

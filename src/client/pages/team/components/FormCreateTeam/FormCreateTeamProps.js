@@ -1,15 +1,15 @@
 export const FormCreateTeamProps = [
   {
-    type: 'file',
-    name: 'avatar',
+      type: 'file',
+      name: 'avatar',
   },
   {
-    type: 'text',
-    label: 'team name',
-    name: 'teamName',
+      type: 'text',
+      label: 'Team name',
+      name: 'name',
   },
   {
-    type: 'submit',
-    name: 'submit',
+      type: 'submit',
+      name: 'submit',
   },
 ];

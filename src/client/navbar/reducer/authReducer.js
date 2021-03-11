@@ -4,18 +4,17 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState: {
         isAuth: false,
-        userData: {
-            accountBalance: '',
-            invited: false
-        },
-        teamData: {}
+        user: {},
+        team: {}
     },
     reducers: {
         toggleAuthStatus: state => ({ ...state, isAuth: !state.isAuth }),
-        setUserData: (state, action) => ({ ...state, userData: action.payload }),
-        setTeamData: (state, action) => ({ ...state, teamData: action.payload }),
-        setBalance: (state, action) => ({ ...state, userData: {...state.userData, accountBalance: action.payload}}),
-        setSortedTeammates: (state, action) => ({ ...state, teamData: {...state.teamData, teammates: action.payload } }),
+        setUserData: (state, action) => ({ ...state, user: action.payload }),
+        setTeamData: (state, action) => ({ ...state, team: action.payload }),
+        setTournamentsHistoryTeamData: (state,action) => ({...state, team: {...state.team, tournamentHistory: action.payload}}),
+        setTournamentsLoading: (state, action) => ({...state, team: {...state.team, tournamentHistory: {...state.team.tournamentHistory, countLoading: state.team.tournamentHistory.countLoading + action.payload}}}),
+        setBalance: (state, action) => ({ ...state, user: {...state.user, charge: action.payload}}),
+        setSortedTeammates: (state, action) => ({ ...state, team: {...state.team, teammates: action.payload } }),
     }
 });
 
@@ -24,6 +23,9 @@ export const {
     setUserData,
     setBalance,
     setTeamData,
-    setSortedTeammates
+    setSortedTeammates,
+    setTournamentsHistoryTeamData,
+    setTournamentsLoading
+
 } = authSlice.actions;
 

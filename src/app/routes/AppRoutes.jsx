@@ -9,6 +9,9 @@ import TournamentsPage from '../../client/pages/tournaments/pages/TournamentsPag
 import TournamentDetailsPage from '../../client/pages/tournamentDetails/pages/TournamentDetailsPage';
 import MatchDetailsPage
     from '../../client/pages/matchDetails/pages/MatchDetailsPage';
+import UserProfile from '../../client/pages/userProfile/pages/UserProfile';
+import TeamPage from '../../client/pages/team/pages/TeamPage';
+import PartnershipPage from "../../client/pages/Partnership/pages/PartnershipPage";
 
 export const AppRoutes = () => {
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
@@ -18,7 +21,7 @@ export const AppRoutes = () => {
             <Route exact path="/"
                    render={() => !isAuth ?
                        <MainPage/> :
-                       <NotReadyPage text={'Profile'}/>
+                       <UserProfile/>
                    }
             />
 
@@ -41,12 +44,13 @@ export const AppRoutes = () => {
             <Route exact path="/team"
                    render={() => !isAuth ?
                        <MainPage/> :
-                       <NotReadyPage text={'Team'}/>
+                       // <NotReadyPage text={'Team'}/>
+                       <TeamPage/>
                    }
             />
 
-            <Route exact path="/partnership">
-                <NotReadyPage text={'Partnership'}/>
+            <Route exact path="/partnership/">
+                <PartnershipPage/>
             </Route>
 
             <Route exact path="/terms">

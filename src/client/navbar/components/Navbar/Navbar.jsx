@@ -9,15 +9,15 @@ import { setTeamData, toggleAuthStatus, setUserData } from '../../reducer/authRe
 
 import styles from './Navbar.module.scss'
 
-import { responseUserData } from '../../userData'; //mocked Navbar logic, remove after back-end fully operational
-import { teamData } from '../../teamData'; //mocked Navbar logic, remove after back-end fully operational
+import {userProfileData as responseUserData} from '../../../pages/userProfile/pages/userProfileData'; //mocked Navbar logic, remove after back-end fully operational
+import { teamData } from '../../../pages/team/teamData'; //mocked Navbar logic, remove after back-end fully operational
 import { usersData } from '../../../pages/tournamentDetails/usersData';
 
 export const Navbar = () => {
     const dispatch = useDispatch();
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
-    const userData = useSelector(({auth}) => auth.userData, shallowEqual);
-    const {accountBalance, invited} = userData;
+    const userData = useSelector(({auth}) => auth.user, shallowEqual);
+    const {charge, invited} = userData;
     const text = isAuth ? 'recharge' : 'sign up';
 
     return (
@@ -33,7 +33,7 @@ export const Navbar = () => {
                     />
                 </div>
                 <div className={`column-4 ${styles.navbar__wraper}`}>
-                    {isAuth ? <ChargeBar accountBalance={accountBalance}/> : null}
+                    {isAuth ? <ChargeBar accountBalance={charge}/> : null}
                     <Button
                         type={'button'}
                         classType={'basic'}
