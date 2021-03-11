@@ -5,21 +5,25 @@ import { shallowEqual, useSelector } from 'react-redux';
 import styles from './SidebarContentPartners.module.scss'
 
 const SidebarContentPartners = () => {
-    const { partners } = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
+    const partners = useSelector(({partners}) => partners.partnersData, shallowEqual);
+    console.log(partners);
     const { title, sub } = partners;
 
-    const subPartnersList = sub.map(element =>
-        <img src={element}
+    const subPartnersList = sub.map(({link, src}) =>
+        <a href={link}>
+            <img src={src}
              key={v4()}
              alt='sub partner'
              className={styles.sidebar_partners__sub_partner}
-        />,
+            />
+        </a>,
     );
+
 
     return (
         <div>
             <h4 className={styles.sidebar_partners__title}>Title partner</h4>
-            <img src={title} alt='title partner' className={styles.sidebar_partners__main_partner} />
+            <a href={title.link}><img src={title.src} alt='title partner' className={styles.sidebar_partners__main_partner} /></a>
             <h4 className={styles.sidebar_partners__title}>Partners</h4>
             {subPartnersList}
         </div>
