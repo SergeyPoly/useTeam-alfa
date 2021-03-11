@@ -25,6 +25,7 @@ export const usersData = [
         statistics: {
             matches: '146',
             tournaments: '21',
+            winrate: '50%',
             cups: '1',
         },
         invites: []
@@ -38,6 +39,7 @@ export const usersData = [
         statistics: {
             matches: '120',
             tournaments: '15',
+            winrate: '20%',
             cups: '2',
         },
         invites: []
@@ -51,6 +53,7 @@ export const usersData = [
         statistics: {
             matches: '244',
             tournaments: '35',
+            winrate: '70%',
             cups: '1',
         },
         invites: []
@@ -64,6 +67,7 @@ export const usersData = [
         statistics: {
             matches: '131',
             tournaments: '20',
+            winrate: '80%',
             cups: '5',
         },
         invites: []
@@ -77,6 +81,7 @@ export const usersData = [
         statistics: {
             matches: '250',
             tournaments: '50',
+            winrate: '90%',
             cups: '3',
         },
         invites: []
@@ -84,14 +89,44 @@ export const usersData = [
     {
         id: '7',
         name: 'Cort',
+        avatarImg: playerAvatar,
+        mediumAvatarImg: mediumPlayerAvatar2,
+        smallAvatarImg: smallPlayerAvatar2,
+        statistics: {
+            matches: '250',
+            tournaments: '50',
+            winrate: '90%',
+            cups: '3',
+        },
+        invites: []
     },
     {
         id: '8',
         name: 'Minerva',
+        avatarImg: playerAvatar,
+        mediumAvatarImg: mediumPlayerAvatar2,
+        smallAvatarImg: smallPlayerAvatar2,
+        statistics: {
+            matches: '250',
+            tournaments: '50',
+            winrate: '90%',
+            cups: '3',
+        },
+        invites: []
     },
     {
         id: '9',
         name: 'Artur',
+        avatarImg: playerAvatar,
+        mediumAvatarImg: mediumPlayerAvatar2,
+        smallAvatarImg: smallPlayerAvatar2,
+        statistics: {
+            matches: '250',
+            tournaments: '50',
+            winrate: '90%',
+            cups: '3',
+        },
+        invites: []
     },
     {
         id: '10',

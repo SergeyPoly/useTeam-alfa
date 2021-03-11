@@ -1,4 +1,6 @@
 import teamAvatar from '../../../assets/images/team/teamAvatar.jpg';
+import avatar from './components/Teammates/PlayerAvatar.png';
+
 
 export const teamData = {
     id: 1,
@@ -22,7 +24,7 @@ export const teamData = {
             result: "win"
         }
     ],
-    teammates: ['2', '3', '4', '5', '6'],
+    teammates: ['2', '3', '4', '5', '6', '7', '8','9'],
     tournaments: [
         {
             id:"51",
@@ -61,7 +63,24 @@ export const teamData = {
         tournaments: [],
         countLoading: 5,
     },
-    teamAvatarImg: teamAvatar
-
+    teamAvatarImg: teamAvatar,
+    listTeammates: [
+        {
+            avatar: avatar,
+            name: 'Anasurimbor Kiborg',
+            matches: 250,
+            tournaments: 250,
+            winrate: '50%',
+            cups: 1,
+        },
+        {
+            avatar: avatar,
+            name: 'Anasurimbor Kiborgdfgsdfgsdfdsafasdfsdfgsdfg',
+            matches: 250,
+            tournaments: 250,
+            winrate: '50%',
+            cups: 1,
+        },
+    ],
 
 }
