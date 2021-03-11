@@ -7,6 +7,7 @@ import axios from 'axios';
 import { tournamentsDataNew } from '../../pages/MainPage/newPageProps';
 import { usersData } from '../../../tournamentDetails/usersData';
 import { matchesData } from '../../../matchDetails/matchesData';
+import { randomPlayersDataForBack } from '../../../tournamentDetails/services/randomPlayersDataForBack';
 
 const url = 'https://cybersports.herokuapp.com';
 
@@ -97,3 +98,11 @@ matchesData.map(elem => {
       .catch(error => console.log(error));
   };
 
+
+
+  export const postAllPlayers = () =>
+  randomPlayersDataForBack.map(elem => {
+      return axios
+        .post("http://localhost:5000/players", elem, {})
+        .catch(error => console.log(error));
+    });

@@ -8,6 +8,7 @@ import styles from './MainPage.module.scss';
 import SectionTourList from '../../components/SectionTourList/SectionTourList';
 import { tournamentsRequestCreator } from '../../../tournaments/reducers/tournamentsActionCreators';
 import { useDispatch } from 'react-redux';
+import { postAllPlayers } from '../../reducer/actions/getAllTournaments';
 // import {
 //   getAllMatches,
 //   getOneTournament,
@@ -25,8 +26,12 @@ const MainPage = () => {
   // postAllMatches()+*2
   // getAllMatches()
   // getOneTournament()
+  
 
   useEffect(() => {
+    postAllPlayers()
+
+
     dispatch(
       tournamentsRequestCreator([
         'url_for_card',
