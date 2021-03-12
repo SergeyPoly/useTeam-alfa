@@ -6,7 +6,7 @@ import { tournamentDetailsSlice } from '../../client/pages/tournamentDetails/red
 import { matchDetailsSlice } from '../../client/pages/matchDetails/reducers/matchDetailsReducer';
 import { apiSlice } from './apiReducer';
 import { sliderSlice } from '../../client/pages/main/reducer/sliderReducer';
-import {partnersSlice} from "../../client/pages/Partnership/reducers/partnerReducer";
+import {partnersSlice} from "../../client/pages/partnership/reducers/partnerReducer";
 
 const rootReducer = combineReducers({
     auth: authSlice.reducer,

@@ -11,7 +11,7 @@ import MatchDetailsPage
     from '../../client/pages/matchDetails/pages/MatchDetailsPage';
 import UserProfile from '../../client/pages/user/pages/UserProfile';
 import TeamPage from '../../client/pages/team/pages/TeamPage';
-import PartnershipPage from "../../client/pages/Partnership/pages/PartnershipPage";
+import PartnershipPage from "../../client/pages/partnership/pages/PartnershipPage";
 
 export const AppRoutes = () => {
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);

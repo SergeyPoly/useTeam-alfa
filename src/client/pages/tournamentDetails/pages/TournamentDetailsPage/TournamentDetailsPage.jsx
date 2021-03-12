@@ -14,7 +14,7 @@ import {
     toggleJoinSoloStatus,
     toggleJoinTeamStatus,
 } from '../../reducers/tournamentDetailsReducer';
-import { partnersDataRequestCreator } from '../../../Partnership/reducers/partnershipActionCreators';
+import { partnersDataRequestCreator } from '../../../partnership/reducers/partnershipActionCreators';
 import Loader from 'react-loader-spinner';
 
 const TournamentDetailsPage = () => {
