@@ -8,7 +8,7 @@ import styles from './MainPage.module.scss';
 import SectionTourList from '../../components/SectionTourList/SectionTourList';
 import { tournamentsRequestCreator } from '../../../tournaments/reducers/tournamentsActionCreators';
 import { useDispatch } from 'react-redux';
-import { postAllPlayers } from '../../reducer/actions/getAllTournaments';
+import { postAllPlayers, postAllTestUsers } from '../../reducer/actions/getAllTournaments';
 // import {
 //   getAllMatches,
 //   getOneTournament,
@@ -29,7 +29,8 @@ const MainPage = () => {
   
 
   useEffect(() => {
-    postAllPlayers()
+    // postAllPlayers()
+    // postAllTestUsers()
 
 
     dispatch(

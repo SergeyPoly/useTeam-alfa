@@ -14,7 +14,7 @@ const SliderSection = () => {
   const processedTournamentsData = useSelector(
     ({ tournaments }) => tournaments.processedTournamentsData,
     shallowEqual,
-  );
+  ).filter(elem=> Math.round(Date.parse(elem.startTime) - Date.now())>0);
 
   const dispatch = useDispatch();
 
@@ -34,6 +34,6 @@ const SliderSection = () => {
       <SliderDots setActualSlide={setActualSlide} />
     </div>
   );
-};
+}
 
 export default SliderSection;

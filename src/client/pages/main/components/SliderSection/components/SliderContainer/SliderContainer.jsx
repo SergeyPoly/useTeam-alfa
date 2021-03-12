@@ -10,7 +10,8 @@ const SliderContainer = ({ actualSlide }) => {
   const processedTournamentsData = useSelector(
     ({ tournaments }) => tournaments.processedTournamentsData,
     shallowEqual,
-  );
+  ).filter(elem=> Math.round(Date.parse(elem.startTime) - Date.now())>0)
+
   let sliderLength = processedTournamentsData.length * (widthBreakPoints + 3);
 
   const style = {

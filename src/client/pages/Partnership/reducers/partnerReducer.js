@@ -5,32 +5,29 @@ import subPartner2 from '../../../../assets/images/tournaments/subpartner_2.png'
 import subPartner3 from '../../../../assets/images/tournaments/subpartner_3.png';
 
 export const partnersSlice = createSlice({
-    name: 'partners',
-    initialState: {
-        status: "title",
-        partnersData : {
-            title:
-                {
-                    link: 'google.com',
-                    src: mainPartner
-                },
-            sub:
-                [
-                    {
-                        link: 'www.ikea.com',
-                        src: subPartner3
-                    }
-                ]
-        }
-
+  name: 'partners',
+  initialState: {
+    status: 'title',
+    partnersData: {
+      title: {
+        link: 'http://www.google.com',
+        src: mainPartner,
+      },
+      sub: [
+        {
+          link: 'http://www.ikea.com',
+          src: subPartner3,
+        },
+      ],
     },
-    reducers: {
-        setStatus: (state, action) => ({ ...state, status: action.payload }),
-        setNewPartner: (state, action) => ({ ...state, partnersData: action.payload }),
-    }
+  },
+  reducers: {
+    setStatus: (state, action) => ({ ...state, status: action.payload }),
+    setNewPartner: (state, action) => ({
+      ...state,
+      partnersData: action.payload,
+    }),
+  },
 });
 
-export const {
-    setStatus,
-    setNewPartner
-} = partnersSlice.actions;
+export const { setStatus, setNewPartner } = partnersSlice.actions;
