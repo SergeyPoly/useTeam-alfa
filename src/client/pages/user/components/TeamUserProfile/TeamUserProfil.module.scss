@@ -1,0 +1,57 @@
+@import "src/shared/styles/scss/shared";
+
+.team {
+    &__wraper {
+        @include flex(flex-start, flex-start);
+    }
+    &__container {
+        width: 270px;
+        border-radius: $block-border-radius;
+        background-color: $primary-color;
+        padding: 13px 17px;
+        @include flex(flex-start, stretch);
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+    &__avatar_empty {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        background-color: rgba(37, 42, 72, 0.5);
+        margin-right: 10px;
+    }
+    &__description {
+        @include font-source-sans(14px, white, 400);
+        margin-bottom: 5px;
+    }
+    &__sub_text {
+        @include font-source-sans(15px, #8988B6, 400);
+        margin-bottom: 15px;
+    }
+    &__accept_btn {
+        padding: 10px 20px;
+        margin-right: 25px;
+    }
+    &__cancel_btn {
+        padding: 10px 0;
+        background-color: transparent;
+        color: #E45D68;
+        font-weight: normal;
+    }
+    &__img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    &__leave {
+        padding-left: 2px;
+        @include font-source-sans(18px, #8B79FF, 700)
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+@import "src/shared/styles/scss/shared";
+
+.overview {
+    margin-bottom: 20px;
+
+    &__block{
+        border-radius: $block-border-radius;
+        background-color: $primary-color;
+        padding: 25px;
+        max-width: 540px;
+        @include flex(flex-start, center);
+    }
+    &__avatar{
+        border-radius: $block-border-radius;
+        width: 85px;
+        max-height: 85px;
+        overflow: hidden;
+        //height: 100%;
+        margin-right: 15px;
+        color: #FFFFFF;
+        background-color: #fff;
+    }
+    &__info {
+        @include flex(center, stretch);
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    &__nameWrapper{
+        @include flex(space-between, center);
+        margin-bottom: 20px;
+    }
+    &__name {
+        @include font-source-sans(14px, #ffffff, 700);
+    }
+    &__statistic {
+        @include flex(space-between, center);
+        max-width: 325px;
+    }
+    &__statisticItem {
+        margin-right: 5px;
+    }
+    &__statisticTitle {
+        @include font-source-sans(12px, #747baa);
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+    }
+    &__statisticValue{
+        @include font-source-sans(18px, #ffffff, 700);
+        display: block;
+        text-align: center;
+    }
+    &__button{
+        border: none;
+        padding: 5px;
+    }
+}
+

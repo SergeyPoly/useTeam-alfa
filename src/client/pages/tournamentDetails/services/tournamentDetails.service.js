@@ -6,5 +6,11 @@ export default class TournamentDetailsService extends BaseHttpService {
         const response = await this.get(endpoint);
         return response;
     }
+
+    async getRandomPlayers(amount) {
+        const endpoint = `players?${amount}`;
+        const response = await this.get(endpoint);
+        return response;
+    }
 };
 

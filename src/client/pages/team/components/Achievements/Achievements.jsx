@@ -11,7 +11,7 @@ const Achievements = () => {
 
   const user = useSelector(state => state.auth.user);
   const achievementsElements =
-      user.achievements && user.achievements.length !== 0 ? (
+      user.achievements && user.achievements.length !== 0 && user.team ? (
       user.achievements.map(({ avatar, title, mode, result, id, team}) => {
           if (team === user.team.id) {result = "Team win" }
           else result = "Winner";

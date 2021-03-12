@@ -19,7 +19,7 @@ export const usersData = [
     {
         id: '2',
         name: 'Serg',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
@@ -33,7 +33,7 @@ export const usersData = [
     {
         id: '3',
         name: 'Nick',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
@@ -47,7 +47,7 @@ export const usersData = [
     {
         id: '4',
         name: 'Oleg',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
@@ -61,7 +61,7 @@ export const usersData = [
     {
         id: '5',
         name: 'Andrew',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
@@ -75,7 +75,7 @@ export const usersData = [
     {
         id: '6',
         name: 'Vadva',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
@@ -89,7 +89,7 @@ export const usersData = [
     {
         id: '7',
         name: 'Cort',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
@@ -103,7 +103,7 @@ export const usersData = [
     {
         id: '8',
         name: 'Minerva',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
@@ -117,7 +117,7 @@ export const usersData = [
     {
         id: '9',
         name: 'Artur',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {

@@ -25,9 +25,9 @@ const JoinSoloBlock = () => {
     const teamStatusText = ready || disabled ? 'Team will generate randomly' : 'Your team generated';
 
 
-    const tournamentTeamList = tournamentSoloTeam.map(({smallAvatarImg, role}) =>
+    const tournamentTeamList = tournamentSoloTeam.map(({avatarImg, role}) =>
         <div className={styles.join__team_item} key={v4()}>
-            <img className={styles.small_avatar} src={smallAvatarImg} alt="small avatar" />
+            <img className={styles.small_avatar} src={avatarImg} alt="small avatar" />
             <p>{role}</p>
         </div>);
 

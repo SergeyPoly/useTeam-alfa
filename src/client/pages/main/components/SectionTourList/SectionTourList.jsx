@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './SectionTourList.module.scss';
 import Heading from '../../../../../shared/components/Heading';
 import Loaders from '../../../../../shared/components/Loaders';
+import { v4 } from 'uuid';
 // import { GetTour } from '../../pages/MainPage/pageProps;';
 
 import { useSelector, shallowEqual } from 'react-redux';
@@ -24,12 +25,9 @@ const SectionTourList = () => {
   };
 
   useEffect(() => {
-    console.log(numCards);
-    console.log(processedTournamentsData.length);
-
     if (numCards >= processedTournamentsData.length) {
       SetVisible(false);
-    } 
+    }
     else if ( numCards===4) {
       SetVisible(true);
     }
@@ -43,8 +41,8 @@ const SectionTourList = () => {
     processedTournamentsData.map((elem, i) => {
       if (i < numCards) {
         return (
-          <div style={{ padding: '11px 7px' }}>
-              <TournamentCard {...elem} key={elem.id} />
+          <div style={{ padding: '11px 7px' }} key={v4()}>
+              <TournamentCard {...elem} />
           </div>
         );
       }

@@ -25,7 +25,7 @@ const OverviewSection = () => {
 
     return (
         <div>
-            <Heading type={'block'} text='Overview'/>
+            <Heading type={'block'} text='PlayerOverview'/>
             <div className={styles.overview__container}>
                 <div className={styles.overview__title}>
                     {titleColumns}

@@ -32,7 +32,7 @@ const BracketSection = () => {
         </div>
     );
 
-    const emptyCard = () => <div className={styles.bracket__empty} key={v4()}/>;
+    const emptyCard = () => <div className={styles.bracket__empty}/>;
     const emptyList = (step) => {
         const length = +step.split('/')[1];
         return new Array(length).fill(emptyCard());
