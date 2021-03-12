@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/useTeam-alfa/static/css/main.80ee2415.chunk.css",
+    "main.js": "/useTeam-alfa/static/js/main.0f89dd1b.chunk.js",
+    "main.js.map": "/useTeam-alfa/static/js/main.0f89dd1b.chunk.js.map",
+    "runtime-main.js": "/useTeam-alfa/static/js/runtime-main.b5b570ed.js",
+    "runtime-main.js.map": "/useTeam-alfa/static/js/runtime-main.b5b570ed.js.map",
+    "static/js/2.bff514ff.chunk.js": "/useTeam-alfa/static/js/2.bff514ff.chunk.js",
+    "static/js/2.bff514ff.chunk.js.map": "/useTeam-alfa/static/js/2.bff514ff.chunk.js.map",
+    "static/js/3.5ee60bb2.chunk.js": "/useTeam-alfa/static/js/3.5ee60bb2.chunk.js",
+    "static/js/3.5ee60bb2.chunk.js.map": "/useTeam-alfa/static/js/3.5ee60bb2.chunk.js.map",
+    "index.html": "/useTeam-alfa/index.html",
+    "precache-manifest.05f44881a5381571ac3e67ceca19bffc.js": "/useTeam-alfa/precache-manifest.05f44881a5381571ac3e67ceca19bffc.js",
+    "service-worker.js": "/useTeam-alfa/service-worker.js",
+    "static/css/main.80ee2415.chunk.css.map": "/useTeam-alfa/static/css/main.80ee2415.chunk.css.map",
+    "static/js/2.bff514ff.chunk.js.LICENSE.txt": "/useTeam-alfa/static/js/2.bff514ff.chunk.js.LICENSE.txt",
+    "static/media/PlayerAvatar.png": "/useTeam-alfa/static/media/PlayerAvatar.64c9f467.png",
+    "static/media/bg_banner1.png": "/useTeam-alfa/static/media/bg_banner1.205c5d7f.png",
+    "static/media/bg_banner2.png": "/useTeam-alfa/static/media/bg_banner2.4d45eb1d.png",
+    "static/media/charge.6f0ecb1c.svg": "/useTeam-alfa/static/media/charge.6f0ecb1c.svg",
+    "static/media/defaultAvatar.png": "/useTeam-alfa/static/media/defaultAvatar.64c9f467.png",
+    "static/media/dollar.b1d74d0b.svg": "/useTeam-alfa/static/media/dollar.b1d74d0b.svg",
+    "static/media/lightening.17d6b08d.svg": "/useTeam-alfa/static/media/lightening.17d6b08d.svg",
+    "static/media/player_avatar_normal1.png": "/useTeam-alfa/static/media/player_avatar_normal1.62ba74b1.png",
+    "static/media/subpartner_2.png": "/useTeam-alfa/static/media/subpartner_2.aa2b8b1c.png",
+    "static/media/subpartner_3.png": "/useTeam-alfa/static/media/subpartner_3.b1ea7259.png",
+    "static/media/tournament-avatar.jpg": "/useTeam-alfa/static/media/tournament-avatar.75042f2d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5b570ed.js",
+    "static/js/2.bff514ff.chunk.js",
+    "static/css/main.80ee2415.chunk.css",
+    "static/js/main.0f89dd1b.chunk.js"
+  ]
+}
