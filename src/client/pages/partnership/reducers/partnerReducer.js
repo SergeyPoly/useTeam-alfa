@@ -38,7 +38,4 @@ export const partnersSlice = createSlice({
     }
 });
 
-export const {
-    setStatus,
-    setNewPartner
-} = partnersSlice.actions;
+export const { setStatus, setNewPartner } = partnersSlice.actions;

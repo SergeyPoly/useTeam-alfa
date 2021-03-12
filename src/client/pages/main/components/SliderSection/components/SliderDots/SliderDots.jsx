@@ -10,7 +10,8 @@ const SliderDots = ({ setActualSlide }) => {
   const processedTournamentsData = useSelector(
     ({ tournaments }) => tournaments.processedTournamentsData,
     shallowEqual,
-  );
+  ).filter(elem=> Math.round(Date.parse(elem.startTime) - Date.now())>0)
+
   const sliderUnit = processedTournamentsData.map((elem, index) => {
     return (
       <li key={elem.id}>

@@ -4,7 +4,7 @@ import { setTeamData, setUserData } from './authReducer';
 
 import { teamData } from '../../pages/team/teamData'; //DELETE! after back-end fully operational!
 import { usersData } from '../../pages/tournamentDetails/usersData';
-import { setNewPartner } from '../../pages/partnership/reducers/partnerReducer'; //DELETE! after back-end fully operational!
+// import { setNewPartner } from '../../pages/partnership/reducers/partnerReducer'; //DELETE! after back-end fully operational!
 
 const authService = new AuthService();
 

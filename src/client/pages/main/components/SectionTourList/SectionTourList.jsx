@@ -18,7 +18,7 @@ const SectionTourList = () => {
   const processedTournamentsData = useSelector(
     ({ tournaments }) => tournaments.processedTournamentsData,
     shallowEqual,
-  );
+  ).filter(elem=> Math.round(Date.parse(elem.startTime) - Date.now())<0)
 
   const addCards = () => {
     SetNumCards(numCards + 4);
