@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d45655bc043be2069be8988a1a3fdf5b",
+    "revision": "78ce1b5194a4711c7b699fd8f17502db",
     "url": "/useTeam-alfa/index.html"
   },
   {
-    "revision": "06f47e6a7f21b881a7c5",
-    "url": "/useTeam-alfa/static/css/main.80ee2415.chunk.css"
+    "revision": "710119efbed728dead5d",
+    "url": "/useTeam-alfa/static/css/main.bf9451ba.chunk.css"
   },
   {
     "revision": "48a7c74aff6654841ea6",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/useTeam-alfa/static/js/3.5ee60bb2.chunk.js"
   },
   {
-    "revision": "06f47e6a7f21b881a7c5",
-    "url": "/useTeam-alfa/static/js/main.a79f4d26.chunk.js"
+    "revision": "710119efbed728dead5d",
+    "url": "/useTeam-alfa/static/js/main.064d4a50.chunk.js"
   },
   {
     "revision": "af852096d752e8208681",
