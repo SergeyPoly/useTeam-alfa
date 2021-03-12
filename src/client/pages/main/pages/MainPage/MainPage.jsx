@@ -31,8 +31,6 @@ const MainPage = () => {
   useEffect(() => {
     // postAllPlayers()
     // postAllTestUsers()
-
-
     dispatch(
       tournamentsRequestCreator([
         'url_for_card',
