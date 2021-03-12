@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "993a2a9cfd261507854903a7dd6a23f8",
+    "revision": "d45655bc043be2069be8988a1a3fdf5b",
     "url": "/useTeam-alfa/index.html"
   },
   {
-    "revision": "aa8c3203c5ab7a917bfe",
+    "revision": "06f47e6a7f21b881a7c5",
     "url": "/useTeam-alfa/static/css/main.80ee2415.chunk.css"
   },
   {
-    "revision": "b2667a5d8f0195b5a03a",
-    "url": "/useTeam-alfa/static/js/2.ac46e0e0.chunk.js"
+    "revision": "48a7c74aff6654841ea6",
+    "url": "/useTeam-alfa/static/js/2.bff514ff.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/useTeam-alfa/static/js/2.ac46e0e0.chunk.js.LICENSE.txt"
+    "url": "/useTeam-alfa/static/js/2.bff514ff.chunk.js.LICENSE.txt"
   },
   {
     "revision": "4a0fa01d6a7730370a90",
     "url": "/useTeam-alfa/static/js/3.5ee60bb2.chunk.js"
   },
   {
-    "revision": "aa8c3203c5ab7a917bfe",
-    "url": "/useTeam-alfa/static/js/main.d059e46b.chunk.js"
+    "revision": "06f47e6a7f21b881a7c5",
+    "url": "/useTeam-alfa/static/js/main.a79f4d26.chunk.js"
   },
   {
     "revision": "af852096d752e8208681",
