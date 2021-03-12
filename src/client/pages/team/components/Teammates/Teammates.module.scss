@@ -40,6 +40,14 @@
         background-color: transparent;
         border: none;
         text-transform: uppercase;
+        border-radius: $border-radius
     }
-
+    &__btnKick:hover{
+        outline: 1px solid #747baa;
+        cursor: pointer;
+    }
+    &__btnKick:focus{
+        outline: none;
+        cursor: pointer;
+    }
 }

@@ -32,45 +32,31 @@ export const tournamentsHistoryData = {
         },
         {
             avatar,
-          id:"55",
-          title: 'Mars Arena',
-          date: 'Nov 3, 2020 13:47',
-          mode: '5x5',
+            id:"55",
+            title: 'Mars Arena',
+            date: 'Nov 3, 2020 13:47',
+            mode: '5x5',
         },
         {
             avatar,
-          id:"56",
-          title: 'Naga Bank',
-          date: 'Nov 3, 2020 13:47',
-          mode: '5x5',
+            id:"56",
+            title: 'Naga Bank',
+            date: 'Nov 3, 2020 13:47',
+            mode: '5x5',
         },
         {
             avatar,
-          id:"57",
-          title: 'Naga Bank',
-          date: 'Nov 3, 2020 13:47',
-          mode: '5x5',
+            id:"57",
+            title: 'Naga Bank',
+            date: 'Nov 3, 2020 13:47',
+            mode: '5x5',
         },
         {
             avatar,
-          id:"58",
-          title: 'Naga Bank',
-          date: 'Nov 3, 2020 13:47',
-          mode: '5x5',
+            id:"58",
+            title: 'Naga Bank',
+            date: 'Nov 3, 2020 13:47',
+            mode: '5x5',
         },
     ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

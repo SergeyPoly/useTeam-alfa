@@ -1,84 +1,62 @@
-import React, { useMemo, useState } from 'react';
-import PropTypes from 'prop-types';
-
-import Loader from 'react-loader-spinner';
-import styles from './TournamentHistory.module.scss';
+import React from 'react';
+import Heading from '../../../../../shared/components/Heading';
+import style from './TournamentHistory.module.scss';
+import Table from '../../../../../shared/containers/Table';
 import Button from '../../../../../shared/components/Button';
+import { setTournamentsLoadingUser } from '../../../../navbar/reducer/authReducer'
+import { useDispatch, useSelector } from 'react-redux';
 
-const TournamentHistory = props => {
-  const { tournaments } = props;
-  const [tournamentsState, setTournamentsState] = useState([...tournaments]);
-  const [isLoading, setIsLoading] = useState(false);
+const TournamentHistory = (props) => {
+    const { tournaments } = props;
 
-  const loadMore = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setTournamentsState(state => [...state, ...tournaments]);
-      setIsLoading(false);
-    }, 1000);
-  };
+    // const {tournamentName, date, mode, role, result} = props;
+    const dispatch = useDispatch();
+    const resultTableData = {
+        headingText: 'Tournament History',
+        winMarker: false,
+        tableColTitles: [
+            {
+                name: 'tournament',
+                // sorter: sorterName,
+            },
+            { name: 'date' },
+            { name: 'mode' },
+            { name: "role" },
+            { name: 'result' }
+        ],
+        maxWidth: '680px',
+    };
 
-  const tournamentElements = tournamentsState.map(
-    ({ name, date, mode, role, result }, number) => (
-      <tr className={styles.tournamentItem} key={`${name}${date}${number}`}>
-        <td>{name}</td>
-        <td>{date}</td>
-        <td>{mode}</td>
-        <td>{role}</td>
-        <td>{result}</td>
-      </tr>
-    ),
-  );
+    const tournamentHistoryElem = tournaments.map(
+        ({ title, date, mode, role, result }) => (
+            <div className={style.tournamentHistory}>
+                <span className={style.tournamentHistory__text}>{title}</span>
+                <span className={style.tournamentHistory__item}>{date}</span>
+                <span className={style.tournamentHistory__item}>{mode}</span>
+                <span className={style.tournamentHistory__item}>{role}</span>
+                <span className={style.tournamentHistory__text}>{result}</span>
+            </div>
+        ),
+    );
 
-  const button = isLoading ? (
-    <Loader
-      type="TailSpin"
-      color="#567EF7"
-      height={25}
-      width={25}
-      timeout={1000}
-    />
-  ) : (
-    <Button
-      classType="outline"
-      text="Load More"
-      additionalClass={styles.loadMore}
-      handleClick={loadMore}
-    />
-  );
+    const resultRows =      <div>
+        {tournamentHistoryElem}
+    </div>
 
-  return useMemo(
-    () => (
-      <div className={styles.container}>
-        <table className={styles.tournaments}>
-          <tbody className={styles.container}>
-            <tr className={styles.title}>
-              <th>TOURNAMENT</th>
-              <th>DATE</th>
-              <th>MODE</th>
-              <th>ROLE</th>
-              <th>RESULT</th>
-            </tr>
-            {tournamentElements}
-          </tbody>
-        </table>
-        <div className={styles.buttonContainer}>{button}</div>
-      </div>
-    ),
-    [button, tournamentElements],
-  );
+    return (
+        <div className={style.tournamentHistoryList}>
+            <Table tableData={resultTableData}>
+                {/*<ResultTableItems rowsData={resultRows} />*/}
+                {resultRows}
+            </Table>
+            <Button
+                classType="outline"
+                handleClick={() => dispatch(setTournamentsLoadingUser(5))}
+                text="Load more"
+                additionalClass={style.tournamentHistoryList__btn}
+            />
+        </div>
+    );
 };
 
 export default TournamentHistory;
-
-TournamentHistory.propTypes = {
-  tournaments: PropTypes.arrayOf(
-    PropTypes.objectOf(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    ),
-  ),
-};
-
-TournamentHistory.defaultProps = {
-  tournaments: null,
-};

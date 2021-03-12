@@ -9,9 +9,8 @@ const SidebarContentPartners = () => {
     const { title, sub } = partners;
 
     const subPartnersList = sub.length > 0 ? sub.map(({link, src}) =>
-        <a href={link}>
+        <a href={link} key={v4()}>
             <img src={src}
-             key={v4()}
              alt='sub partner'
              className={styles.sidebar_partners__sub_partner}
             />

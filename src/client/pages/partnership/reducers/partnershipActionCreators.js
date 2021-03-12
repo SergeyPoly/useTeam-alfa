@@ -31,7 +31,6 @@ export const changeDataRequestCreator = (id, body) => {
         try {
             await partnershipService.changePartnerData(id, body)
                 .then((res) => {
-                    console.log(res);
                     const {_id, partnersData} = res.result[0];
                     dispatch(setNewPartner({
                         partnersData: partnersData,

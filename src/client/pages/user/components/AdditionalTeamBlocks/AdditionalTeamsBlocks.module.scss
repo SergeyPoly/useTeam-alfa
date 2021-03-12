@@ -30,7 +30,7 @@
     }
     &__accept_btn {
         padding: 10px 20px;
-        margin-right: 25px;
+        margin-left: 30px;
     }
     &__cancel_btn {
         padding: 10px 0;
@@ -49,9 +49,29 @@
         @include font-source-sans(18px, #8B79FF, 700)
     }
 }
-
-
-
+.invite {
+    &__container {
+        padding: 10px;
+        border-radius: $block-border-radius;
+        width: 105%;
+        background-color: #364886;
+        margin: 0 -17px -13px -17px;
+    }
+    &__description {
+        @include font-source-sans(14px, white, 700);
+        margin-bottom: 3px;
+    }
+    &__subtext {
+        @include font-source-sans(12px, #747BAA, 400);
+        margin-bottom: 10px;
+    }
+    &__img {
+        width: 90px;
+        height: 90px;
+        border-radius: $block-border-radius;
+        margin-bottom: 10px;
+    }
+}
 
 
 

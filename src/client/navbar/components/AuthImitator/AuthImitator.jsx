@@ -6,33 +6,22 @@ import Heading from '../../../../shared/components/Heading';
 import {fields} from './fields'
 import CustomFormikField from '../../../../shared/components/FormikFields/CustomFormikField';
 import Button from '../../../../shared/components/Button';
-
-import styles from './AuthImitator.module.scss';
 import {
-    setTeamData,
-    setUserData, toggleAuthModalStatus,
+    toggleAuthModalStatus,
     toggleAuthStatus,
 } from '../../reducer/authReducer';
+import { userDataRequestCreator } from '../../reducer/authActionCreators';
 
-import { userProfileData } from '../../../pages/user/pages/userProfileData'; //DELETE! after back-end fully operational!
-import { teamData } from '../../../pages/team/teamData'; //DELETE! after back-end fully operational!
-import { usersData } from '../../../pages/tournamentDetails/usersData'; //DELETE! after back-end fully operational!
+import styles from './AuthImitator.module.scss';
 
 const AuthImitator = () => {
     const dispatch = useDispatch();
     const initialValues = {
-        user: '1'
+        user: '604a903fc7c9c314782e04e5'
     };
 
     const onSubmit = (values) => {
-        console.log(values);
-        //REFACTOR NEXT STEPS after back-end fully operational!
-        dispatch(setUserData(userProfileData));
-        const responseTeamData = {
-            ...teamData,
-            teammates: teamData.teammates.map(element => usersData.find(({id}) => id === element))
-        };
-        dispatch(setTeamData(responseTeamData));
+        dispatch(userDataRequestCreator(values.user))
         dispatch(toggleAuthModalStatus());
         dispatch(toggleAuthStatus());
     };

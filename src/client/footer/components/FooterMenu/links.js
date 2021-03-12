@@ -4,7 +4,7 @@ export const links = [
     {
         id: v4(),
         to: '/partnership/',
-        text: 'partnership',
+        text: 'Partnership',
     },
     {
         id: v4(),

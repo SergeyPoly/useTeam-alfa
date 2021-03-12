@@ -11,3 +11,7 @@
     }
 
 }
+.loader {
+    @include flex (center, center);
+    height: 400px;
+}

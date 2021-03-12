@@ -15,12 +15,12 @@ const PlayerOverview = () => {
         <img className={styles.overview__avatar} src={avatarImg} alt="player avatar" /> :
         <img className={styles.overview__avatar} src={defaultAvatar} alt="default avatar" />
 
-    const statisticItems = Object.entries(statistics).map(element => (
+    const statisticItems = statistics ? Object.entries(statistics).map(element => (
         <div className={styles.overview__statisticItem} key={v4()}>
             <span className={styles.overview__statisticTitle}>{element[0]}</span>
             <span className={styles.overview__statisticValue}>{element[1]}</span>
         </div>
-    ));
+    )) : null;
 
     return (
         <div className={styles.overview}>

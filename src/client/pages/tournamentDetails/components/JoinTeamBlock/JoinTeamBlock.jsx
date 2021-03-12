@@ -12,13 +12,16 @@ import { setBalance } from '../../../../navbar/reducer/authReducer';
 
 import styles from './JoinTeamBlock.module.scss';
 
-import { randomPlayersRequestCreator } from '../../reducers/tournamentDetailsActionCreators'; //logic rethink needed after back-end fully operational
+import { randomPlayersRequestCreator } from '../../reducers/tournamentDetailsActionCreators';
+import { inviteTeammateRequestCreator } from '../../../../navbar/reducer/authActionCreators';
+import teamAvatar
+    from '../../../../../assets/images/userProfile/team-avatar.jpg';
 
 const JoinTeamBlock = () => {
     const dispatch = useDispatch();
     const {teamAvatarImg, name} = useSelector(({auth}) => auth.team, shallowEqual);
-    const {entry} = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
-    const {id, avatarImg, accountBalance} = useSelector(({auth}) => auth.user, shallowEqual);
+    const {entry, itemHeading, prizePool, url_for_invite} = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
+    const {_id, avatarImg, charge} = useSelector(({auth}) => auth.user, shallowEqual);
     const {team} = useSelector(({tournamentDetails}) => tournamentDetails.discount, shallowEqual);
     const tournamentOwnerTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentOwnerTeam, shallowEqual);
     const {notReady, ready, joined, confirmed, disabled} = useSelector(({tournamentDetails}) => tournamentDetails.joinTeamStatus, shallowEqual);
@@ -28,9 +31,9 @@ const JoinTeamBlock = () => {
     const additionalClass = disabled || notReady ? styles.join_button_disabled : styles.join_button;
 
     useEffect(() => {
-        if (tournamentOwnerTeam.length === 0 && id) {
+        if (tournamentOwnerTeam.length === 0 && _id) {
             const owner = {
-                id: id,
+                id: _id,
                 avatarImg: avatarImg,
                 owner: true
             };
@@ -38,7 +41,24 @@ const JoinTeamBlock = () => {
             createdTournamentTeam.push(owner);
             dispatch(setTournamentOwnerTeam(createdTournamentTeam));
         }
-    });
+    }, [_id]);
+
+    const body = {
+        additionalTeams: [
+            {
+                id: '1',
+                name: 'Jabba’sTeam 1',
+                date: 'Nov 3, 2020 13:47',
+                imgSrc: teamAvatar,
+                invitation: {
+                    itemHeading,
+                    prizePool,
+                    entry,
+                    imgSrc: url_for_invite,
+                },
+            }
+        ],
+    };
 
     const handleResponse = (newRandomTeam) => setTournamentOwnerTeam(newRandomTeam);
 
@@ -111,8 +131,9 @@ const JoinTeamBlock = () => {
                                 additionalClass={styles.btn_confirm}
                                 handleClick={() => {
                                     dispatch(toggleJoinTeamStatus('confirmed'));
-                                    const currentBalance = accountBalance - discountedEntry;
+                                    const currentBalance = charge - discountedEntry;
                                     dispatch(setBalance(currentBalance.toString()));
+                                    dispatch(inviteTeammateRequestCreator('604a903fc7c9c314782e04e6', body))
                                 }}
                             />
                             <Button

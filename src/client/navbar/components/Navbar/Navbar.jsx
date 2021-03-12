@@ -17,8 +17,8 @@ export const Navbar = () => {
     const dispatch = useDispatch();
     const isAuth = useSelector(({auth}) => auth.isAuth, shallowEqual);
     const authModalActive = useSelector(({auth}) => auth.authModalActive, shallowEqual);
-    const userData = useSelector(({auth}) => auth.user, shallowEqual);
-    const {charge, invited} = userData;
+    const {charge, invites, additionalTeams} = useSelector(({auth}) => auth.user, shallowEqual);
+    const checkTeamInvite = additionalTeams.length > 0 ? additionalTeams[0].invitation : null;
 
     return (
         <div className={styles.navbar}>
@@ -29,7 +29,7 @@ export const Navbar = () => {
                 <div className={'column-5'}>
                     <NavbarMenu
                         isAuth={isAuth}
-                        invited={invited}
+                        invited={Boolean(invites.length > 0 || checkTeamInvite)}
                     />
                 </div>
                 <div className={`column-4 ${styles.navbar__wraper}`}>
