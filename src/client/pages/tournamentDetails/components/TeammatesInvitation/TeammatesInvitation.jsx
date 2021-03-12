@@ -43,14 +43,14 @@ const TeammatesInvitation = () => {
         dispatch(setTournamentOwnerTeam(createdTournamentTeam));
     };
 
-    const teammateItems = tournamentOwnerTeam.map(({ mediumAvatarImg, owner, id }) => owner ?
+    const teammateItems = tournamentOwnerTeam.map(({ avatarImg, owner, id }) => owner ?
         <img className={styles.mid_avatar}
-             src={mediumAvatarImg}
+             src={avatarImg}
              alt="small avatar"
              key={v4()}/> :
         <img className={styles.mid_avatar}
              key={v4()}
-             src={mediumAvatarImg}
+             src={avatarImg}
              alt="small avatar"
              style={{cursor: 'pointer'}}
              onClick={()=>removeTeammate(id)}/>,

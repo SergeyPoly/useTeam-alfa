@@ -1,6 +1,9 @@
 import TournamentDetailsService from '../services/tournamentDetails.service';
 import { setLoadingStatus } from '../../../../app/store/apiReducer';
-import { setProcessedTournamentData } from './tournamentDetailsReducer';
+import {
+    setProcessedTournamentData,
+    setTournamentSoloTeam,
+} from './tournamentDetailsReducer';
 
 import { partnersData } from '../partnersData'; //DELETE! after back-end fully operational!
 import { tournamentTeamsData } from '../tournamentTeamsData'; //DELETE! after back-end fully operational!
@@ -43,6 +46,23 @@ export const tournamentDetailsRequestCreator = (id) => {
                         }))
                     };
                     dispatch(setProcessedTournamentData(responseTournamentData));
+                    dispatch(setLoadingStatus(false));
+                })
+        } catch (err) {
+            console.log(err);
+            dispatch(setLoadingStatus(false));
+        }
+    }
+};
+
+export const randomPlayersRequestCreator = (amount, randomTeam, handleResponse) => {
+    return async ( dispatch ) => {
+        dispatch(setLoadingStatus(true));
+        try {
+            await tournamentDetailsService.getRandomPlayers(amount)
+                .then((res) => {
+                    const newRandomTeam = randomTeam.concat(res.result);
+                    dispatch(handleResponse(newRandomTeam));
                     dispatch(setLoadingStatus(false));
                 })
         } catch (err) {

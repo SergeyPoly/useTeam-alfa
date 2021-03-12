@@ -19,12 +19,13 @@ export const usersData = [
     {
         id: '2',
         name: 'Serg',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
             matches: '146',
             tournaments: '21',
+            winrate: '50%',
             cups: '1',
         },
         invites: []
@@ -32,12 +33,13 @@ export const usersData = [
     {
         id: '3',
         name: 'Nick',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
             matches: '120',
             tournaments: '15',
+            winrate: '20%',
             cups: '2',
         },
         invites: []
@@ -45,12 +47,13 @@ export const usersData = [
     {
         id: '4',
         name: 'Oleg',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
             matches: '244',
             tournaments: '35',
+            winrate: '70%',
             cups: '1',
         },
         invites: []
@@ -58,12 +61,13 @@ export const usersData = [
     {
         id: '5',
         name: 'Andrew',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
             matches: '131',
             tournaments: '20',
+            winrate: '80%',
             cups: '5',
         },
         invites: []
@@ -71,12 +75,13 @@ export const usersData = [
     {
         id: '6',
         name: 'Vadva',
-        avatarImg: playerAvatar,
+        avatarImg: mediumPlayerAvatar2,
         mediumAvatarImg: mediumPlayerAvatar2,
         smallAvatarImg: smallPlayerAvatar2,
         statistics: {
             matches: '250',
             tournaments: '50',
+            winrate: '90%',
             cups: '3',
         },
         invites: []
@@ -84,14 +89,44 @@ export const usersData = [
     {
         id: '7',
         name: 'Cort',
+        avatarImg: mediumPlayerAvatar2,
+        mediumAvatarImg: mediumPlayerAvatar2,
+        smallAvatarImg: smallPlayerAvatar2,
+        statistics: {
+            matches: '250',
+            tournaments: '50',
+            winrate: '90%',
+            cups: '3',
+        },
+        invites: []
     },
     {
         id: '8',
         name: 'Minerva',
+        avatarImg: mediumPlayerAvatar2,
+        mediumAvatarImg: mediumPlayerAvatar2,
+        smallAvatarImg: smallPlayerAvatar2,
+        statistics: {
+            matches: '250',
+            tournaments: '50',
+            winrate: '90%',
+            cups: '3',
+        },
+        invites: []
     },
     {
         id: '9',
         name: 'Artur',
+        avatarImg: mediumPlayerAvatar2,
+        mediumAvatarImg: mediumPlayerAvatar2,
+        smallAvatarImg: smallPlayerAvatar2,
+        statistics: {
+            matches: '250',
+            tournaments: '50',
+            winrate: '90%',
+            cups: '3',
+        },
+        invites: []
     },
     {
         id: '10',

@@ -9,7 +9,7 @@ import TournamentsPage from '../../client/pages/tournaments/pages/TournamentsPag
 import TournamentDetailsPage from '../../client/pages/tournamentDetails/pages/TournamentDetailsPage';
 import MatchDetailsPage
     from '../../client/pages/matchDetails/pages/MatchDetailsPage';
-import UserProfile from '../../client/pages/userProfile/pages/UserProfile';
+import UserProfile from '../../client/pages/user/pages/UserProfile';
 import TeamPage from '../../client/pages/team/pages/TeamPage';
 import PartnershipPage from "../../client/pages/Partnership/pages/PartnershipPage";
 

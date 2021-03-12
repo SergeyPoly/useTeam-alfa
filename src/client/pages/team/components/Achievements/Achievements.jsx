@@ -5,22 +5,25 @@ import styles from './Achievements.module.scss';
 import TournamentItem from '../TournamentsItem';
 import NoTournamentsItem from '../NoTournamentsItem';
 import Heading from '../../../../../shared/components/Heading';
+import { useSelector } from 'react-redux';
 
-const Achievements = props => {
-  const { achievements } = props;
+const Achievements = () => {
 
+  const user = useSelector(state => state.auth.user);
   const achievementsElements =
-    achievements && achievements.length !== 0 ? (
-      achievements.map(({ avatar, name, type, status, id }) => (
-        <TournamentItem
-          avatar={avatar}
-          name={name}
-          status={status}
-          type={type}
-          key={id}
-        />
-      ))
-    ) : (
+      user.achievements && user.achievements.length !== 0 && user.team ? (
+      user.achievements.map(({ avatar, title, mode, result, id, team}) => {
+          if (team === user.team.id) {result = "Team win" }
+          else result = "Winner";
+          return(
+              <TournamentItem
+              avatar={avatar}
+              title={title}
+              status={result}
+              mode={mode}
+              key={id}
+          />)
+      })) : (
       <NoTournamentsItem />
     );
 
@@ -35,15 +38,4 @@ const Achievements = props => {
 };
 
 export default Achievements;
-
-// Achievements.propTypes = {
-//   achievements: PropTypes.arrayOf(
-//     PropTypes.objectOf(
-//       PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-//     ),
-//   ),
-// };
-//
-// Achievements.defaultProps = {
-//   achievements: [],
-// };
+;

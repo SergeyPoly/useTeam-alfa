@@ -11,11 +11,12 @@ import {
     setJoinOption, setTournamentOwnerTeam, setTournamentSoloTeam,
     toggleJoinSoloStatus, toggleJoinTeamStatus,
 } from '../../reducers/tournamentDetailsReducer';
-import { randomPlayersData } from '../../randomPlayersData'; //logic rethink needed after back-end fully operational
+import { randomPlayersData } from '../../randomPlayersData';
+import { randomPlayersRequestCreator } from '../../reducers/tournamentDetailsActionCreators'; //logic rethink needed after back-end fully operational
 
 const JoinSoloForm = ({disabled}) => {
     const dispatch = useDispatch();
-    const {id, smallAvatarImg} = useSelector(({auth}) => auth.user, shallowEqual);
+    const {id, avatarImg} = useSelector(({auth}) => auth.user, shallowEqual);
     const joinOption = useSelector(({tournamentDetails}) => tournamentDetails.joinOption, shallowEqual);
     const tournamentSoloTeam = useSelector(({tournamentDetails}) => tournamentDetails.tournamentSoloTeam, shallowEqual);
     const initialValues = {
@@ -23,21 +24,18 @@ const JoinSoloForm = ({disabled}) => {
     };
     const additionalClass = disabled ? styles.join_button_disabled : styles.join_button;
 
+    const handleResponse = (newRandomTeam) => setTournamentSoloTeam(newRandomTeam);
+
     const onSubmit = ({joinAs}) => {
         dispatch(setJoinOption(joinAs));
         const currentPlayer = {
             id: id,
-            smallAvatarImg: smallAvatarImg,
+            avatarImg: avatarImg,
             role: joinAs
         };
         const randomTournamentTeam = [...tournamentSoloTeam];
-        const randomPlayers = [...randomPlayersData];
-        const randomIndex = () => Math.floor(Math.random()*(randomPlayers.length));
         randomTournamentTeam.push(currentPlayer);
-        do {
-            randomTournamentTeam.push(randomPlayers.splice(randomIndex(), 1)[0]);
-        } while (randomTournamentTeam.length < 5);
-        dispatch(setTournamentSoloTeam(randomTournamentTeam));
+        dispatch(randomPlayersRequestCreator(4, randomTournamentTeam, handleResponse));
         dispatch(toggleJoinSoloStatus('joined'));
         dispatch(toggleJoinTeamStatus('disabled'));
         dispatch(setTournamentOwnerTeam([]))

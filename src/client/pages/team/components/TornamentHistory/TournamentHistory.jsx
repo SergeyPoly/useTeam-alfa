@@ -3,30 +3,29 @@ import Heading from '../../../../../shared/components/Heading';
 import style from '../TornamentHistory/TournamentHistory.module.scss';
 import Table from '../../../../../shared/containers/Table';
 import Button from '../../../../../shared/components/Button';
-import { setTournamentsLoading } from '../../../../navbar/reducer/authReducer'
-import { useDispatch } from 'react-redux';
+import { setTournamentsLoadingTeam } from '../../../../navbar/reducer/authReducer'
+import { useDispatch, useSelector } from 'react-redux';
 
-const TournamentHistory = props => {
-  const { tournamentHistory } = props;
+const TournamentHistory = (props) => {
+  const { tournaments } = props;
   // const {tournamentName, date, mode, result} = props;
     const dispatch = useDispatch();
-    console.log(tournamentHistory)
     const resultTableData = {
         headingText: 'Tournament History',
         winMarker: false,
         tableColTitles: [
             {
-                name: 'players',
+                name: 'tournaments',
                 // sorter: sorterName,
             },
-            { name: 'matches' },
-            { name: 'tournaments' },
-            { name: 'winrate' }
+            { name: 'date' },
+            { name: 'mode' },
+            { name: 'result' }
         ],
         maxWidth: '674px',
     };
 
-    const tournamentHistoryElem = tournamentHistory.map(
+    const tournamentHistoryElem = tournaments.map(
         ({ title, date, mode, result }) => (
             <div className={style.tournamentHistory}>
                 <span className={style.tournamentHistory__text}>{title}</span>
@@ -49,7 +48,7 @@ const TournamentHistory = props => {
         </Table>
           <Button
             classType="outline"
-            handleClick={() => dispatch(setTournamentsLoading(5))}
+            handleClick={() => dispatch(setTournamentsLoadingTeam(5))}
             text="Load more"
             additionalClass={style.tournamentHistoryList__btn}
           />

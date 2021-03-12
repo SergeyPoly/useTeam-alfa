@@ -16,19 +16,18 @@ const InviteTableItems = ({rowsData}) => {
             dispatch(setTournamentOwnerTeam(createdTournamentTeam));
         }
     };
-    const tableData = rowsData.map(({id, name, smallAvatarImg, mediumAvatarImg, statistics}) => {
+    const tableData = rowsData.map(({id, name, avatarImg, statistics}) => {
         const {matches, tournaments, cups} = statistics;
         const alreadyInTeam = tournamentOwnerTeam.find(element=>element.id === id);
         const teammate = {
             id: id,
-            smallAvatarImg: smallAvatarImg,
-            mediumAvatarImg: mediumAvatarImg,
+            avatarImg: avatarImg,
             owner: false
         };
         return (
             <div className={styles.row} key={v4()}>
                 <div className={styles.first_cell}>
-                    <img src={smallAvatarImg} alt="small avatar" className={styles.avatar} style={{marginRight: '10px'}}/>
+                    <img src={avatarImg} alt="small avatar" className={styles.avatar} style={{marginRight: '10px'}}/>
                     <span className={styles.text_highlited}>{name}</span>
                 </div>
                 <div className={styles.cell}>
