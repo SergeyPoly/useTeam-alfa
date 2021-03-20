@@ -5,19 +5,21 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import Sidebar from '../../../../../shared/containers/Sidebar';
 import SidebarContentPartners from '../../../tournamentDetails/components/SidebarContentPartners';
 import MatchDetails from '../../components/MatchDetails';
+import { matchDetailsRequestCreator } from '../../reducers/matchDetailsActionCreators';
+import { useLoader } from '../../../../../shared/customHooks/useLoader';
 
 import styles from './MatchDetailsPage.module.scss'
-
-import { matchDetailsRequestCreator } from '../../reducers/matchDetailsActionCreators';
+import Loader from 'react-loader-spinner';
 
 const MatchDetailsPage = () => {
     const {id} = useParams();
     const {partners} = useSelector(({tournamentDetails}) => tournamentDetails.processedTournamentData, shallowEqual);
     const dispatch = useDispatch();
+    const { isLoading, toggleLoadingStatus } = useLoader();
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        dispatch(matchDetailsRequestCreator(id))
+        dispatch(matchDetailsRequestCreator(id, toggleLoadingStatus))
 
     }, []);
 
@@ -35,7 +37,12 @@ const MatchDetailsPage = () => {
                     <Sidebar sidebarData={sidebarData}/>
                 </div>
                 <div className={'column-9'}>
-                    <MatchDetails/>
+                    {isLoading ?
+                        <div className={styles.loader}>
+                            <Loader type='TailSpin' color='#567EF7' height={40}
+                                    width={40} />
+                        </div> :
+                        <MatchDetails />}
                 </div>
             </div>
         </div>

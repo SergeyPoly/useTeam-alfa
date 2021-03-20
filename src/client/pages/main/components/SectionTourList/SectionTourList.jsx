@@ -10,11 +10,10 @@ import TournamentCard from '../../../../../shared/components/TournamentCard';
 
 import Loader from 'react-loader-spinner';
 
-const SectionTourList = () => {
+const SectionTourList = ({isLoading}) => {
   const [numCards, SetNumCards] = useState(4);
   const [visible, SetVisible] = useState(true);
 
-  const isLoading = useSelector(({ api }) => api.isLoading, shallowEqual);
   const processedTournamentsData = useSelector(
     ({ tournaments }) => tournaments.processedTournamentsData,
     shallowEqual,

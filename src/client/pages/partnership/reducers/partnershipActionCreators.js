@@ -1,13 +1,11 @@
 import PartnershipService from '../service/partnership.service';
 
-import { setLoadingStatus } from '../../../../app/store/apiReducer';
 import { setNewPartner } from './partnerReducer';
 
 const partnershipService = new PartnershipService();
 
 export const partnersDataRequestCreator = () => {
     return async ( dispatch ) => {
-        dispatch(setLoadingStatus(true));
         try {
             await partnershipService.getPartnerData()
                 .then((res) => {
@@ -16,18 +14,15 @@ export const partnersDataRequestCreator = () => {
                         partnersData: partnersData,
                         id: _id
                     }));
-                    dispatch(setLoadingStatus(false));
                 })
         } catch (err) {
             console.log(err);
-            dispatch(setLoadingStatus(false));
         }
     }
 };
 
 export const changeDataRequestCreator = (id, body) => {
     return async ( dispatch ) => {
-        dispatch(setLoadingStatus(true));
         try {
             await partnershipService.changePartnerData(id, body)
                 .then((res) => {
@@ -36,11 +31,9 @@ export const changeDataRequestCreator = (id, body) => {
                         partnersData: partnersData,
                         id: _id
                     }));
-                    dispatch(setLoadingStatus(false));
                 })
         } catch (err) {
             console.log(err);
-            dispatch(setLoadingStatus(false));
         }
     }
 };

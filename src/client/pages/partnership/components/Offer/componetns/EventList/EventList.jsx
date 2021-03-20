@@ -1,9 +1,11 @@
 import React from "react"
 import EventItem from "../EventItem";
 import styles from "./EventList.module.scss"
+import {shallowEqual, useDispatch, useSelector} from "react-redux";
 
 const EventsList = ({eventsProps}) => {
-    const events = eventsProps.map(item => <EventItem key={item} event={item}/>);
+    const tournaments = useSelector(({tournaments}) => tournaments.processedTournamentsData, shallowEqual);
+    const events = tournaments.length > 0 ? tournaments.map(({url_for_card}) => <EventItem key={url_for_card} event={url_for_card}/>) : null;
     return (
         <div className={styles.eventList}>
             {events}

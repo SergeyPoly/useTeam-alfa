@@ -81,7 +81,7 @@ const MatchDetails = () => {
     });
 
     return (
-        <div>
+        <main>
             <div onClick={() => history.goBack()}>
                 <Heading
                     type={'page'}
@@ -90,7 +90,7 @@ const MatchDetails = () => {
                 />
             </div>
             {matchDetailsTables}
-        </div>
+        </main>
     );
 };
 

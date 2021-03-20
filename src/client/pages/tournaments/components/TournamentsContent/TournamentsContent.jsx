@@ -7,10 +7,10 @@ import TournamentCard from '../../../../../shared/components/TournamentCard';
 
 import styles from './TournamentsContent.module.scss'
 
-const TournamentsContent = () => {
+const TournamentsContent = ({isLoading}) => {
     const filterOptions = useSelector(({tournaments}) => tournaments.filterOptions, shallowEqual);
     const processedTournamentsData = useSelector(({tournaments}) => tournaments.processedTournamentsData, shallowEqual);
-    const isLoading = useSelector(({api}) => api.isLoading, shallowEqual);
+
 
     const filteredCards = processedTournamentsData.filter(({prizePool, mode, slots, server}) => {
             const prizePoolOption = filterOptions.prizePool ? prizePool.currencyValue === filterOptions.prizePool : true;
@@ -28,17 +28,16 @@ const TournamentsContent = () => {
         </div> : null);
 
     return (
-        <div>
+        <main>
             <Heading type={'page'} text='Dota 2 tournaments'/>
-            {isLoading &&
+            {isLoading ?
             <div className={styles.loader}>
                 <Loader type="TailSpin" color="#567EF7" height={40} width={40} />
-            </div>}
-            {!isLoading &&
+            </div> :
             <div className={styles.wraper}>
                 {tournamentCards}
             </div>}
-        </div>
+        </main>
     );
 };
 

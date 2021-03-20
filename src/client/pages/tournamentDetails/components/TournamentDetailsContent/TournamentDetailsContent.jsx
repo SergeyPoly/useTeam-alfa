@@ -23,7 +23,7 @@ const TournamentDetailsContent = () => {
     const inviteModalActive = useSelector(({tournamentDetails}) => tournamentDetails.inviteModalActive, shallowEqual);
 
     return (
-        <div>
+        <main>
             <Heading type={'page'} text={itemHeading}/>
             <OverviewSection />
             {(isAuth && engaged.length < total) && <JoinSection />}
@@ -35,7 +35,7 @@ const TournamentDetailsContent = () => {
             <Modal isOpen={inviteModalActive} toggleModal={() => dispatch(toggleInviteModal())} minWidth={'500px'} >
                 <TeammatesInvitation />
             </Modal>
-        </div>
+        </main>
     );
 };
 

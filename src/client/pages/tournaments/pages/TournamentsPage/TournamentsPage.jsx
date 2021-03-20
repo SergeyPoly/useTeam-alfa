@@ -5,11 +5,13 @@ import Sidebar from '../../../../../shared/containers/Sidebar';
 import SidebarContentFilters from '../../components/SidebarContentFilters';
 import TournamentsContent from '../../components/TournamentsContent';
 import { tournamentsRequestCreator } from '../../reducers/tournamentsActionCreators';
+import { useLoader } from '../../../../../shared/customHooks/useLoader';
 
 import styles from './TournamentsPage.module.scss'
 
 const TournamentsPage = () => {
     const dispatch = useDispatch();
+    const { isLoading, toggleLoadingStatus } = useLoader();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -21,7 +23,7 @@ const TournamentsPage = () => {
             'id',
             'entry',
             'startTime',
-        ]));
+        ], toggleLoadingStatus));
     }, []);
 
     const sidebarData = [
@@ -38,7 +40,7 @@ const TournamentsPage = () => {
                     <Sidebar sidebarData={sidebarData}/>
                 </div>
                 <div className={'column-9'}>
-                    <TournamentsContent/>
+                    <TournamentsContent isLoading={isLoading}/>
                 </div>
             </div>
         </div>

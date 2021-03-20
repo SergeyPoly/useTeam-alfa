@@ -1,5 +1,4 @@
 import AuthService from '../services/auth.service';
-import { setLoadingStatus } from '../../../app/store/apiReducer';
 import { setTeamData, setUserData } from './authReducer';
 
 import { teamData } from '../../pages/team/teamData'; //DELETE! after back-end fully operational!
@@ -10,7 +9,6 @@ const authService = new AuthService();
 
 export const userDataRequestCreator = (id) => {
     return async ( dispatch ) => {
-        dispatch(setLoadingStatus(true));
         try {
             await authService.getUserData(id)
                 .then((res) => {
@@ -21,11 +19,9 @@ export const userDataRequestCreator = (id) => {
                         teammates: teamData.teammates.map(element => usersData.find(({id}) => id === element))
                     };
                     dispatch(setTeamData(responseTeamData));
-                    dispatch(setLoadingStatus(false));
                 })
         } catch (err) {
             console.log(err);
-            dispatch(setLoadingStatus(false));
         }
     }
 };

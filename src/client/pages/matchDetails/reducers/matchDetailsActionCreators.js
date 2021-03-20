@@ -1,5 +1,4 @@
 import MatchDetailsService from '../services/matchDetails.service';
-import { setLoadingStatus } from '../../../../app/store/apiReducer';
 import { setMatchDetailsData } from './matchDetailsReducer';
 
 import { tournamentTeamsData } from '../../tournamentDetails/tournamentTeamsData'; //DELETE! after back-end fully operational!
@@ -7,9 +6,9 @@ import { usersData } from '../../tournamentDetails/usersData'; //DELETE! after b
 
 const matchDetailsService = new MatchDetailsService();
 
-export const matchDetailsRequestCreator = (id) => {
+export const matchDetailsRequestCreator = (id, toggleLoadingStatus) => {
     return async ( dispatch ) => {
-        dispatch(setLoadingStatus(true));
+        toggleLoadingStatus();
         try {
             await matchDetailsService.getCurrentMatch(id)
                 .then((res) => {
@@ -22,11 +21,11 @@ export const matchDetailsRequestCreator = (id) => {
                         players: element.players.map(element => ({...element, player: usersData.find(({id})=> id === element.player).name}))
                     }));
                     dispatch(setMatchDetailsData(responseMatchData));
-                    dispatch(setLoadingStatus(false));
+                    toggleLoadingStatus();
                 })
         } catch (err) {
             console.log(err);
-            dispatch(setLoadingStatus(false));
+            toggleLoadingStatus();
         }
     }
 };

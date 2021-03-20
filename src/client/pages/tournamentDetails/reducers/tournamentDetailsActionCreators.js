@@ -1,8 +1,6 @@
 import TournamentDetailsService from '../services/tournamentDetails.service';
-import { setLoadingStatus } from '../../../../app/store/apiReducer';
 import {
     setProcessedTournamentData,
-    setTournamentSoloTeam,
 } from './tournamentDetailsReducer';
 
 import { partnersData } from '../partnersData'; //DELETE! after back-end fully operational!
@@ -10,9 +8,9 @@ import { tournamentTeamsData } from '../tournamentTeamsData'; //DELETE! after ba
 
 const tournamentDetailsService = new TournamentDetailsService();
 
-export const tournamentDetailsRequestCreator = (id) => {
+export const tournamentDetailsRequestCreator = (id, toggleLoadingStatus) => {
     return async ( dispatch ) => {
-        dispatch(setLoadingStatus(true));
+        toggleLoadingStatus();
         try {
             await tournamentDetailsService.getCurrentTournament(id)
                 .then((res) => {
@@ -46,28 +44,28 @@ export const tournamentDetailsRequestCreator = (id) => {
                         }))
                     };
                     dispatch(setProcessedTournamentData(responseTournamentData));
-                    dispatch(setLoadingStatus(false));
+                    toggleLoadingStatus();
                 })
         } catch (err) {
             console.log(err);
-            dispatch(setLoadingStatus(false));
+            toggleLoadingStatus();
         }
     }
 };
 
 export const randomPlayersRequestCreator = (amount, randomTeam, handleResponse) => {
     return async ( dispatch ) => {
-        dispatch(setLoadingStatus(true));
+
         try {
             await tournamentDetailsService.getRandomPlayers(amount)
                 .then((res) => {
                     const newRandomTeam = randomTeam.concat(res.result);
                     dispatch(handleResponse(newRandomTeam));
-                    dispatch(setLoadingStatus(false));
+
                 })
         } catch (err) {
             console.log(err);
-            dispatch(setLoadingStatus(false));
+
         }
     }
 };

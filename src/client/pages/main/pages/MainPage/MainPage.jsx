@@ -9,6 +9,7 @@ import SectionTourList from '../../components/SectionTourList/SectionTourList';
 import { tournamentsRequestCreator } from '../../../tournaments/reducers/tournamentsActionCreators';
 import { useDispatch } from 'react-redux';
 import { postAllPlayers, postAllTestUsers } from '../../reducer/actions/getAllTournaments';
+import { useLoader } from '../../../../../shared/customHooks/useLoader';
 // import {
 //   getAllMatches,
 //   getOneTournament,
@@ -20,13 +21,14 @@ import { postAllPlayers, postAllTestUsers } from '../../reducer/actions/getAllTo
 const MainPage = () => {
   const { sectionBannerEnticing, sectionBannerAdvantage } = pageProps;
   const dispatch = useDispatch();
+    const { isLoading, toggleLoadingStatus } = useLoader();
 
   // postAllTournaments();
   // getAllUsers()+
   // postAllMatches()+*2
   // getAllMatches()
   // getOneTournament()
-  
+
 
   useEffect(() => {
     // postAllPlayers()
@@ -42,7 +44,7 @@ const MainPage = () => {
         'id',
         'entry',
         'startTime',
-      ]),
+      ], toggleLoadingStatus),
     );
   }, []);
 
@@ -50,7 +52,7 @@ const MainPage = () => {
     <div className={`${styles.container} ${styles.mainPage}`}>
       <SliderSection />
 
-      <SectionTourList />
+      <SectionTourList isLoading={isLoading} />
 
       <SectionBanner
         title={sectionBannerEnticing.title}

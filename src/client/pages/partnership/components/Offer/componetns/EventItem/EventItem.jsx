@@ -4,7 +4,7 @@ import styles from "./EventItem.module.scss"
 const EventItem = ({event}) => {
 
     return(
-        <div className={styles.eventItem}>{event}</div>
+        <img className={styles.eventItem} src={event}/>
     )
 }
 export default EventItem
